@@ -1,0 +1,38 @@
+{{!-- Header section block --}}
+<header class="header">
+  <div id="sticky-header" class="unfixed">
+    <div class="inner">
+      {{>logo logo1="images/logo.png" logo2=""}}
+
+      <nav class="main-nav-container">
+        <ul class="main-nav header-nav">
+          <li><a href="#">How it works</a></li>
+          <li><a href="#">Legislation Overview</a></li>
+          <li><a href="#">Knowledge base</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-custom">
+        <div class="search">
+          <input name="search" type="text" placeholder="Paste website URL">
+        </div>
+        <select name="select">
+          <option value="value1" selected><p style="background-image: url({{root}}images/us-flag.png)"></p>US</option>
+          <option value="value2"><img src="{{root}}images/ca-flag.png" alt="#">CA</option>
+          <option value="value3"><img src="{{root}}images/eu-flag.png" alt="#">EU</option>
+          <option value="value4"><img src="{{root}}images/ge-flag.png" alt="#">GE</option>
+          <option value="value5"><img src="{{root}}images/au-flag.png" alt="#">AU</option>
+          <option value="value6"><img src="{{root}}images/dg-flag.png" alt="#">DN</option>
+          <option value="value7"><img src="{{root}}images/fn-flag.png" alt="#">FN</option>
+        </select>
+        <div class="button">
+          <a href="#" class="btn">Audit</a>
+        </div>
+      </div>
+
+    </div>
+    <button class="menu-button" id="open-button">Menu</button>
+  </div>
+</header>

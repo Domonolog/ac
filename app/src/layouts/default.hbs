@@ -1,0 +1,32 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{{root}}css/styles.css">
+
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+</head>
+<body class="{{#ifpage 'index'}}home-page {{/ifpage}}{{bodyclass}}">
+<div class="container">
+  {{> mobile-menu}}
+  <div class="content-wrap">
+    {{> header}}
+
+      <main class="main">
+
+        {{> body}}
+
+      </main>
+    {{> footer}}
+  </div>
+</div>
+<script src="{{root}}js/init.js"></script>
+</body>
+</html>
