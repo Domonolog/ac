@@ -374,3 +374,182 @@
     }
   }
 }
+
+.section-mail {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .wrapper {
+    padding-top: 70px;
+    padding-bottom: 80px;
+    background: #fff;
+    border: 1px solid #e9ecee;
+    box-sizing: border-box;
+    box-shadow: 15px 15px 0 #eef2f4;
+    border-radius: 5px;
+    display: grid;
+    justify-content: center;
+  }
+
+  .mail__img {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: #3a3a3a;
+  }
+
+  p {
+    max-width: 430px;
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #3a3a3a;
+    margin-bottom: 40px;
+  }
+
+  .text {
+    display: grid;
+    justify-content: center;
+  }
+
+  .mail-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      background: #fff;
+      border: 1px solid #e9ecee;
+      box-sizing: border-box;
+      border-radius: 5px;
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+      color: rgba(58, 58, 58, 0.7);
+      height: 60px;
+      padding: 20px 60px;
+      min-width: 398px;
+      margin-right: -10px;
+      outline: none !important;
+      position: relative;
+      background-image: url("../../images/mail-icon.png");
+      background-repeat: no-repeat;
+      background-position: 25px 18px;
+
+      &:focus {
+        background-image: url("../../images/mail-icon-active.png");
+        border: 1px solid #1ed185;
+      }
+    }
+
+    .button {
+      .btn {
+        width: 202px;
+        height: 60px;
+        padding: 20px;
+        position: relative;
+
+        &:hover {
+          margin-top: 0;
+          margin-bottom: 0;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+
+.section-frequent {
+  padding-top: 100px;
+  padding-bottom: 170px;
+
+  .title {
+    display: flex;
+    max-width: 495px;
+    align-items: center;
+    margin-bottom: 100px;
+
+    h2 {
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 30px;
+      line-height: 45px;
+      letter-spacing: 0.5px;
+      color: #3a3a3a;
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      width: 31.6%;
+      max-width: 31.6%;
+      max-height: 505px;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #e9ecee;
+      box-sizing: border-box;
+      box-shadow: 15px 15px 0 #eef2f4;
+      border-radius: 5px;
+      padding: 40px;
+      margin-bottom: 30px;
+
+      h3 {
+        height: 70px;
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 35px;
+        color: #3a3a3a;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        color: #3a3a3a;
+        opacity: 0.7;
+      }
+
+      &:last-child {
+        padding: 0;
+
+        a {
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-position: 68% 50%;
+        }
+      }
+    }
+  }
+}

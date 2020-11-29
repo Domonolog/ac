@@ -305,6 +305,97 @@ body:not(.home-page) .footer .by {
 }
 
 .footer {
+  .search-footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #141619;
+
+    .inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+
+      .info__text {
+        padding-left: 30px;
+
+        h4 {
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 30px;
+          color: #fff;
+          margin-bottom: 5px;
+        }
+
+        p {
+          margin-bottom: 0;
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 0.5px;
+          color: #fff;
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .mail-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        background: #fff;
+        border: 1px solid #e9ecee;
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        color: rgba(58, 58, 58, 0.7);
+        height: 60px;
+        padding: 20px 60px;
+        min-width: 398px;
+        margin-right: -10px;
+        outline: none !important;
+        position: relative;
+        background-image: url("../../images/mail-icon.png");
+        background-repeat: no-repeat;
+        background-position: 25px 18px;
+
+        &:focus {
+          background-image: url("../../images/mail-icon-active.png");
+          border: 1px solid #1ed185;
+        }
+      }
+
+      .button {
+        .btn {
+          width: 202px;
+          height: 60px;
+          padding: 20px;
+          position: relative;
+
+          &:hover {
+            margin-top: 0;
+            margin-bottom: 0;
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+
   .footer-nav {
     display: flex;
     width: 100%;
