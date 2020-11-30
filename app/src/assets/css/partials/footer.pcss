@@ -318,6 +318,7 @@ body:not(.home-page) .footer .by {
     .info {
       display: flex;
       align-items: center;
+      overflow: hidden;
 
       .info__text {
         padding-left: 30px;
@@ -389,7 +390,6 @@ body:not(.home-page) .footer .by {
           &:hover {
             margin-top: 0;
             margin-bottom: 0;
-            opacity: 0.9;
           }
         }
       }
@@ -482,6 +482,55 @@ body:not(.home-page) .footer .by {
 
         &:hover {
           text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .section-mail {
+    .wrapper {
+      .mail-form {
+        input {
+          min-width: auto;
+        }
+
+        .button {
+          .btn {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .search-footer {
+      .inner {
+        flex-wrap: wrap;
+      }
+
+      .info,
+      .mail-form {
+        width: 100%;
+        max-width: 100%;
+        justify-content: flex-start;
+      }
+
+      .info {
+        margin-bottom: 20px;
+      }
+
+      .mail-form {
+        input {
+          min-width: auto;
+        }
+
+        .button {
+          .btn {
+            width: auto;
+          }
         }
       }
     }
