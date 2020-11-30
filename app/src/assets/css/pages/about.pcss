@@ -1,0 +1,254 @@
+.section-about {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  position: relative;
+
+  .inner {
+    position: initial;
+  }
+
+  .fixed-left {
+    position: fixed;
+    top: 310px;
+    transition: 0.2s ease-in-out;
+
+    h3 {
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+      color: #3a3a3a;
+      margin-bottom: 40px;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+
+      li {
+        margin-bottom: 20px;
+
+        a {
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          color: #3a3a3a;
+
+          &:hover {
+            color: #2dc082;
+            text-decoration: none;
+          }
+        }
+      }
+
+      li.active {
+        a {
+          color: #2dc082;
+        }
+      }
+    }
+  }
+
+  .content-fixed {
+    top: 150px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .content-fixed-bottom {
+    position: absolute;
+    bottom: 80px;
+    top: initial;
+    transition: 0.2s ease-in-out;
+  }
+
+  .fixed-bg {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .about-title {
+    .inner {
+      max-width: 770px;
+
+      .about__img {
+        display: flex;
+        justify-content: center;
+      }
+
+      .title {
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 45px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #3a3a3a;
+        margin-bottom: 50px;
+      }
+
+      .img {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .img__none {
+        background: linear-gradient(0deg, #f8fafb, #f8fafb);
+        border: 1px solid #e6edf0;
+        box-sizing: border-box;
+        border-radius: 0;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+
+        p {
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 40px;
+          color: #3a3a3a;
+          opacity: 0.2;
+          margin-bottom: 0;
+        }
+      }
+
+      h2 {
+        margin-bottom: 30px;
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 40px;
+        color: #3a3a3a;
+      }
+
+      p {
+        margin-bottom: 30px;
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        color: #3a3a3a;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid #e9ecee;
+        list-style-type: none;
+        margin-bottom: 50px;
+
+        li {
+          padding: 21px 30px;
+          border: 1px solid rgba(0, 0, 0, 0);
+          border-bottom: 1px solid #e9ecee;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            content: " ";
+            right: 20px;
+            top: 21px;
+            background-image: url("../../images/list-arrow.png");
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 30px;
+          }
+
+          p {
+            margin-bottom: 0;
+            font-family: SF UI Display;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 30px;
+            letter-spacing: 1px;
+            color: #3a3a3a;
+          }
+
+          &:hover {
+            cursor: pointer;
+            background: #fff;
+            border: 1px solid #e9ecee;
+          }
+
+          .tab-hidden {
+            display: none;
+          }
+        }
+
+        li.active {
+          background: #fff;
+          border: 1px solid #e9ecee;
+
+          .tab-hidden {
+            display: block;
+          }
+
+          &::before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .ask-more {
+        background: #fff;
+        border: 1px solid #e9ecee;
+        box-sizing: border-box;
+        box-shadow: 15px 15px 0 #eef2f4;
+        border-radius: 5px;
+        padding: 50px 15px 60px;
+
+        h2 {
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 25px;
+          line-height: 35px;
+          text-align: center;
+          color: #3a3a3a;
+          margin-bottom: 20px;
+
+          strong {
+            color: #2dc082;
+          }
+        }
+
+        p {
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 30px;
+          text-align: center;
+          letter-spacing: 1px;
+          color: #3a3a3a;
+          margin-bottom: 40px;
+        }
+
+        .button {
+          display: flex;
+          justify-content: center;
+
+          .btn {
+            width: 202px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
