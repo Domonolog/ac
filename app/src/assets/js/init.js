@@ -88,5 +88,5 @@ jQuery( $ => {
         $(".fixed-left").removeClass('content-fixed-bottom');
       }
     });
-  }
+  };
 } );
