@@ -149,9 +149,6 @@
         margin-bottom: 50px;
 
         li {
-          padding: 21px 30px;
-          border: 1px solid rgba(0, 0, 0, 0);
-          border-bottom: 1px solid #e9ecee;
           position: relative;
 
           &::before {
@@ -163,6 +160,7 @@
             background-repeat: no-repeat;
             width: 30px;
             height: 30px;
+            z-index: 1;
           }
 
           p {
@@ -174,12 +172,16 @@
             line-height: 30px;
             letter-spacing: 1px;
             color: #3a3a3a;
-          }
+            padding: 21px 30px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            border-bottom: 1px solid #e9ecee;
+            position: relative;
 
-          &:hover {
-            cursor: pointer;
-            background: #fff;
-            border: 1px solid #e9ecee;
+            &:hover {
+              cursor: pointer;
+              background: #fff;
+              border: 1px solid #e9ecee;
+            }
           }
 
           .tab-hidden {
@@ -189,7 +191,6 @@
 
         li.active {
           background: #fff;
-          border: 1px solid #e9ecee;
 
           .tab-hidden {
             display: block;
@@ -197,6 +198,19 @@
 
           &::before {
             transform: rotate(180deg);
+          }
+
+          p {
+            font-weight: 700;
+            border: 1px solid #e9ecee;
+          }
+
+          .tab-hidden {
+            p {
+              padding-top: 25px;
+              padding-bottom: 79px;
+              font-weight: normal;
+            }
           }
         }
       }
