@@ -6,12 +6,14 @@
     <h1 class="title">Find out if your website is <strong>ADA compliant</strong></h1>
     <p>Scan your website for free, identify accessbility issues, and get exact instructions on how to fix them. Type your URL to start now!</p>
     <div class="home__search">
-      <div class="search">
-        <input name="search" type="text" placeholder="Paste website URL here & choose country">
+      <div class="form-home">
+        <div class="search">
+          <input name="search" type="text" placeholder="Paste website URL here & choose country">
+        </div>
+        <select name="select">
+          <option value="value1" selected><p style="background-image: url({{root}}images/us-flag.png)"></p>US</option>
+        </select>
       </div>
-      <select name="select">
-        <option value="value1" selected><p style="background-image: url({{root}}images/us-flag.png)"></p>US</option>
-      </select>
     </div>
     <div class="button">
       <a href="#" class="btn">Check website</a>
