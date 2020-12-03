@@ -1,4 +1,4 @@
-<section class="section-about">
+<section class="section-blog">
   <div class="about-title">
     <div class="inner">
       <div class="about__img">
@@ -9,9 +9,10 @@
         <div class="selects">
           <div class="select__left">
             <span>Category:</span>
-            <select name="select">
-              <option value="value1" selected>All articles</option>
-              <option value="value2" selected>College Students</option>
+            <select id="filter-left" name="select">
+              <option value="item-blog" selected>All articles</option>
+              <option value="big-post" selected>Big post</option>
+              <option value="medium-post" selected>Medium post</option>
             </select>
             <span class="arrow"></span>
           </div>
@@ -25,212 +26,215 @@
           </div>
         </div>
 
-        <div class="blog__big">
-          <a href="#">
-            <div class="blog__img">
-              <img src="{{root}}images/big-img1.png" alt="#">
-            </div>
-            <div class="wrapper">
-              <div class="info__top">
-                <h3>Accessibility events</h3>
-                <div class="time">
-                  <span class="calendar">27 August 2020</span>
-                  <span class="eye">3 min</span>
+        <div id="items">
+          <div class="blog__big item-blog big-post">
+            <a href="#">
+              <div class="blog__img">
+                <img src="{{root}}images/big-img1.png" alt="#">
+              </div>
+              <div class="wrapper">
+                <div class="info__top">
+                  <h3>Accessibility events</h3>
+                  <div class="time">
+                    <span class="calendar">27 August 2020</span>
+                    <span class="eye">3 min</span>
+                  </div>
+                </div>
+                <div class="info__bottom">
+                  <h2>College Students Increasingly Turn to ProFund to Pay for Tuition</h2>
+                  <p>As the Southeast prepares for Hurricane Florence, GoFundMe is also making preparations and working
+                    with state and local officials to ensure that the money raised</p>
                 </div>
               </div>
-              <div class="info__bottom">
-                <h2>College Students Increasingly Turn to ProFund to Pay for Tuition</h2>
-                <p>As the Southeast prepares for Hurricane Florence, GoFundMe is also making preparations and working
-                  with state and local officials to ensure that the money raised</p>
+            </a>
+          </div>
+
+          <div class="blog__medium item-blog medium-post">
+            <a href="#">
+              <div class="blog__img">
+                <img src="{{root}}images/med-img1.png" alt="#">
               </div>
-            </div>
-          </a>
+              <div class="wrapper">
+                <div class="info__top">
+                  <h3>compliance</h3>
+                  <div class="time">
+                    <span class="eye">3 min</span>
+                  </div>
+                </div>
+                <div class="info__bottom">
+                  <h2>College Students Increasingly Turn to ProFund to Pay for Tuition</h2>
+                  <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="blog__medium item-blog medium-post">
+            <a href="#">
+              <div class="blog__img">
+                <img src="{{root}}images/med-img2.png" alt="#">
+              </div>
+              <div class="wrapper">
+                <div class="info__top">
+                  <h3>compliance</h3>
+                  <div class="time">
+                    <span class="eye">3 min</span>
+                  </div>
+                </div>
+                <div class="info__bottom">
+                  <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
+                  <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="blog__medium item-blog medium-post">
+            <a href="#">
+              <div class="blog__img">
+                <img src="{{root}}images/med-img3.png" alt="#">
+              </div>
+              <div class="wrapper">
+                <div class="info__top">
+                  <h3>compliance</h3>
+                  <div class="time">
+                    <span class="eye">3 min</span>
+                  </div>
+                </div>
+                <div class="info__bottom">
+                  <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
+                  <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="blog__medium item-blog medium-post">
+            <a href="#">
+              <div class="blog__img">
+                <img src="{{root}}images/med-img4.png" alt="#">
+              </div>
+              <div class="wrapper">
+                <div class="info__top">
+                  <h3>compliance</h3>
+                  <div class="time">
+                    <span class="eye">3 min</span>
+                  </div>
+                </div>
+                <div class="info__bottom">
+                  <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
+                  <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="blog__big item-blog big-post">
+            <a href="#">
+              <div class="blog__img">
+                <img src="{{root}}images/big-img2.png" alt="#">
+              </div>
+              <div class="wrapper">
+                <div class="info__top">
+                  <h3>Accessibility events</h3>
+                  <div class="time">
+                    <span class="calendar">27 August 2020</span>
+                    <span class="eye">3 min</span>
+                  </div>
+                </div>
+                <div class="info__bottom">
+                  <h2>College Students Increasingly Turn to ProFund to Pay for Tuition</h2>
+                  <p>As the Southeast prepares for Hurricane Florence, GoFundMe is also making preparations and working
+                    with state and local officials to ensure that the money raised</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="blog__medium item-blog medium-post">
+            <a href="#">
+              <div class="blog__img">
+                <img src="{{root}}images/med-img5.png" alt="#">
+              </div>
+              <div class="wrapper">
+                <div class="info__top">
+                  <h3>compliance</h3>
+                  <div class="time">
+                    <span class="eye">3 min</span>
+                  </div>
+                </div>
+                <div class="info__bottom">
+                  <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
+                  <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="blog__medium item-blog medium-post">
+            <a href="#">
+              <div class="blog__img">
+                <img src="{{root}}images/med-img6.png" alt="#">
+              </div>
+              <div class="wrapper">
+                <div class="info__top">
+                  <h3>compliance</h3>
+                  <div class="time">
+                    <span class="eye">3 min</span>
+                  </div>
+                </div>
+                <div class="info__bottom">
+                  <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
+                  <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="blog__medium item-blog medium-post">
+            <a href="#">
+              <div class="blog__img">
+                <img src="{{root}}images/med-img7.png" alt="#">
+              </div>
+              <div class="wrapper">
+                <div class="info__top">
+                  <h3>compliance</h3>
+                  <div class="time">
+                    <span class="eye">3 min</span>
+                  </div>
+                </div>
+                <div class="info__bottom">
+                  <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
+                  <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="blog__medium item-blog medium-post">
+            <a href="#">
+              <div class="blog__img">
+                <img src="{{root}}images/med-img8.png" alt="#">
+              </div>
+              <div class="wrapper">
+                <div class="info__top">
+                  <h3>compliance</h3>
+                  <div class="time">
+                    <span class="eye">3 min</span>
+                  </div>
+                </div>
+                <div class="info__bottom">
+                  <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
+                  <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
 
-        <div class="blog__medium">
-          <a href="#">
-            <div class="blog__img">
-              <img src="{{root}}images/med-img1.png" alt="#">
-            </div>
-            <div class="wrapper">
-              <div class="info__top">
-                <h3>compliance</h3>
-                <div class="time">
-                  <span class="eye">3 min</span>
-                </div>
-              </div>
-              <div class="info__bottom">
-                <h2>College Students Increasingly Turn to ProFund to Pay for Tuition</h2>
-                <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="blog__medium">
-          <a href="#">
-            <div class="blog__img">
-              <img src="{{root}}images/med-img2.png" alt="#">
-            </div>
-            <div class="wrapper">
-              <div class="info__top">
-                <h3>compliance</h3>
-                <div class="time">
-                  <span class="eye">3 min</span>
-                </div>
-              </div>
-              <div class="info__bottom">
-                <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
-                <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="blog__medium">
-          <a href="#">
-            <div class="blog__img">
-              <img src="{{root}}images/med-img3.png" alt="#">
-            </div>
-            <div class="wrapper">
-              <div class="info__top">
-                <h3>compliance</h3>
-                <div class="time">
-                  <span class="eye">3 min</span>
-                </div>
-              </div>
-              <div class="info__bottom">
-                <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
-                <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="blog__medium">
-          <a href="#">
-            <div class="blog__img">
-              <img src="{{root}}images/med-img4.png" alt="#">
-            </div>
-            <div class="wrapper">
-              <div class="info__top">
-                <h3>compliance</h3>
-                <div class="time">
-                  <span class="eye">3 min</span>
-                </div>
-              </div>
-              <div class="info__bottom">
-                <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
-                <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="blog__big">
-          <a href="#">
-            <div class="blog__img">
-              <img src="{{root}}images/big-img2.png" alt="#">
-            </div>
-            <div class="wrapper">
-              <div class="info__top">
-                <h3>Accessibility events</h3>
-                <div class="time">
-                  <span class="calendar">27 August 2020</span>
-                  <span class="eye">3 min</span>
-                </div>
-              </div>
-              <div class="info__bottom">
-                <h2>College Students Increasingly Turn to ProFund to Pay for Tuition</h2>
-                <p>As the Southeast prepares for Hurricane Florence, GoFundMe is also making preparations and working
-                  with state and local officials to ensure that the money raised</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="blog__medium">
-          <a href="#">
-            <div class="blog__img">
-              <img src="{{root}}images/med-img5.png" alt="#">
-            </div>
-            <div class="wrapper">
-              <div class="info__top">
-                <h3>compliance</h3>
-                <div class="time">
-                  <span class="eye">3 min</span>
-                </div>
-              </div>
-              <div class="info__bottom">
-                <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
-                <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="blog__medium">
-          <a href="#">
-            <div class="blog__img">
-              <img src="{{root}}images/med-img6.png" alt="#">
-            </div>
-            <div class="wrapper">
-              <div class="info__top">
-                <h3>compliance</h3>
-                <div class="time">
-                  <span class="eye">3 min</span>
-                </div>
-              </div>
-              <div class="info__bottom">
-                <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
-                <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="blog__medium">
-          <a href="#">
-            <div class="blog__img">
-              <img src="{{root}}images/med-img7.png" alt="#">
-            </div>
-            <div class="wrapper">
-              <div class="info__top">
-                <h3>compliance</h3>
-                <div class="time">
-                  <span class="eye">3 min</span>
-                </div>
-              </div>
-              <div class="info__bottom">
-                <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
-                <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="blog__medium">
-          <a href="#">
-            <div class="blog__img">
-              <img src="{{root}}images/med-img8.png" alt="#">
-            </div>
-            <div class="wrapper">
-              <div class="info__top">
-                <h3>compliance</h3>
-                <div class="time">
-                  <span class="eye">3 min</span>
-                </div>
-              </div>
-              <div class="info__bottom">
-                <h2>College Students Increasingly Turn to ProFund to Pay for Tuition </h2>
-                <p>As the Southeast prepares for Hurricane As the Southeast prepares for Hurricane Flo...</p>
-              </div>
-            </div>
-          </a>
-        </div>
 
         <div class="loader-blog">
-          LOADER HERE
+          <img src="{{root}}images/loader-blog.gif" alt="loader-gif">
         </div>
 
       </div>

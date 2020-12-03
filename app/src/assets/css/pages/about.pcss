@@ -1,4 +1,5 @@
 .section-about,
+.section-blog,
 .section-blog_next {
   padding-top: 70px;
   padding-bottom: 100px;
@@ -38,9 +39,15 @@
           font-size: 14px;
           line-height: 22px;
           color: #3a3a3a;
+          text-decoration: none;
 
           &:hover {
             color: #2dc082;
+            text-decoration: none;
+          }
+
+          &:active,
+          &:focus {
             text-decoration: none;
           }
         }
@@ -269,7 +276,9 @@
 }
 
 @media (max-width: 992px) {
-  .section-about {
+  .section-about,
+  .section-blog,
+  .section-blog_next {
     padding-top: 95px;
     padding-bottom: 50px;
 

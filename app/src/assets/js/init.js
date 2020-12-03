@@ -75,6 +75,12 @@ jQuery( $ => {
     $(this).addClass('active');
   });
 
+  $(".fixed-left ul li").click(function(e) {
+    e.preventDefault();
+    $(".fixed-left ul li").removeClass('active');
+    $(this).addClass('active');
+  });
+
   var target = $('.fixed-bg');
   if (target.length) {
     var targetPos = target.offset().top;
@@ -88,5 +94,20 @@ jQuery( $ => {
         $(".fixed-left").removeClass('content-fixed-bottom');
       }
     });
+  };
+
+  var filter_select_el = document.getElementById('filter-left');
+  var items_el = document.getElementById('items');
+
+  filter_select_el.onchange = function() {
+    console.log(this.value);
+    var items = items_el.getElementsByClassName('item-blog');
+    for (var i=0; i<items.length; i++) {
+      if (items[i].classList.contains(this.value)) {
+        items[i].style.display = 'flex';
+      } else {
+        items[i].style.display = 'none';
+      }
+    }
   };
 } );
