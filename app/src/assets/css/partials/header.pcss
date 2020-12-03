@@ -214,7 +214,6 @@ ul.second-nav {
     .inner {
       position: relative;
       width: 1280px;
-      padding-top: 1px;
       align-items: flex-end;
       z-index: 13;
       display: flex;
@@ -395,8 +394,25 @@ ul.second-nav {
 
 @media (max-width: 992px) {
   .header {
+    min-height: 45px;
+    position: fixed;
+    width: 100%;
+
+    #sticky-header.fixed {
+      min-height: 34px;
+      background: #fff;
+      box-shadow: 15px 15px 0 rgba(126, 144, 153, 0.1), 0 4px 125px rgba(0, 0, 0, 0.05);
+    }
+
     .inner {
-      margin-top: 20px;
+      margin-top: 10px;
+    }
+
+    .logo {
+      img {
+        width: 101px;
+        height: 25px;
+      }
     }
   }
 }

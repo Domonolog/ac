@@ -488,6 +488,10 @@ body:not(.home-page) .footer .by {
   }
 }
 
+.mobile-footer {
+  display: none;
+}
+
 @media (max-width: 992px) {
   .section-mail {
     .wrapper {
@@ -506,30 +510,184 @@ body:not(.home-page) .footer .by {
   }
 
   .footer {
+    .wrap {
+      .footer-nav-container {
+        display: none;
+      }
+
+      .mobile-footer {
+        display: block;
+      }
+    }
+
     .search-footer {
       .inner {
         flex-wrap: wrap;
-      }
 
-      .info,
-      .mail-form {
-        width: 100%;
-        max-width: 100%;
-        justify-content: flex-start;
-      }
+        .info {
+          display: block;
+          width: 100%;
 
-      .info {
-        margin-bottom: 20px;
-      }
+          .info__img {
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+            padding-bottom: 15px;
 
-      .mail-form {
-        input {
-          min-width: auto;
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+
+          .info__text {
+            padding-left: 0;
+            text-align: center;
+            display: grid;
+            justify-content: center;
+
+            h3 {
+              font-family: SF UI Display;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 30px;
+              color: #fff;
+              margin-bottom: 10px;
+            }
+
+            p {
+              font-family: SF UI Display;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 13px;
+              line-height: 20px;
+              text-align: center;
+              letter-spacing: 0.5px;
+              color: #fff;
+              opacity: 0.7;
+              margin-bottom: 25px;
+              max-width: 290px;
+            }
+          }
         }
 
-        .button {
-          .btn {
-            width: auto;
+        .mail-form {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+
+          .mail {
+            input {
+              height: 40px;
+              font-family: SF UI Display;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 20px;
+              letter-spacing: 0.5px;
+              color: rgba(58, 58, 58, 0.7);
+              padding: 10px 15px 10px 50px;
+              background-position: 15px 10px;
+              min-width: 100%;
+              margin-bottom: 15px;
+            }
+          }
+
+          .button {
+            .btn {
+              width: 100%;
+              min-width: 100%;
+              height: 40px;
+              font-family: SF UI Display;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 16px;
+              line-height: 20px;
+              text-align: center;
+              letter-spacing: 0.5px;
+              color: #fff;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              margin-bottom: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    .mobile-footer {
+      ul {
+        padding: 50px 0;
+        margin: 0;
+        list-style-type: none;
+        text-align: center;
+
+        li {
+          margin-bottom: 10px;
+
+          a {
+            font-family: SF UI Display;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 40px;
+            letter-spacing: 0.5px;
+            color: #fff;
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .social-links {
+        margin-top: 0;
+        margin-bottom: 50px;
+        justify-content: center;
+        grid-gap: 20px;
+      }
+    }
+
+    .bottom-line {
+      min-height: auto;
+      padding-bottom: 20px;
+      padding-top: 30px;
+      background-color: #202223;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+
+      .inner {
+        display: grid;
+        justify-content: center;
+
+        .links-nav {
+          order: 1;
+          display: block;
+          text-align: center;
+          margin-bottom: 15px;
+
+          li {
+            padding: 0;
+            margin-bottom: 15px;
+          }
+        }
+
+        .copyright {
+          order: 2;
+          width: 100%;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            content: " ";
+            width: 200%;
+            left: -50%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.05);
+          }
+
+          p {
+            padding-top: 19px;
+            text-align: center;
           }
         }
       }

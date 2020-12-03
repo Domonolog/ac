@@ -4,8 +4,8 @@
 .menu-button {
   position: absolute;
   top: 50%;
-  margin-top: -20px;
-  right: 15px;
+  margin-top: -19px;
+  right: 0;
   z-index: 1000;
   width: 40px;
   height: 40px;
@@ -21,7 +21,7 @@
   display: block;
   width: 28px;
   height: 25px;
-  background: linear-gradient(#2dc082 20%, transparent 20%, transparent 40%, #2dc082 40%, #2dc082 60%, transparent 60%, transparent 80%, #2dc082 80%);
+  background-image: url("../../images/burger-img.png");
   content: '';
   margin-left: auto;
   margin-right: auto;
@@ -36,11 +36,11 @@
   width: 1em;
   height: 1em;
   position: absolute;
-  right: 1em;
-  top: 1em;
+  right: 15px;
+  top: 14px;
   overflow: hidden;
   text-indent: 1em;
-  font-size: 0.75em;
+  font-size: 23px;
   border: none;
   background: transparent;
   color: transparent;
@@ -50,11 +50,11 @@
 .close-button::after {
   content: '';
   position: absolute;
-  width: 3px;
+  width: 1px;
   height: 100%;
   top: 0;
   left: 50%;
-  background: #bdc3c7;
+  background: #000;
 }
 
 .close-button::before {
@@ -109,17 +109,33 @@
   width: 255px;
   height: 100%;
   right: -255px;
-  background: #fff;
-  padding: 2em 1.5em 1.5em;
+  background: #f8fafb;
+  padding: 0;
   font-size: 1.15em;
   transition: right 0.4s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   overflow-y: auto;
+
+  .logo-mobile {
+    padding: 10px 15px;
+    background: #fff;
+    box-shadow: 0 4px 125px rgba(0, 0, 0, 0.05);
+
+    img {
+      width: 101px;
+      height: 25px;
+    }
+  }
+
+  .main-nav li:last-child {
+    margin-right: 0 !important;
+  }
 }
 
 /* Shown menu */
 .show-menu .menu-wrap {
   right: 0;
+  width: 100%;
   transition: right 0.8s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -140,17 +156,22 @@
   list-style: none;
   padding: 0;
   margin: 0;
-
-  .home-icon {
-    margin-bottom: 10px;
-  }
+  padding-top: 96px;
 
   li {
     position: relative;
 
     a {
-      padding: 10px 0;
-      padding-right: 25px;
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 45px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #3a3a3a;
+      display: flex;
+      justify-content: center;
     }
   }
 
