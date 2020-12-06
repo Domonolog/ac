@@ -26,32 +26,14 @@
 
     .select__left,
     .select__right {
-      position: relative;
-
-      span {
-        font-family: SF UI Display;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 26px;
-        letter-spacing: 1px;
-        color: #3a3a3a;
-        position: absolute;
-        top: -25px;
+      .select {
+        display: block;
+        width: 100%;
+        position: relative;
+        margin-top: 10px;
       }
 
-      .arrow {
-        position: absolute;
-        z-index: 1;
-        content: " ";
-        background-image: url("../../images/select-arrow.png");
-        width: 20px;
-        height: 20px;
-        top: 15px;
-        right: 20px;
-      }
-
-      select {
+      .new-select {
         width: 100%;
         padding: 13px 60px 12px 25px;
         height: 50px;
@@ -72,10 +54,63 @@
         position: relative;
         outline: none;
         cursor: pointer;
+      }
 
-        &:hover {
-          border: 1px solid #2dc082;
-        }
+      .new-select.on {
+        border: 1px solid #2dc082;
+      }
+
+      .new-select__list {
+        position: absolute;
+        top: 54px;
+        left: 0;
+        cursor: pointer;
+        width: 100%;
+        z-index: 2;
+        background: #fff;
+        user-select: none;
+        border: 1px solid #e9ecee;
+        box-sizing: border-box;
+        box-shadow: 0 17px 32px rgba(58, 89, 105, 0.15);
+        border-radius: 5px;
+      }
+
+      .new-select__list.on {
+        display: block;
+      }
+
+      .new-select__item span {
+        display: block;
+        padding: 15px 20px;
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        color: #2e2e2e;
+      }
+
+      .new-select__item span:hover {
+        background: #f8fafb;
+      }
+
+      .new-select::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        background: url("../../images/select-arrow.png") no-repeat right center / cover;
+        opacity: 0.6;
+        transition: all 0.27s ease-in-out;
+        transform: rotate(0deg);
+      }
+
+      .new-select.on::after {
+        transform: rotate(180deg);
       }
     }
 
@@ -310,11 +345,7 @@
         max-width: 100%;
         margin-right: 0;
 
-        .arrow {
-          top: 11px;
-        }
-
-        select {
+        .new-select {
           width: 100%;
           max-width: 100%;
           height: 40px;
@@ -324,11 +355,19 @@
           line-height: 25px;
           letter-spacing: 1px;
           padding: 8px 60px 8px 25px;
+
+          &::after {
+            top: 10px;
+          }
+        }
+
+        .new-select__list {
+          top: 45px;
         }
       }
 
       .select__left {
-        margin-bottom: 45px;
+        margin-bottom: 15px;
       }
     }
 

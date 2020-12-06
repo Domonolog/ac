@@ -22,6 +22,16 @@
       line-height: 25px;
       color: #3a3a3a;
       margin-bottom: 40px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: " ";
+        background-color: #eee;
+        height: 1px;
+        width: 170px;
+        bottom: -19px;
+      }
     }
 
     ul {
@@ -170,6 +180,7 @@
             width: 30px;
             height: 30px;
             z-index: 1;
+            transition: 0.3s ease-in-out;
           }
 
           p {
@@ -270,6 +281,16 @@
             justify-content: center;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .section-about {
+    .fixed-left {
+      h3::before {
+        width: 100%;
       }
     }
   }
