@@ -319,12 +319,190 @@
   }
 }
 
+.section-blog_next {
+  background: #fff;
+  padding-top: 30px;
+  padding-bottom: 70px;
+
+  .content__all {
+    .inner {
+      .img-title {
+        margin-bottom: 28px;
+      }
+    }
+  }
+
+  .blog__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 42px;
+
+    .avatar__info {
+      display: flex;
+      align-items: center;
+
+      .avatar__mobile {
+        display: flex;
+        align-items: center;
+      }
+
+      .avatar__img {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      a {
+        display: block;
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+        letter-spacing: 0.5px;
+        text-decoration-line: underline;
+        color: #3a3a3a;
+      }
+
+      .avatar__name {
+        padding-right: 15px;
+        border-right: 1px solid rgba(58, 58, 58, 0.3);
+      }
+
+      .avatar__tag {
+        text-decoration: none;
+        padding-left: 15px;
+      }
+    }
+
+    .time {
+      .calendar,
+      .eye {
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+        letter-spacing: 0.5px;
+        color: #3a3a3a;
+        position: relative;
+      }
+
+      .calendar {
+        padding-right: 42px;
+
+        &::before {
+          position: absolute;
+          content: " ";
+          background-image: url("../../images/calendar-icon.png");
+          width: 19px;
+          height: 15px;
+          left: -24px;
+          top: 0;
+        }
+      }
+
+      .eye::before {
+        position: absolute;
+        content: " ";
+        background-image: url("../../images/eye-icon.png");
+        width: 15px;
+        height: 15px;
+        left: -22px;
+        top: 0;
+      }
+    }
+  }
+
+  .up-scroll {
+    background: #fff;
+    border: 1px solid #e9ecee;
+    box-sizing: border-box;
+    box-shadow: 15px 15px 0 #eef2f4;
+    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+    background-image: url("../../images/scroll-up.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    position: absolute;
+    right: 65px;
+    bottom: 65px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      outline: none;
+    }
+  }
+
+  .fixed-left {
+    top: 121px;
+
+    h3 {
+      padding-top: 0;
+    }
+
+    ul {
+      li {
+        a {
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  #wcag {
+    margin-bottom: 20px;
+  }
+
+  .back-button {
+    .rgb-btn {
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: #3a3a3a !important;
+      text-decoration: none !important;
+      background-color: #fff;
+      border: 1px solid #e9ecee;
+      box-sizing: border-box;
+      border-radius: 5px;
+      height: 60px;
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 30px;
+      background-image: url("../../images/left-arrow.png");
+      background-position: 37% 20px;
+
+      &:hover {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  h2,
+  h3 {
+    padding-top: 20px;
+  }
+}
+
 @media (max-width: 992px) {
   .section-blog {
     .content__all {
       .inner {
         .title {
-          margin-bottom: 45px;
+          margin-bottom: 15px;
         }
       }
     }
@@ -430,6 +608,115 @@
 
     .loader-blog {
       padding-top: 40px;
+    }
+  }
+
+  .section-blog_next {
+    overflow: hidden;
+    background: #e5e5e5;
+    padding-top: 60px;
+    padding-bottom: 35px;
+
+    .blog__info {
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e9ecee;
+      margin-bottom: 30px;
+
+      .avatar__info {
+        display: block;
+
+        .avatar__mobile {
+          margin-top: -4px;
+          margin-bottom: 12px;
+        }
+
+        .avatar__img {
+          margin-right: 5px;
+        }
+
+        .avatar__img,
+        .avatar__name {
+          display: inline-block;
+          padding-right: 0;
+          border-right: 0;
+        }
+
+        .avatar__tag {
+          padding-left: 0;
+        }
+      }
+
+      .time {
+        display: block;
+
+        .calendar,
+        .eye {
+          display: block;
+          margin-right: 0;
+          text-align: right;
+          padding-right: 0;
+        }
+
+        .calendar {
+          margin-bottom: 15px;
+        }
+
+        .eye::before {
+          left: 40px;
+        }
+      }
+    }
+
+    .up-scroll {
+      display: none;
+    }
+
+    .content__all {
+      .inner {
+        .img-title {
+          margin-bottom: 20px;
+        }
+
+        .img__none {
+          height: 182px;
+          background-color: #f8fafb;
+        }
+
+        h2 {
+          margin-bottom: 15px;
+          padding-top: 15px;
+        }
+      }
+    }
+
+    .back-button {
+      .rgb-btn {
+        height: 40px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        padding: 6px;
+        background-image: none;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: " ";
+          background-image: url("../../images/left-arrow.png");
+          background-repeat: no-repeat;
+          width: 16px;
+          height: 16px;
+          top: 12px;
+          margin-left: -25px;
+        }
+
+        &:hover {
+          margin-bottom: 17px;
+        }
+      }
     }
   }
 }
