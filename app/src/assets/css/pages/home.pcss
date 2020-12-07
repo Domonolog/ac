@@ -372,6 +372,155 @@
 .section-tabs {
   padding-top: 105px;
   padding-bottom: 100px;
+
+  .inner {
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      background: #fff;
+      box-shadow: 15px 15px 0 #eef2f4;
+      border-radius: 5px;
+      border: 1px solid #e9ecee;
+
+      .left {
+        border-right: 1px solid #e9ecee;
+        max-height: 700px;
+
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            display: flex;
+            align-items: center;
+            padding: 22px 25px;
+            background: #f8fafb;
+            width: 270px;
+            height: 70px;
+            cursor: pointer;
+            border-left: 2px solid rgba(0, 0, 0, 0);
+
+            &:hover {
+              background-color: #fff;
+            }
+
+            .tabs__img {
+              width: 25px;
+              height: 25px;
+
+              img {
+                width: 25px;
+                height: 25px;
+                max-width: 25px;
+              }
+            }
+
+            h3 {
+              margin-bottom: 0;
+              font-family: SF UI Display;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 25px;
+              letter-spacing: 0.5px;
+              color: #3a3a3a;
+              padding-left: 15px;
+            }
+          }
+
+          li.active {
+            border-left: 2px solid #1dbe7a;
+            background: #fff;
+          }
+        }
+      }
+
+      .right {
+        max-height: 700px;
+        overflow-y: auto;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          background-image: url("../../images/bg-shadow.png");
+          content: " ";
+          width: 100%;
+          bottom: 0;
+          z-index: 3;
+          height: 130px;
+        }
+
+        .content {
+          padding: 70px;
+          display: none;
+
+          .content__title {
+            display: flex;
+            margin-bottom: 50px;
+
+            h2 {
+              font-family: SF UI Display;
+              font-style: normal;
+              font-weight: 800;
+              font-size: 30px;
+              line-height: 40px;
+              color: #3a3a3a;
+              padding-left: 25px;
+              margin-bottom: 0;
+            }
+          }
+
+          p {
+            font-family: SF UI Display;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.5px;
+            color: #3a3a3a;
+            margin-bottom: 30px;
+          }
+
+          h3 {
+            padding-top: 20px;
+            font-family: SF UI Display;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 35px;
+            color: #3a3a3a;
+            margin-bottom: 30px;
+          }
+
+          ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            margin-bottom: 20px;
+
+            li {
+              background-image: url("../../images/check-icon.png");
+              background-repeat: no-repeat;
+              padding-left: 40px;
+              margin-bottom: 10px;
+              font-family: SF UI Display;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 30px;
+              letter-spacing: 0.5px;
+              color: #3a3a3a;
+            }
+          }
+        }
+
+        .content.active {
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 .section-work {
