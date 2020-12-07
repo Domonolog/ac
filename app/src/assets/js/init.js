@@ -173,4 +173,18 @@ jQuery( $ => {
       return false;
     }
   });
+
+  $( '.section-tabs .left ul li' ).on( 'click', 'a:not(.active)', function( e ) {
+    e.preventDefault();
+
+    $( this )
+      .addClass( 'active' )
+      .siblings()
+      .removeClass( 'active' )
+      .closest( '.section-tabs .right' )
+      .find( '.section-tabs .right .content' )
+      .removeClass( 'active' )
+      .eq( $( this ).index() )
+      .addClass( 'active' );
+  } );
 } );
