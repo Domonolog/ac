@@ -1,7 +1,7 @@
 /* eslint-disable no-var */
 // require( 'magnific-popup' );
+require( './jquery' );
 require( 'slick-carousel' );
-// require( './map' );
 require( './retina' );
 require( './header' );
 require( './blog' );
@@ -14,7 +14,6 @@ WebFont.load( {
   google: {
     families: [
       'Roboto:300,400,500,600,700',
-      'SF UI Display:300,400,500,600,700'
     ]
   }
 } );
@@ -174,15 +173,15 @@ jQuery( $ => {
     }
   });
 
-  $( '.section-tabs .left ul li' ).on( 'click', 'a:not(.active)', function( e ) {
+  $( '.section-tabs .left .tabs' ).on( 'click', 'a:not(.active)', function( e ) {
     e.preventDefault();
 
     $( this )
       .addClass( 'active' )
       .siblings()
       .removeClass( 'active' )
-      .closest( '.section-tabs .right' )
-      .find( '.section-tabs .right .content' )
+      .closest( '.section-tabs .content' )
+      .find( '.section-tabs .wrapper' )
       .removeClass( 'active' )
       .eq( $( this ).index() )
       .addClass( 'active' );
