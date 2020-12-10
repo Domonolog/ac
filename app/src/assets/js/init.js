@@ -68,6 +68,14 @@ jQuery( $ => {
     $('.fixed-left').toggleClass('content-fixed', $(this).scrollTop() > 155);
   });
 
+  $(window).scroll(function(){
+    $('.version1').toggleClass('hidden', $(this).scrollTop() > 300);
+  });
+
+  $(window).scroll(function(){
+    $('.version2').toggleClass('vision', $(this).scrollTop() > 300);
+  });
+
   $(".tabs li").click(function(e) {
     e.preventDefault();
     $(".tabs li").removeClass('active');

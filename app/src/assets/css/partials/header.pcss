@@ -20,13 +20,14 @@
     min-height: 75px;
     align-items: center;
     padding-left: 32px;
-    display: none;
+    display: flex;
 
     .search {
       position: relative;
 
       input {
-        min-width: 354px;
+        width: 100%;
+        max-width: 242px;
         font-family: SF UI Display;
         font-style: normal;
         font-weight: normal;
@@ -40,10 +41,8 @@
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
         height: 50px;
-        border-right: none;
         position: relative;
-        margin-right: -112px;
-        padding: 15px 112px 15px 50px;
+        padding: 15px 15px 15px 50px;
         background-image: url("../../images/browse-icon.png");
         background-repeat: no-repeat;
         background-position: 20px 15px;
@@ -52,36 +51,107 @@
           outline: none;
           color: #3a3a3a;
           border: 1px solid #1dbe7a;
-          border-right: none;
           background-image: url("../../images/browse-icon-active.png");
         }
       }
     }
 
-    select {
-      min-width: 108px;
+    .select__header {
       position: relative;
-      border: none;
-      border-left: 1px solid #e8e8e8;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      height: 48px;
-      text-transform: uppercase;
-      font-family: SF UI Display;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 0.5px;
-      color: #2e2e2e;
 
-      img {
+      .world__img {
+        position: absolute;
+        content: " ";
+        width: 20px;
+        height: 20px;
+        z-index: 10;
+        left: 19px;
+        top: 15px;
+      }
+
+      .select {
+        position: relative;
+        z-index: 2;
+      }
+
+      .new-select {
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        box-sizing: border-box;
+        border-radius: 0;
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #2e2e2e;
+        width: 111px;
+        height: 48px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: -3px;
+      }
+
+      .new-select.on {
+        border: 1px solid #2dc082;
+        background: #f8fafb;
+      }
+
+      .new-select__list {
+        top: 64px;
+        left: 0;
+        cursor: pointer;
+        width: 100%;
+        z-index: 2;
+        background: #fff;
+        user-select: none;
+        border: 1px solid #e9ecee;
+        box-sizing: border-box;
+        box-shadow: 0 17px 32px rgba(58, 89, 105, 0.15);
+        border-radius: 5px;
+        position: absolute;
+      }
+
+      .new-select__list.on {
         display: block;
       }
 
-      &:focus {
+      .new-select__item span {
+        display: block;
+        padding: 15px 20px;
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        color: #2e2e2e;
+      }
+
+      .new-select__item span:hover {
         background: #f8fafb;
+      }
+
+      .new-select::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        background: url("../../images/select-arrow.png") no-repeat right center / cover;
+        opacity: 0.6;
+        transition: all 0.27s ease-in-out;
+        transform: rotate(0deg);
+      }
+
+      .new-select.on::after {
+        transform: rotate(180deg);
       }
     }
 
@@ -154,8 +224,8 @@
 
 .main-nav {
   li {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
     position: relative;
 
     &:last-child {
@@ -395,11 +465,38 @@ ul.second-nav {
   }
 }
 
+@media (max-width: 1300px) {
+  .main-nav.header-nav {
+    li {
+      padding-left: 8px;
+      padding-right: 8px;
+
+      a {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .header {
+    .nav-custom {
+      .search {
+        input {
+          max-width: 160px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .header {
     min-height: 45px;
     position: fixed;
     width: 100%;
+
+    .nav-custom {
+      display: none;
+    }
 
     #sticky-header.fixed {
       min-height: 34px;
@@ -418,4 +515,16 @@ ul.second-nav {
       }
     }
   }
+}
+
+.version2 {
+  display: none;
+}
+
+.version1.hidden {
+  display: none;
+}
+
+.version2.vision {
+  display: block;
 }
