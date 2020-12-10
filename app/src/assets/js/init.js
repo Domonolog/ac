@@ -74,6 +74,12 @@ jQuery( $ => {
     $(this).addClass('active');
   });
 
+  $(".section-frequent__mobile ul li").click(function(e) {
+    e.preventDefault();
+    $(".section-frequent__mobile ul li").removeClass('active');
+    $(this).addClass('active');
+  });
+
   $(".fixed-left ul li").click(function(e) {
     e.preventDefault();
     $(".fixed-left ul li").removeClass('active');

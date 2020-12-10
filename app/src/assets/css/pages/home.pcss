@@ -1399,6 +1399,8 @@
 
         li {
           width: 100%;
+          display: flex;
+          justify-content: center;
 
           .blog__big {
             display: none;
@@ -1533,6 +1535,121 @@
   }
 
   .section-frequent__mobile {
+    padding-top: 65px;
+    padding-bottom: 50px;
     display: block;
+
+    .frequent__img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    h2 {
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #3a3a3a;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+
+      li {
+        background: #f8fafb;
+
+        h3 {
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 20px;
+          letter-spacing: 0.5px;
+          color: #3a3a3a;
+          margin-bottom: 0;
+          text-align: left;
+        }
+
+        p {
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 20px;
+          letter-spacing: 0.5px;
+          color: #3a3a3a;
+          text-align: left;
+        }
+
+        .frequent__top {
+          border: 1px solid #eee;
+          padding: 10px 50px 10px 15px;
+          cursor: pointer;
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          &::before {
+            position: absolute;
+            content: " ";
+            background-image: url("../../images/up-mobile-icon.png");
+            width: 20px;
+            height: 20px;
+            right: 20px;
+            transition: 0.2 ease-in-out;
+          }
+        }
+
+        .frequent__bottom {
+          display: none;
+          border: 1px solid #eee;
+          border-top: 0;
+          padding: 15px;
+        }
+      }
+
+      li.active {
+        box-shadow: 15px 15px 0 #eef2f4;
+        background: #fff;
+        position: relative;
+
+        .frequent__top {
+          &::before {
+            transform: rotate(180deg);
+          }
+        }
+
+        .frequent__bottom {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section-info {
+    .inner {
+      ul {
+        li {
+          .blog__medium {
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
