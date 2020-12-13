@@ -126,7 +126,7 @@
                   <div class="world__img">
                     <img src="images/word-tab1.png" alt="#">
                   </div>
-                  <select class="select"  id="filter-left" name="select">
+                  <select class="select" name="select">
                     <option value="#" disabled>United States</option>
                     <option value="#">United States</option>
                     <option value="#">Finland</option>
@@ -139,8 +139,58 @@
                 </div>
               </div>
             </div>
-            <div class="button">
-              <a href="#" class="btn">Check website</a>
+        
+          </div>
+        </section>
+        
+        <section class="popup">
+          <input id="modal" type="checkbox">
+          <label class="modal-button" for="modal">
+            <span class="btn">Check website</span>
+          </label>
+          <label class="modal-background" for="modal"></label>
+        
+          <div class="modal-content">
+            <div class="content">
+              <label class="modal-close" for="modal">&#10005;</label>
+              <div class="wrapper">
+                <div class="left">
+                  <img src="images/popup-img.png" alt="#">
+                </div>
+                <div class="right">
+                  <h2>Contact us</h2>
+                  <div class="name-mail__input">
+                    <div class="name__input">
+                      <span>Your name:</span>
+                      <input type="text" name="name" placeholder="Ex.: John Doe">
+                    </div>
+                    <div class="mail__input">
+                      <span>Your email:</span>
+                      <input type="text" name="mail" placeholder="Ex.: info@mail.com">
+                    </div>
+                  </div>
+        
+                  <div class="select__popup">
+                    <span class="subject">Subject:</span>
+                    <select class="select" name="select">
+                      <option value="#" disabled>Not selected</option>
+                      <option value="#">Not selected</option>
+                      <option value="#">Not selected1</option>
+                      <option value="#">Not selected2</option>
+                      <option value="#">Not selected3</option>
+                    </select>
+                  </div>
+        
+                  <div class="text__textarea">
+                    <span>Write your question here:</span>
+                    <textarea name="textarea"></textarea>
+                  </div>
+        
+                  <div class="button">
+                    <a href="#" class="btn">Send a question</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -1212,6 +1262,7 @@
     </footer>
   </div>
 </div>
+
 <script src="js/init.js"></script>
 </body>
 </html>

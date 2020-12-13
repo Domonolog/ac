@@ -115,27 +115,12 @@ jQuery( $ => {
     });
   };
 
-  var filter_select_el = document.getElementById('filter-left');
-  var items_el = document.getElementById('items');
-
-  filter_select_el.onchange = function() {
-    console.log(this.value);
-    var items = items_el.getElementsByClassName('item-blog');
-    for (var i=0; i<items.length; i++) {
-      if (items[i].classList.contains(this.value)) {
-        items[i].style.display = 'flex';
-      } else {
-        items[i].style.display = 'none';
-      }
-    }
-  };
-
-  $('.select').each(function() {
+  $('.select, .select-popup').each(function() {
     const _this = $(this),
       selectOption = _this.find('option'),
       selectOptionLength = selectOption.length,
       selectedOption = selectOption.filter(':selected'),
-      duration = 450; // длительность анимации
+      duration = 450;
 
     _this.hide();
     _this.wrap('<div class="select"></div>');
