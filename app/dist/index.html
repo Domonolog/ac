@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -38,6 +37,7 @@
     <button class="close-button" id="close-button">Close Menu</button>
   </aside>
   <div class="content-wrap">
+    <div id="target__header"></div>
     <header class="header version1">
       <div id="sticky-header" class="unfixed">
         <div class="inner">
@@ -51,7 +51,59 @@
               <li><a href="#">Legislation Overview</a></li>
               <li><a href="#">Knowledge base</a></li>
               <li><a href="#">Statement generator</a></li>
-              <li><a href="#">Contacts</a></li>
+              <li>
+                <div class="popup">
+                  <input id="modal" type="checkbox">
+                  <label class="modal-button" for="modal">
+                    <span>Contacts</span>
+                  </label>
+                  <label class="modal-background" for="modal"></label>
+    
+                  <div class="modal-content">
+                    <div class="content">
+                      <label class="modal-close" for="modal">&#10005;</label>
+                      <div class="wrapper">
+                        <div class="left">
+                          <img src="images/popup-img.png" alt="#">
+                        </div>
+                        <div class="right">
+                          <h2>Contact us</h2>
+                          <div class="name-mail__input">
+                            <div class="name__input">
+                              <span>Your name:</span>
+                              <input type="text" name="name" placeholder="Ex.: John Doe">
+                            </div>
+                            <div class="mail__input">
+                              <span>Your email:</span>
+                              <input type="text" name="mail" placeholder="Ex.: info@mail.com">
+                            </div>
+                          </div>
+    
+                          <div class="select__popup">
+                            <span class="subject">Subject:</span>
+                            <select class="select" name="select">
+                              <option value="#" disabled>Not selected</option>
+                              <option value="#">Not selected</option>
+                              <option value="#">Not selected1</option>
+                              <option value="#">Not selected2</option>
+                              <option value="#">Not selected3</option>
+                            </select>
+                          </div>
+    
+                          <div class="text__textarea">
+                            <span>Write your question here:</span>
+                            <textarea name="textarea"></textarea>
+                          </div>
+    
+                          <div class="button">
+                            <a href="#" class="btn">Send a question</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
           </nav>
     
@@ -113,9 +165,8 @@
             <div class="home_img">
               <img src="images/home-img.png" alt="#">
             </div>
-            <h1 class="title">Find out if your website is <input placeholder="ADA compliant" value="ADA compliant"></h1>
-            <p>Scan your website for free, identify accessbility issues, and get exact instructions on how to fix them. Type
-              your URL to start now!</p>
+            <h1 class="title">Be sure of compliance with <input placeholder="WCAG 2.1" value="WCAG 2.1"></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="home__search">
               <div class="form-home">
                 <div class="search">
@@ -140,58 +191,10 @@
               </div>
             </div>
         
-          </div>
-        </section>
-        
-        <section class="popup">
-          <input id="modal" type="checkbox">
-          <label class="modal-button" for="modal">
-            <span class="btn">Check website</span>
-          </label>
-          <label class="modal-background" for="modal"></label>
-        
-          <div class="modal-content">
-            <div class="content">
-              <label class="modal-close" for="modal">&#10005;</label>
-              <div class="wrapper">
-                <div class="left">
-                  <img src="images/popup-img.png" alt="#">
-                </div>
-                <div class="right">
-                  <h2>Contact us</h2>
-                  <div class="name-mail__input">
-                    <div class="name__input">
-                      <span>Your name:</span>
-                      <input type="text" name="name" placeholder="Ex.: John Doe">
-                    </div>
-                    <div class="mail__input">
-                      <span>Your email:</span>
-                      <input type="text" name="mail" placeholder="Ex.: info@mail.com">
-                    </div>
-                  </div>
-        
-                  <div class="select__popup">
-                    <span class="subject">Subject:</span>
-                    <select class="select" name="select">
-                      <option value="#" disabled>Not selected</option>
-                      <option value="#">Not selected</option>
-                      <option value="#">Not selected1</option>
-                      <option value="#">Not selected2</option>
-                      <option value="#">Not selected3</option>
-                    </select>
-                  </div>
-        
-                  <div class="text__textarea">
-                    <span>Write your question here:</span>
-                    <textarea name="textarea"></textarea>
-                  </div>
-        
-                  <div class="button">
-                    <a href="#" class="btn">Send a question</a>
-                  </div>
-                </div>
-              </div>
+            <div class="button">
+              <a href="#" class="btn">Start audit</a>
             </div>
+        
           </div>
         </section>
         

@@ -1,6 +1,8 @@
-.popup {
+.popup,
+.popup-download,
+.popup-mobile {
   padding-top: 0;
-  padding-bottom: 60px;
+  padding-bottom: 0;
 
   label {
     cursor: pointer;
@@ -10,6 +12,8 @@
   .modal-button {
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 75px;
   }
 
   #modal {
@@ -37,11 +41,12 @@
     opacity: 1;
     pointer-events: auto;
     top: 90px;
-    display: flex;
-    justify-content: center;
     width: 100%;
     height: auto;
     z-index: 99;
+    left: 0;
+    display: flex;
+    justify-content: center;
 
     .content {
       position: relative;
@@ -427,6 +432,15 @@
       .button {
         .btn {
           height: 50px;
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 20px;
+          text-align: center;
+          letter-spacing: 0.5px;
+          color: #fff;
+          min-height: 50px;
         }
       }
     }
@@ -434,9 +448,6 @@
 }
 
 .modal-button {
-  margin-left: 15px;
-  margin-right: 15px;
-
   .btn {
     height: 60px;
     width: 270px;
@@ -448,17 +459,43 @@
     text-align: center;
     letter-spacing: 0.5px;
   }
+
+  span {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    color: rgba(58, 58, 58, 0.7);
+  }
+}
+
+.popup-mobile {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .modal-button {
+    span {
+      font-size: 11px;
+    }
+  }
 }
 
 @media (max-width: 992px) {
-  .popup {
-    padding-bottom: 30px;
-
+  .popup,
+  .popup-mobile,
+  .popup-download {
     .modal-button {
       .btn {
         height: 40px;
         width: 100%;
         max-width: 586px;
+      }
+
+      span {
+        color: #3a3a3a;
       }
     }
 
@@ -503,8 +540,14 @@
   }
 }
 
+.popup-mobile {
+  display: block;
+}
+
 @media (max-width: 567px) {
-  .popup {
+  .popup,
+  .popup-download,
+  .popup-mobile {
     #modal:checked ~ .modal-content {
       top: 0;
 

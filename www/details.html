@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -38,6 +37,130 @@
     <button class="close-button" id="close-button">Close Menu</button>
   </aside>
   <div class="content-wrap">
+    <div id="target__header"></div>
+    <header class="header version1">
+      <div id="sticky-header" class="unfixed">
+        <div class="inner">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="">
+            </a>
+          </div>
+    
+          <nav class="main-nav-container">
+            <ul class="main-nav header-nav">
+              <li><a href="#">How it works</a></li>
+              <li><a href="#">Legislation Overview</a></li>
+              <li><a href="#">Knowledge base</a></li>
+              <li><a href="#">Statement generator</a></li>
+              <li>
+                <div class="popup">
+                  <input id="modal" type="checkbox">
+                  <label class="modal-button" for="modal">
+                    <span>Contacts</span>
+                  </label>
+                  <label class="modal-background" for="modal"></label>
+    
+                  <div class="modal-content">
+                    <div class="content">
+                      <label class="modal-close" for="modal">&#10005;</label>
+                      <div class="wrapper">
+                        <div class="left">
+                          <img src="images/popup-img.png" alt="#">
+                        </div>
+                        <div class="right">
+                          <h2>Contact us</h2>
+                          <div class="name-mail__input">
+                            <div class="name__input">
+                              <span>Your name:</span>
+                              <input type="text" name="name" placeholder="Ex.: John Doe">
+                            </div>
+                            <div class="mail__input">
+                              <span>Your email:</span>
+                              <input type="text" name="mail" placeholder="Ex.: info@mail.com">
+                            </div>
+                          </div>
+    
+                          <div class="select__popup">
+                            <span class="subject">Subject:</span>
+                            <select class="select" name="select">
+                              <option value="#" disabled>Not selected</option>
+                              <option value="#">Not selected</option>
+                              <option value="#">Not selected1</option>
+                              <option value="#">Not selected2</option>
+                              <option value="#">Not selected3</option>
+                            </select>
+                          </div>
+    
+                          <div class="text__textarea">
+                            <span>Write your question here:</span>
+                            <textarea name="textarea"></textarea>
+                          </div>
+    
+                          <div class="button">
+                            <a href="#" class="btn">Send a question</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+    
+        </div>
+        <button class="menu-button" id="open-button">Menu</button>
+      </div>
+    </header>
+    
+    <header class="header version2">
+      <div id="sticky-header" class="unfixed">
+        <div class="inner">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="">
+            </a>
+          </div>
+    
+          <nav class="main-nav-container">
+            <ul class="main-nav header-nav">
+              <li><a href="#">How it works</a></li>
+              <li><a href="#">Legislation</a></li>
+              <li><a href="#">Knowledge</a></li>
+              <li><a href="#">Statement generator</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </nav>
+    
+          <div class="nav-custom">
+            <div class="search">
+              <input name="search" type="text" placeholder="Paste website URL">
+            </div>
+            <div class="select__header">
+              <div class="world__img">
+                <img src="images/word-tab1.png" alt="#">
+              </div>
+              <select class="select"  id="filter-left" name="select">
+                <option value="#" disabled>US</option>
+                <option value="#">US</option>
+                <option value="#">CA</option>
+                <option value="#">EU</option>
+                <option value="#">GE</option>
+                <option value="#">AU</option>
+                <option value="#">DN</option>
+                <option value="#">FN</option>
+              </select>
+            </div>
+            <div class="button">
+              <a href="#" class="btn">Audit</a>
+            </div>
+          </div>
+    
+        </div>
+        <button class="menu-button" id="open-button">Menu</button>
+      </div>
+    </header>
 
       <main class="main">
 
@@ -100,11 +223,223 @@
                 </li>
               </ul>
             </div>
-            <div class="right">
         
+            <div class="right">
+              <div class="detail__title">
+                <h2>Audit results of <a href="#">obnovastores.com</a></h2>
+                <div class="button__download">
+                  <a href="#"><img src="images/download-icon.png" alt="#">Download audit</a>
+                </div>
+              </div>
+        
+              <div class="detail-slider">
+                <div class="item">
+                  <img src="images/not-comliant-img.png" alt="#">
+                </div>
+                <div class="item">
+                  <img src="images/download-img.png" alt="#">
+                </div>
+                <div class="item">
+                  <img src="images/progress-img.png" alt="#">
+                </div>
+              </div>
+        
+              <div class="tabs-details">
+                <h3>Urgent issues (8):</h3>
+                <ul>
+                  <li class="active">
+                    <div class="top__details">
+                      <div class="tabs-details__left">
+                        <div class="tabs-details__img">
+                          <img src="images/details-img1.png" alt="#">
+                        </div>
+                        <p>Visual issue</p>
+                      </div>
+                      <div class="tabs-details__right">
+                        <p>Background and foreground colors do not have a sufficient contrast ratio</p>
+                      </div>
+                    </div>
+                    <div class="bottom__content">
+                      <ol>
+                        <li>
+                          <h3><span class="red">failing</span> elements</h3>
+                          <ul class="error">
+                            <li>&#60;h2 class=”title center”&#62;We make growing simple. Watch the video below to learn more.&#60;/h2&#62;</li>
+                            <li>&#60;time class=”post-date” datetime=”2020-01-23T07:05:21+00:00”&#62;Jan 23, 2020&#60/time&#62;</li>
+                            <li>&#60;h2 class=”title center”&#62;We make growing simple. Watch the video below to learn more.&#60;/h2&#62;</li>
+                          </ul>
+                          <div class="show-all">
+                            <span>Show all</span>
+                          </div>
+                        </li>
+                        <li>
+                          <h3>in plain words</h3>
+                          <p>If the characters on your website have a low color contrast ratio, people with visual impairments or color-blindness will find it very difficult to navigate your site.</p>
+                          <p>For example, someone who is color-blind will view the green and red apples in the top image as simply yellow apples, as demonstrated in the image below.</p>
+                          <div class="detail__img">
+                            <img src="images/img1-detail.png" alt="#">
+                          </div>
+                          <p>Therefore, your website’s color contrast ratio must be in compliance with the WCAG’s guidelines. </p>
+                        </li>
+                        <li>
+                          <h3>WHOM DOES THIS AFFECT?</h3>
+                          <p>People with visual impairments or color-blindness.</p>
+                          <div class="detail__img">
+                            <img src="images/img2-detail.png" alt="#">
+                          </div>
+                        </li>
+                        <li>
+                          <h3>HOW TO <span class="green">SOLVE IT</span>:</h3>
+                          <h4><span class="green">Option 1</span> - Do it yourself:</h4>
+                          <p class="pb-10">Make sure all text on your page meets the minimum color contrast ratios specified by WCAG:</p>
+                          <ul class="checks">
+                            <li>3:1 for text that is 18 pt, or 14 pt and bold</li>
+                            <li>4.5:1 for all other text</li>
+                          </ul>
+                          <h4><span class="green">Option 2</span> - Use automated solutions:</h4>
+                          НАДО ДОДЕЛАТЬ
+                        </li>
+                      </ol>
+                    </div>
+                  </li>
+        
+                  <li>
+                    <div class="top__details">
+                      <div class="tabs-details__left">
+                        <div class="tabs-details__img">
+                          <img src="images/details-img2.png" alt="#">
+                        </div>
+                        <p>Motor issue</p>
+                      </div>
+                      <div class="tabs-details__right">
+                        <p>A user is not able to freeze GIFs and other moving objects</p>
+                      </div>
+                    </div>
+                    <div class="bottom__content">
+                      TEST INFO
+                    </div>
+                  </li>
+        
+                  <li>
+                    <div class="top__details">
+                      <div class="tabs-details__left">
+                        <div class="tabs-details__img">
+                          <img src="images/details-img3.png" alt="#">
+                        </div>
+                        <p>Visual & motor</p>
+                      </div>
+                      <div class="tabs-details__right">
+                        <p>Links do not have discernible names</p>
+                      </div>
+                    </div>
+                    <div class="bottom__content">
+                      TEST INFO
+                    </div>
+                  </li>
+        
+                  <li>
+                    <div class="top__details">
+                      <div class="tabs-details__left">
+                        <div class="tabs-details__img">
+                          <img src="images/details-img4.png" alt="#">
+                        </div>
+                        <p>Cognitive issue</p>
+                      </div>
+                      <div class="tabs-details__right">
+                        <p>Buttons do not have an accessible name</p>
+                      </div>
+                    </div>
+                    <div class="bottom__content">
+                      TEST INFO
+                    </div>
+                  </li>
+        
+                  <li>
+                    <div class="top__details">
+                      <div class="tabs-details__left">
+                        <div class="tabs-details__img">
+                          <img src="images/details-img1.png" alt="#">
+                        </div>
+                        <p>Visual issue</p>
+                      </div>
+                      <div class="tabs-details__right">
+                        <p>Disabling zoom functions</p>
+                      </div>
+                    </div>
+                    <div class="bottom__content">
+                      TEST INFO
+                    </div>
+                  </li>
+        
+                  <li>
+                    <div class="top__details">
+                      <div class="tabs-details__left">
+                        <div class="tabs-details__img">
+                          <img src="images/details-img1.png" alt="#">
+                        </div>
+                        <p>Visual issue</p>
+                      </div>
+                      <div class="tabs-details__right">
+                        <p>Access Key Values Are Not Unique</p>
+                      </div>
+                    </div>
+                    <div class="bottom__content">
+                      TEST INFO
+                    </div>
+                  </li>
+        
+                  <li>
+                    <div class="top__details">
+                      <div class="tabs-details__left">
+                        <div class="tabs-details__img">
+                          <img src="images/details-img1.png" alt="#">
+                        </div>
+                        <p>Visual issue</p>
+                      </div>
+                      <div class="tabs-details__right">
+                        <p>Disabling zoom functions</p>
+                      </div>
+                    </div>
+                    <div class="bottom__content">
+                      TEST INFO
+                    </div>
+                  </li>
+        
+                  <li>
+                    <div class="top__details">
+                      <div class="tabs-details__left">
+                        <div class="tabs-details__img">
+                          <img src="images/details-img1.png" alt="#">
+                        </div>
+                        <p>Visual issue</p>
+                      </div>
+                      <div class="tabs-details__right">
+                        <p>Access Key Values Are Not Unique</p>
+                      </div>
+                    </div>
+                    <div class="bottom__content">
+                      TEST INFO
+                    </div>
+                  </li>
+                </ul>
+                <h3>Secondary issues (24):</h3>
+                <div class="button__read">
+                  <a href="#">Read more</a>
+                </div>
+                <h3>Passed audits (68):</h3>
+                <div class="button__read">
+                  <a href="#">Read more</a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+        
+        <style type="text/css">
+          header {
+            display: none;
+          }
+        </style>
         
 
       </main>
