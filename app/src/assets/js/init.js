@@ -24,6 +24,8 @@ jQuery( $ => {
     slidesToShow: 9,
     centerPadding: '30px',
     slidesToScroll: 1,
+    rows: 1,
+    swipeToSlide: true,
     responsive: [
       {
         breakpoint: 1400,

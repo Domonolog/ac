@@ -1,6 +1,6 @@
 jQuery( document ).ready( ( $ ) => {
   //Mobile menu open/close
-  const openbtn = document.getElementById( 'open-button' );
+  const openbtn = document.getElementById( 'open-button');
   let isOpen    = false;
 
   function toggleMenu() {
