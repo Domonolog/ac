@@ -70,12 +70,22 @@ jQuery( $ => {
     $('.fixed-left').toggleClass('content-fixed', $(this).scrollTop() > 155);
   });
 
-  $(window).scroll(function(){
-    $('.version1').toggleClass('hidden', $(this).scrollTop() > 500);
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if(scroll >= 800) {
+      $(".version1").addClass("hidden");
+    } else {
+      $(".version1").removeClass("hidden");
+    }
   });
 
-  $(window).scroll(function(){
-    $('.version2').toggleClass('vision', $(this).scrollTop() > 500);
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if(scroll >= 700) {
+      $(".version2").addClass("vision");
+    } else {
+      $(".version2").removeClass("vision");
+    }
   });
 
   $(".tabs-details ul li").click(function(e) {
@@ -214,3 +224,77 @@ jQuery( $ => {
     });
   });
 } );
+
+(function( $ ){
+  $.customSelect = function(options){
+    if(typeof options.identifier === "undefined" || options.identifier == ""){
+      options.identifier = Math.floor((Math.random() * 8645));
+    }
+
+    $(options.selector).after(
+      "<div id='jqcs_s_"+options.identifier+"' class='jqcs_select "+options.cssClass+"'>"+
+      "<div class='jqcs_value'><p class='jqcs_placeholder'>"+options.placeholder+"</p></div>"+
+      "<div class='jqcs_arrow'></div>"+
+      "</div>"+
+      "<div id='jqcs_o_"+options.identifier+"' class='jqcs_options'></div>"
+    );
+
+    $('#jqcs_s_'+options.identifier+' .jqcs_arrow').width($('#jqcs_s_'+options.identifier).height());
+
+
+    for(var i = 0; i < options.options.length; i++){
+      var currenthtml = $('#jqcs_o_'+options.identifier).html();
+      var template = options.template;
+
+      for(var j = 0; j < options.options[i].length; j++){
+        var regex = new RegExp("\\$"+j, "g");
+        template = template.replace(regex, options.options[i][j]);
+      }
+
+      $('#jqcs_o_'+options.identifier).html(currenthtml + template);
+    }
+
+    $('#jqcs_s_'+options.identifier).click(function(e){
+      e.stopPropagation();
+      if($('#jqcs_o_'+options.identifier).css('display') == "block"){
+        $('#jqcs_o_'+options.identifier).slideUp();
+        $($('#jqcs_s_'+options.identifier+' .jqcs_arrow')[0]).removeClass('rotated');
+      }else{
+        $('#jqcs_o_'+options.identifier).slideDown();
+        $($('#jqcs_s_'+options.identifier+' .jqcs_arrow')[0]).addClass('rotated');
+      }
+    });
+
+    $('#jqcs_o_'+options.identifier+' .jqcs_option').click(function(e){
+      $('input#countrySelect')[0].value = $(this).data('select-value');
+      $($('#jqcs_s_'+options.identifier+' .jqcs_value')[0]).html(this.outerHTML);
+    });
+
+    $(window).click(function(e){
+      $('#jqcs_o_'+options.identifier).slideUp();
+      $($('#jqcs_s_'+options.identifier+' .jqcs_arrow')[0]).removeClass('rotated');
+    });
+  }
+})( jQuery );
+
+(function($){
+  $.customSelect({
+    identifier: 'demo',
+    selector: '#countrySelect',
+    placeholder: 'United States',
+    options: [
+      ['us', 'us.png', 'United States'],
+      ['ca', 'ca.png', 'Canada'],
+      ['eu', 'eu.png', 'Europe'],
+      ['ge', 'ge.png', 'Germany'],
+      ['au', 'au.png', 'Australia'],
+      ['dn', 'dn.png', 'Denmark'],
+      ['fr', 'fr.png', 'Finland']
+    ],
+    template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(../images/$1);'>$2</div>"
+  });
+
+  $(window).click(function(e){
+    $('#currentValue').html('Current value is: \''+ $('input#countrySelect')[0].value +'\'');
+  });
+})(jQuery);

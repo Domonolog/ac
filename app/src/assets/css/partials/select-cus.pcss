@@ -1,0 +1,135 @@
+.jqcs_default_select {
+  display: none;
+}
+
+.jqcs_select {
+  position: relative;
+  border: 1px solid #cacdcf;
+  cursor: pointer;
+  overflow: hidden;
+  color: #555;
+}
+
+.jqcs_select:hover {
+  background-color: #f9f9f9;
+}
+
+.jqcs_select .jqcs_value {
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 0;
+  width: 201px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: SF UI Display;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #2e2e2e;
+  outline: none;
+  position: relative;
+  z-index: 4;
+}
+
+.jqcs_option {
+  height: 50px;
+  font-family: SF UI Display;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #2e2e2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background-repeat: no-repeat !important;
+  background-position: 19px;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.jqcs_select .jqcs_value p.jqcs_placeholder {
+  font-family: SF UI Display;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  margin-left: 20px;
+
+  &::before {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    content: " ";
+    background-image: url("../../images/us.png");
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.jqcs_select .jqcs_arrow {
+  position: absolute;
+  z-index: 10;
+  right: 20px;
+  top: 20px;
+  background-image: url("../../images/arrow-down.png");
+  width: 20px !important;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.jqcs_select .jqcs_arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.jqcs_options {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid #e9ecee;
+  box-sizing: border-box;
+  box-shadow: 0 17px 32px rgba(58, 89, 105, 0.15);
+  border-radius: 5px;
+  width: 200px;
+  bottom: 64px;
+  left: 2px;
+}
+
+@media (max-width: 992px) {
+  .jqcs_select .jqcs_value {
+    width: 100%;
+    height: 40px;
+  }
+
+  .jqcs_options {
+    width: 100%;
+    bottom: inherit;
+    top: 44px;
+    left: 0;
+  }
+
+  .jqcs_select {
+    border-radius: 5px;
+    border: 1px solid #cacdcf;
+  }
+
+  .jqcs_select .jqcs_arrow {
+    top: 10px;
+  }
+}

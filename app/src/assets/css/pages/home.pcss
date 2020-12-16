@@ -82,7 +82,7 @@
         background-repeat: no-repeat;
         background-position: 25px 19px;
         position: relative;
-        z-index: 2;
+        z-index: 4;
         margin-right: -1px;
         cursor: pointer;
         outline: none;
@@ -99,97 +99,9 @@
     .select__block {
       position: relative;
 
-      .world__img {
-        position: absolute;
-        content: " ";
-        width: 20px;
-        height: 20px;
-        z-index: 10;
-        left: 26px;
-        top: 20px;
-      }
-
       .select {
         position: relative;
         z-index: 2;
-      }
-
-      .new-select {
-        background: #fff;
-        border: 1px solid #cacdcf;
-        box-sizing: border-box;
-        border-radius: 0;
-        font-family: SF UI Display;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-        text-align: center;
-        letter-spacing: 0.5px;
-        color: #2e2e2e;
-        width: 201px;
-        height: 60px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .new-select.on {
-        border: 1px solid #2dc082;
-      }
-
-      .new-select__list {
-        top: 64px;
-        left: 0;
-        cursor: pointer;
-        width: 100%;
-        z-index: 2;
-        background: #fff;
-        user-select: none;
-        border: 1px solid #e9ecee;
-        box-sizing: border-box;
-        box-shadow: 0 17px 32px rgba(58, 89, 105, 0.15);
-        border-radius: 5px;
-        position: absolute;
-      }
-
-      .new-select__list.on {
-        display: block;
-      }
-
-      .new-select__item span {
-        display: block;
-        padding: 15px 20px;
-        font-family: SF UI Display;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0.5px;
-        color: #2e2e2e;
-      }
-
-      .new-select__item span:hover {
-        background: #f8fafb;
-      }
-
-      .new-select::after {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        background: url("../../images/select-arrow.png") no-repeat right center / cover;
-        opacity: 0.6;
-        transition: all 0.27s ease-in-out;
-        transform: rotate(0deg);
-      }
-
-      .new-select.on::after {
-        transform: rotate(180deg);
       }
     }
   }
