@@ -73,15 +73,15 @@ jQuery( $ => {
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if(scroll >= 800) {
-      $(".version1").addClass("hidden");
+      $(".version1 #sticky-header").addClass("hidden");
     } else {
-      $(".version1").removeClass("hidden");
+      $(".version1 #sticky-header").removeClass("hidden");
     }
   });
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if(scroll >= 700) {
+    if(scroll >= 800) {
       $(".version2").addClass("vision");
     } else {
       $(".version2").removeClass("vision");
@@ -279,7 +279,7 @@ jQuery( $ => {
 
 (function($){
   $.customSelect({
-    identifier: 'demo',
+    identifier: 'select-home',
     selector: '#countrySelect',
     placeholder: 'United States',
     options: [
@@ -298,3 +298,26 @@ jQuery( $ => {
     $('#currentValue').html('Current value is: \''+ $('input#countrySelect')[0].value +'\'');
   });
 })(jQuery);
+
+(function($){
+  $.customSelect({
+    identifier: 'select-header',
+    selector: '#flagSelect',
+    placeholder: 'US',
+    options: [
+      ['us', 'us.png', 'US'],
+      ['ca', 'ca.png', 'CA'],
+      ['eu', 'eu.png', 'EU'],
+      ['ge', 'ge.png', 'GE'],
+      ['au', 'au.png', 'AU'],
+      ['dn', 'dn.png', 'DE'],
+      ['fr', 'fr.png', 'FN']
+    ],
+    template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(../images/$1);'>$2</div>"
+  });
+
+  $(window).click(function(e){
+    $('#currentValue').html('Current value is: \''+ $('input#flagSelect')[0].value +'\'');
+  });
+})(jQuery);
+

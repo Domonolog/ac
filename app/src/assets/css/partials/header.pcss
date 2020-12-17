@@ -33,9 +33,10 @@
 
       input {
         width: 100%;
-        max-width: 242px;
+        width: 355px;
         font-family: SF UI Display;
         font-style: normal;
+        margin-right: -113px;
         font-weight: normal;
         font-size: 14px;
         line-height: 20px;
@@ -48,11 +49,19 @@
         border-bottom-left-radius: 5px;
         height: 50px;
         position: relative;
-        padding: 15px 15px 15px 50px;
+        padding: 15px 128px 15px 50px;
         background-image: url("../../images/browse-icon.png");
         background-repeat: no-repeat;
         background-position: 20px 15px;
         cursor: pointer;
+
+        &::placeholder {
+          font-family: SF UI Display;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.5px;
+        }
 
         &:focus {
           outline: none;
@@ -493,7 +502,7 @@ ul.second-nav {
     .nav-custom {
       .search {
         input {
-          max-width: 160px;
+          max-width: 272px;
         }
       }
     }
