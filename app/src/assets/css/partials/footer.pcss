@@ -352,33 +352,35 @@ body:not(.home-page) .footer .by {
       justify-content: center;
       align-items: center;
 
-      input {
-        background: #fff;
-        border: 1px solid #e9ecee;
-        box-sizing: border-box;
-        border-radius: 5px;
-        font-family: SF UI Display;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0.5px;
-        color: rgba(58, 58, 58, 0.7);
-        height: 60px;
-        padding: 20px 60px;
-        min-width: 398px;
-        margin-right: -10px;
-        outline: none !important;
-        position: relative;
-        background-image: url("../../images/mail-icon.png");
-        background-repeat: no-repeat;
-        background-position: 25px 18px;
-        cursor: pointer;
+      .mail {
+        input {
+          background: #fff;
+          border: 1px solid #e9ecee;
+          box-sizing: border-box;
+          border-radius: 5px;
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.5px;
+          color: rgba(58, 58, 58, 0.7);
+          height: 60px;
+          padding: 20px 60px;
+          min-width: 398px;
+          margin-right: -10px;
+          outline: none !important;
+          position: relative;
+          background-image: url("../../images/mail-icon.png");
+          background-repeat: no-repeat;
+          background-position: 25px 18px;
+          cursor: pointer;
 
-        &:focus,
-        &:hover {
-          background-image: url("../../images/mail-icon-active.png");
-          border: 1px solid #1ed185;
+          &:focus,
+          &:hover {
+            background-image: url("../../images/mail-icon-active.png");
+            border: 1px solid #1ed185;
+          }
         }
       }
 
@@ -388,6 +390,7 @@ body:not(.home-page) .footer .by {
           height: 60px;
           padding: 20px;
           position: relative;
+          cursor: pointer;
 
           &:hover {
             margin-top: 0;
@@ -499,8 +502,10 @@ body:not(.home-page) .footer .by {
   .section-mail {
     .wrapper {
       .mail-form {
-        input {
-          min-width: auto;
+        .mail {
+          input {
+            min-width: auto;
+          }
         }
 
         .button {
@@ -615,6 +620,7 @@ body:not(.home-page) .footer .by {
               padding-top: 10px;
               padding-bottom: 10px;
               margin-bottom: 25px;
+              cursor: pointer;
             }
           }
         }
