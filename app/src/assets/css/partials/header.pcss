@@ -20,6 +20,7 @@
   .logo {
     max-width: 140.88px;
     height: 35px;
+    min-width: 100px;
   }
 
   .nav-custom {
@@ -298,9 +299,6 @@ ul.second-nav {
 
     .logo {
       margin-right: 15px;
-      position: absolute;
-      left: 15px;
-      top: 50%;
       transform: translateY(-50%);
       height: 35px;
     }
@@ -311,7 +309,7 @@ ul.second-nav {
       align-items: flex-end;
       z-index: 13;
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
     }
 
     .second-nav-container {
@@ -324,7 +322,6 @@ ul.second-nav {
 
   .main-nav.header-nav {
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-end;
     min-height: 75px;
     align-items: center;
