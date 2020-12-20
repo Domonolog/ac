@@ -463,6 +463,11 @@ ul.second-nav {
   }
 }
 
+.hide-dekstop-block,
+.hide-dekstop-flex {
+  display: none !important;
+}
+
 @media screen and (--xxl) {
   .header {
     .logo {
@@ -532,6 +537,14 @@ ul.second-nav {
         height: 25px;
       }
     }
+  }
+
+  .hide-dekstop-block {
+    display: block !important;
+  }
+
+  .hide-dekstop-flex {
+    display: flex !important;
   }
 }
 
