@@ -526,6 +526,62 @@
                     margin-bottom: 0;
                   }
 
+                  ol {
+                    li {
+                      font-family: SF UI Display;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 14px;
+                      line-height: 25px;
+                      letter-spacing: 0.5px;
+                      margin-bottom: 10px;
+                      color: #2dc082;
+
+                      p {
+                        font-family: SF UI Display;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 25px;
+                        letter-spacing: 0.5px;
+                        color: #3a3a3a;
+                        display: inline-block;
+                        padding-left: 10px;
+                        padding-bottom: 0;
+                      }
+
+                      &::before {
+                        display: none !important;
+                        border: 0;
+                      }
+                    }
+                  }
+
+                  .text-img {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+
+                    p {
+                      font-family: SF UI Display;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 14px;
+                      line-height: 25px;
+                      letter-spacing: 0.5px;
+                      color: #3a3a3a;
+                      max-width: 365px;
+                      padding-bottom: 0;
+                      margin-right: 40px;
+                      margin-bottom: 20px;
+                    }
+
+                    img {
+                      display: inline-block;
+                      margin-bottom: 20px;
+                    }
+                  }
+
                   .pb-10 {
                     padding-bottom: 10px;
                   }
@@ -565,6 +621,18 @@
                     }
                   }
 
+                  ul.error-hidden {
+                    li {
+                      &:nth-child(even) {
+                        background-color: #f8fafb;
+                      }
+
+                      &:nth-child(odd) {
+                        background-color: #ebf0f2;
+                      }
+                    }
+                  }
+
                   ul.checks {
                     font-family: SF UI Display;
                     font-style: normal;
@@ -593,6 +661,74 @@
 
                       &::before {
                         display: none;
+                      }
+                    }
+                  }
+
+                  .block-go-website {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: #f8fafb;
+                    padding: 20px 30px 20px 20px;
+                    margin-bottom: 15px;
+
+                    h3 {
+                      font-family: SF UI Display;
+                      font-style: normal;
+                      font-weight: bold;
+                      font-size: 14px;
+                      line-height: 25px;
+                      letter-spacing: 0.5px;
+                      color: #3a3a3a;
+                      padding-bottom: 10px;
+                    }
+
+                    .text {
+                      padding-right: 50px;
+                    }
+
+                    p {
+                      font-family: SF UI Display;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 12px;
+                      line-height: 20px;
+                      letter-spacing: 0.5px;
+                      color: #3a3a3a;
+                      padding-bottom: 0;
+                      max-width: 365px;
+                    }
+
+                    .go-website__img {
+                      width: 75px;
+                      height: 75px;
+                      margin-right: 20px;
+
+                      img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                      }
+                    }
+
+                    .button {
+                      .btn {
+                        background: #1dbe7a;
+                        border-radius: 5px;
+                        font-family: SF UI Display;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 11px;
+                        line-height: 20px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: #fff;
+                        width: 200px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                       }
                     }
                   }
@@ -645,6 +781,18 @@
                       }
                     }
                   }
+
+                  .show-all.active {
+                    span::before {
+                      transform: rotate(180deg);
+                    }
+                  }
+                }
+
+                li:last-child {
+                  &::before {
+                    display: none;
+                  }
                 }
               }
             }
@@ -669,5 +817,14 @@
         }
       }
     }
+  }
+
+  .error-hidden {
+    display: none;
+    margin-bottom: 0 !important;
+  }
+
+  .error-hidden.active {
+    display: block;
   }
 }

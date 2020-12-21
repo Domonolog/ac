@@ -16,11 +16,13 @@
     min-height: 75px;
   }
 
-  #modal {
+  #modal,
+  #modal-download {
     display: none;
   }
 
-  #modal:checked ~ .modal-background {
+  #modal:checked ~ .modal-background,
+  #modal-download:checked ~ .modal-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -33,7 +35,8 @@
     z-index: 98;
   }
 
-  #modal:checked ~ .modal-content {
+  #modal:checked ~ .modal-content,
+  #modal-download:checked ~ .modal-content {
     position: fixed;
     transform: scale(1);
     transition: transform 500ms;
@@ -43,7 +46,7 @@
     top: 90px;
     width: 100%;
     height: auto;
-    z-index: 99;
+    z-index: 9999;
     left: 0;
     display: flex;
     justify-content: center;
@@ -61,7 +64,8 @@
     }
   }
 
-  #modal:checked ~ .modal-content .modal-close {
+  #modal:checked ~ .modal-content .modal-close,
+  #modal-download:checked ~ .modal-content .modal-close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -475,6 +479,30 @@
   display: none;
 }
 
+.popup-download {
+  .modal-button {
+    display: flex;
+    align-items: center;
+    min-height: initial;
+
+    span {
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: #3a3a3a;
+      display: flex;
+      align-items: center;
+
+      img {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
 @media (max-width: 1300px) {
   .modal-button {
     span {
@@ -499,7 +527,8 @@
       }
     }
 
-    #modal:checked ~ .modal-content {
+    #modal:checked ~ .modal-content,
+    #modal-download:checked ~ .modal-content {
       top: 25px;
 
       .content {
@@ -548,7 +577,8 @@
   .popup,
   .popup-download,
   .popup-mobile {
-    #modal:checked ~ .modal-content {
+    #modal:checked ~ .modal-content,
+    #modal-download:checked ~ .modal-content {
       top: 0;
 
       .content {

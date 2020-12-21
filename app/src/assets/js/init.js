@@ -223,6 +223,14 @@ jQuery( $ => {
         .addClass("active");
     });
   });
+
+  document.querySelector('.show-all span').addEventListener('click', () => {
+    document.querySelector('.error-hidden').classList.toggle('active');
+  });
+
+  document.querySelector('.show-all span').addEventListener('click', () => {
+    document.querySelector('.show-all').classList.toggle('active');
+  });
 } );
 
 (function( $ ){
