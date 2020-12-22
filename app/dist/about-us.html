@@ -31,7 +31,11 @@
       <li><a href="#">Legislation Overview</a></li>
       <li><a href="#">Knowledge base</a></li>
       <li><a href="#">Statement generator</a></li>
-      <li><a href="#">Contacts</a></li>
+      <li>
+        <label class="modal-button" for="modal">
+          <span>Contacts</span>
+        </label>
+      </li>
     </ul>
   
     <button class="close-button" id="close-button">Close Menu</button>
@@ -54,58 +58,9 @@
               <li><a href="#">Knowledge base</a></li>
               <li><a href="#">Statement generator</a></li>
               <li>
-                <div class="popup">
-                  <input id="modal" type="checkbox">
-                  <label class="modal-button" for="modal">
-                    <span>Contacts</span>
-                  </label>
-                  <label class="modal-background" for="modal"></label>
-    
-                  <div class="modal-content">
-                    <div class="content">
-                      <label class="modal-close" for="modal">&#10005;</label>
-                      <div class="wrapper">
-                        <div class="left">
-                          <img src="images/popup-img.png" alt="#">
-                        </div>
-                        <div class="right">
-                          <h2>Contact us</h2>
-                          <div class="name-mail__input">
-                            <div class="name__input">
-                              <span>Your name:</span>
-                              <input type="text" name="name" placeholder="Ex.: John Doe">
-                            </div>
-                            <div class="mail__input">
-                              <span>Your email:</span>
-                              <input type="text" name="mail" placeholder="Ex.: info@mail.com">
-                            </div>
-                          </div>
-    
-                          <div class="select__popup">
-                            <span class="subject">Subject:</span>
-                            <select class="select" name="select">
-                              <option value="#" title="not-select" disabled>Not selected</option>
-                              <option value="#">Just wanted to say ”Hi”</option>
-                              <option value="#">Accessibility Help/question</option>
-                              <option value="#">Become a Contributor</option>
-                              <option value="#">Partnerships</option>
-                              <option value="#">Other</option>
-                            </select>
-                          </div>
-    
-                          <div class="text__textarea">
-                            <span>Write your question here:</span>
-                            <textarea name="textarea"></textarea>
-                          </div>
-    
-                          <div class="button">
-                            <a href="#" class="btn">Send a question</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <label class="modal-button" for="modal">
+                  <span>Contacts</span>
+                </label>
               </li>
             </ul>
           </nav>
@@ -129,7 +84,11 @@
               <li><a href="#">Legislation</a></li>
               <li><a href="#">Knowledge</a></li>
               <li><a href="#">Statement generator</a></li>
-              <li><a href="#">Contacts</a></li>
+              <li>
+                <label class="modal-button" for="modal">
+                  <span>Contacts</span>
+                </label>
+              </li>
             </ul>
           </nav>
     
@@ -357,6 +316,96 @@
         </div>
       </div>
     </footer>
+  </div>
+</div>
+
+<div class="popup">
+  <input id="modal" type="checkbox">
+  <label class="modal-background" for="modal"></label>
+
+  <div class="modal-content">
+    <div class="content">
+      <label class="modal-close" for="modal">&#10005;</label>
+      <div class="wrapper">
+        <div class="left">
+          <img src="images/popup-img.png" alt="#">
+        </div>
+        <div class="right">
+          <h2>Contact us</h2>
+          <div class="name-mail__input">
+            <div class="name__input">
+              <span>Your name:</span>
+              <input type="text" name="name" placeholder="Ex.: John Doe">
+            </div>
+            <div class="mail__input">
+              <span>Your email:</span>
+              <input type="text" name="mail" placeholder="Ex.: info@mail.com">
+            </div>
+          </div>
+
+          <div class="select__popup">
+            <span class="subject">Subject:</span>
+            <select class="select" name="select">
+              <option value="#" title="not-select" disabled>Not selected</option>
+              <option value="#">Just wanted to say ”Hi”</option>
+              <option value="#">Accessibility Help/question</option>
+              <option value="#">Become a Contributor</option>
+              <option value="#">Partnerships</option>
+              <option value="#">Other</option>
+            </select>
+          </div>
+
+          <div class="text__textarea">
+            <span>Write your question here:</span>
+            <textarea name="textarea"></textarea>
+          </div>
+
+          <div class="button">
+            <a href="#" class="btn">Send a question</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup-download">
+  <input id="modal-download" type="checkbox">
+  <label class="modal-background" for="modal-download"></label>
+
+  <div class="modal-content">
+    <div class="content">
+      <label class="modal-close" for="modal-download">&#10005;</label>
+      <div class="wrapper">
+        <div class="left">
+          <img src="images/popup-download-img.png" alt="#">
+        </div>
+        <div class="right">
+          <h2>Download audit report</h2>
+          <p>We will send the results to your email as a PDF file:</p>
+          <div class="name-mail__input w-100">
+            <div class="name__input">
+              <span>Your name:</span>
+              <input type="text" name="name" placeholder="Ex.: John Doe">
+            </div>
+            <div class="mail__input">
+              <span>Your email:</span>
+              <input type="text" name="mail" placeholder="Ex.: info@mail.com">
+            </div>
+          </div>
+
+          <label class="container">
+            <p>I accept <a href="#">terms and conditions</a></p>
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
+          <div class="button">
+            <a href="#" class="btn">Send me the report</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

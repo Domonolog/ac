@@ -161,17 +161,21 @@
   li {
     position: relative;
 
-    a {
+    a,
+    span {
       font-family: SF UI Display;
       font-style: normal;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 14px !important;
       line-height: 45px;
       text-align: center;
       letter-spacing: 0.5px;
-      color: #3a3a3a;
+      color: #3a3a3a !important;
       display: flex;
       justify-content: center;
+      cursor: pointer;
+      min-height: 75px !important;
+      align-items: center;
     }
   }
 
@@ -276,4 +280,8 @@
   .menu-button {
     display: none;
   }
+}
+
+.admin-bar .menu-button {
+  margin-top: 32px;
 }
