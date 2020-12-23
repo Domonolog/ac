@@ -88,6 +88,15 @@ jQuery( $ => {
     }
   });
 
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if(scroll >= 200) {
+      $(".home__search .jqcs_options").addClass("active");
+    } else {
+      $(".home__search .jqcs_options").removeClass("active");
+    }
+  });
+
   $(".tabs-details ul li").click(function(e) {
     e.preventDefault();
     $(".tabs-details ul li").removeClass('active');
@@ -222,14 +231,6 @@ jQuery( $ => {
         .eq($(this).index())
         .addClass("active");
     });
-  });
-
-  document.querySelector('.show-all span').addEventListener('click', () => {
-    document.querySelector('.error-hidden').classList.toggle('active');
-  });
-
-  document.querySelector('.show-all span').addEventListener('click', () => {
-    document.querySelector('.show-all').classList.toggle('active');
   });
 } );
 
