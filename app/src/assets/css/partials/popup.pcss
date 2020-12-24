@@ -312,7 +312,7 @@
           font-size: 16px;
           line-height: 25px;
           letter-spacing: 1px;
-          color: #3a3a3a;
+          color: rgba(58, 58, 58, 0.3);
           border: 1px solid rgba(98, 105, 117, 0.5);
           position: relative;
           outline: none;
@@ -374,6 +374,12 @@
 
         .new-select.on::after {
           transform: rotate(180deg);
+        }
+      }
+
+      .select__popup.active {
+        .new-select {
+          color: #3a3a3a;
         }
       }
 

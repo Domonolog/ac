@@ -127,6 +127,11 @@ jQuery( $ => {
     $(this).addClass('active');
   });
 
+  $(".select__popup").click(function(e) {
+    e.preventDefault();
+    $(".select__popup").addClass('active');
+  });
+
   var target = $('.fixed-bg');
   if (target.length) {
     var targetPos = target.offset().top;
@@ -217,6 +222,17 @@ jQuery( $ => {
         .eq($(this).index())
         .addClass("active");
     });
+  });
+
+  $(document).ready(function(){
+    $('a[href*=#]').bind("click", function(e){
+      var anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $(anchor.attr('href')).offset().top - 150
+      }, 1000);
+      e.preventDefault();
+    });
+    return false;
   });
 
   $(function () {
