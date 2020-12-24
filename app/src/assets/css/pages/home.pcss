@@ -160,10 +160,34 @@
     display: flex;
     justify-content: center;
 
-    .btn {
+    input {
       min-width: 270px;
       height: 60px;
       padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+      border: none;
+      outline: none;
+      background-color: #1dbe7a;
+      border-radius: 5px;
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #fff;
+      transition: 0.1s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        margin-top: -2px;
+        margin-bottom: 2px;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -1148,7 +1172,7 @@
     }
 
     .button {
-      .btn {
+      input {
         height: 40px;
         width: 100%;
         max-width: 100%;
