@@ -128,9 +128,10 @@
             </div>
         
             <div class="button">
-              <input type="submit" value="Check website">
+              <label class="modal-button" for="modal-audit">
+                <span>Check website</span>
+              </label>
             </div>
-        
           </div>
         </section>
         
@@ -1287,6 +1288,34 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup-audit">
+  <input id="modal-audit" type="checkbox">
+  <label class="modal-background" for="modal-audit"></label>
+
+  <div class="modal-content">
+    <div class="content">
+      <label class="modal-close" for="modal-audit">&#10005;</label>
+      <div class="logo-popup">
+        <img src="images/logo-popup.png" alt="#">
+      </div>
+      <div class="bar__content">
+        <div class="wrap">
+          <h2>Auditing process... <span>20%</span></h2>
+          <div class="progress-bar">
+          <span class="bar">
+            <span class="progress" style="width: 20%"></span>
+          </span>
+          </div>
+          <p class="hide1">Gathering website data...</p>
+          <p class="hide2">Identify Germany BITV law compliance...</p>
+          <p class="hide3">Preparing auditing results...</p>
+        </div>
+      </div>
+      <label class="modal-button-close" for="modal-audit">Cancel</label>
     </div>
   </div>
 </div>

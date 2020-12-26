@@ -224,6 +224,14 @@ jQuery( $ => {
     });
   });
 
+  $('#modal-audit').change(function(){
+    if($(this).is(":checked")) {
+      $('.container').addClass("blur");
+    } else {
+      $('.container').removeClass("blur");
+    }
+  });
+
   $(document).ready(function(){
     $('a[href*=#]').bind("click", function(e){
       var anchor = $(this);

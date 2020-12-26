@@ -1,6 +1,7 @@
 .popup,
 .popup-download,
-.popup-mobile {
+.popup-mobile,
+.popup-audit {
   padding-top: 0;
   padding-bottom: 0;
 
@@ -17,12 +18,14 @@
   }
 
   #modal,
-  #modal-download {
+  #modal-download,
+  #modal-audit {
     display: none;
   }
 
   #modal:checked ~ .modal-background,
-  #modal-download:checked ~ .modal-background {
+  #modal-download:checked ~ .modal-background,
+  #modal-audit:checked ~ .modal-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -36,7 +39,8 @@
   }
 
   #modal:checked ~ .modal-content,
-  #modal-download:checked ~ .modal-content {
+  #modal-download:checked ~ .modal-content,
+  #modal-audit:checked ~ .modal-content {
     position: fixed;
     transform: scale(1);
     transition: transform 500ms;
@@ -65,7 +69,8 @@
   }
 
   #modal:checked ~ .modal-content .modal-close,
-  #modal-download:checked ~ .modal-content .modal-close {
+  #modal-download:checked ~ .modal-content .modal-close,
+  #modal-audit:checked ~ .modal-content .modal-close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -509,6 +514,143 @@
   }
 }
 
+.container.blur {
+  filter: blur(5px) !important;
+}
+
+.popup-audit {
+  #modal-audit:checked ~ .modal-background {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 125px rgba(0, 0, 0, 0.05);
+  }
+
+  #modal-audit:checked ~ .modal-content {
+    top: 203px;
+  }
+
+  #modal-audit:checked ~ .modal-content .content {
+    padding: 35px;
+    width: 610px;
+    min-height: 338px;
+    margin: 12px;
+  }
+
+  #modal-audit:checked ~ .modal-content .modal-close {
+    top: 35px;
+    right: 35px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .bar__content {
+    margin-top: 34px;
+    border-top: 1px solid #eaedef;
+    border-radius: 10px;
+    padding-top: 50px;
+
+    h2 {
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 40px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #3a3a3a;
+      margin-bottom: 20px;
+
+      span {
+        color: #1dbe7a;
+      }
+    }
+
+    p {
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: #3a3a3a;
+    }
+
+    0% {
+      width: 0;
+    }
+
+    20% {
+      width: 10%;
+    }
+
+    25% {
+      width: 24%;
+    }
+
+    43% {
+      width: 41%;
+    }
+
+    56% {
+      width: 50%;
+    }
+
+    66% {
+      width: 52%;
+    }
+
+    71% {
+      width: 60%;
+    }
+
+    75% {
+      width: 76%;
+    }
+
+    94% {
+      width: 86%;
+    }
+
+    100% {
+      width: 100%;
+    }
+
+    .progress-bar {
+      border-radius: 10px;
+      overflow: hidden;
+      width: 100%;
+
+      span {
+        display: block;
+      }
+    }
+
+    .bar {
+      background: #eaedef;
+    }
+
+    .progress {
+      animation: loader 8s ease infinite;
+      background: #1dbe7a;
+      color: #fff;
+      padding: 5px;
+      width: 0;
+    }
+
+    .progress-bar {
+      margin-bottom: 25px;
+    }
+  }
+
+  .modal-button-close {
+    display: none;
+  }
+
+  .hide2,
+  .hide3 {
+    display: none;
+  }
+}
+
 @media (max-width: 1300px) {
   .modal-button {
     span {
@@ -520,7 +662,8 @@
 @media (max-width: 992px) {
   .popup,
   .popup-mobile,
-  .popup-download {
+  .popup-download,
+  .popup-audit {
     .modal-button {
       .btn {
         height: 40px;
@@ -534,7 +677,8 @@
     }
 
     #modal:checked ~ .modal-content,
-    #modal-download:checked ~ .modal-content {
+    #modal-download:checked ~ .modal-content,
+    #modal-audit:checked ~ .modal-content {
       top: 25px;
 
       .content {
@@ -583,13 +727,83 @@
 @media (max-width: 567px) {
   .popup,
   .popup-download,
-  .popup-mobile {
+  .popup-mobile,
+  .popup-audit {
     #modal:checked ~ .modal-content,
-    #modal-download:checked ~ .modal-content {
+    #modal-download:checked ~ .modal-content,
+    #modal-audit:checked ~ .modal-content {
       top: 0;
 
       .content {
         width: 100%;
+      }
+    }
+  }
+
+  .popup-audit {
+    overflow: hidden;
+
+    #modal-audit:checked ~ .modal-background {
+      box-shadow: 0 4px 125px rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    #modal-audit:checked ~ .modal-content {
+      top: 45px;
+      height: 100vh;
+
+      .content {
+        margin: 0;
+        padding: 0 25px;
+      }
+    }
+
+    .modal-button-close {
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #3a3a3a;
+      width: 100%;
+      padding: 10px;
+      position: absolute;
+      bottom: 50px;
+      display: flex;
+      justify-content: center;
+      left: 0;
+    }
+
+    .modal-close,
+    .logo-popup {
+      display: none;
+    }
+
+    .bar__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      padding-top: 50%;
+      margin-top: 0;
+
+      h2 {
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
       }
     }
   }
