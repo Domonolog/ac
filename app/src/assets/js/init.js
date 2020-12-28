@@ -66,9 +66,50 @@ jQuery( $ => {
     ]
   });
 
+  $('.detail-slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    rows: 1,
+    swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1130,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 3,
+          dots: true,
+          centerMode: true,
+          variableWidth: true
+        }
+      }
+    ]
+  });
+
   $(window).scroll(function(){
     $('.fixed-left').toggleClass('content-fixed', $(this).scrollTop() > 155);
   });
+
+  var text = $('.typewriter').text();
+  var length = text.length;
+  var timeOut;
+  var character = 0;
+
+  (function typeWriter() {
+    timeOut = setTimeout(function() {
+      character++;
+      var type = text.substring(0, character);
+      $('.typewriter').text(type);
+      typeWriter();
+
+      if (character == length) {
+        clearTimeout(timeOut);
+      } else  {
+        setTimeout(timeOut);
+      }
+    }, 300);
+  }());
+
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
@@ -326,7 +367,7 @@ jQuery( $ => {
       ['dn', 'dn.png', 'Denmark'],
       ['fr', 'fr.png', 'Finland']
     ],
-    template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(../images/$1);'>$2</div>"
+    template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(../wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
   });
 
   $(window).click(function(e){
@@ -348,7 +389,7 @@ jQuery( $ => {
       ['dn', 'dn.png', 'DE'],
       ['fr', 'fr.png', 'FN']
     ],
-    template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(../images/$1);'>$2</div>"
+    template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(../wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
   });
 
   $(window).click(function(e){

@@ -53,7 +53,7 @@
     
           <nav class="main-nav-container">
             <ul class="main-nav header-nav">
-              <li><a href="#">How it works</a></li>
+              <li class="current_page_item"><a href="#">How it works</a></li>
               <li><a href="#">Legislation Overview</a></li>
               <li><a href="#">Knowledge base</a></li>
               <li><a href="#">Statement generator</a></li>
@@ -80,7 +80,7 @@
     
           <nav class="main-nav-container">
             <ul class="main-nav header-nav">
-              <li><a href="#">How it works</a></li>
+              <li class="current_page_item"><a href="#">How it works</a></li>
               <li><a href="#">Legislation</a></li>
               <li><a href="#">Knowledge</a></li>
               <li><a href="#">Statement generator</a></li>
@@ -128,50 +128,53 @@
               <div class="arrow__img">
                 <img src="images/arrow-details.png" alt="#">
               </div>
-              <div class="left__info">
-                <p>Based on our analysis, these automated tools will help you become compliant under<a href="#"><img
-                        src="images/germany-icon.png" alt="#">Germany BITV law</a></p>
+        
+              <div class="mobile-details">
+                <div class="left__info">
+                  <p>Based on our analysis, these automated tools will help you become compliant under<a href="#"><img
+                          src="images/germany-icon.png" alt="#">Germany BITV law</a></p>
+                </div>
+                <ul class="medals">
+                  <li>
+                    <div class="medal__block">
+                      <div class="medal__img">
+                        <img src="images/gold-medal.png" alt="#">
+                      </div>
+                      <p>AccessiBe</p>
+                      <div class="button">
+                        <a href="#" class="rgb-green">Go to website</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="medal__block">
+                      <div class="medal__img">
+                        <img src="images/silver-medal.png" alt="#">
+                      </div>
+                      <p>UserWay</p>
+                      <div class="button">
+                        <a href="#" class="rgb-green">Go to website</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="medal__block">
+                      <div class="medal__img">
+                        <img src="images/bronze-medal.png" alt="#">
+                      </div>
+                      <p>Equalweb</p>
+                      <div class="button">
+                        <a href="#" class="rgb-green">Go to website</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="button-more">
+                      <a href="#" class="btn-more">Learn more</a>
+                    </div>
+                  </li>
+                </ul>
               </div>
-              <ul class="medals">
-                <li>
-                  <div class="medal__block">
-                    <div class="medal__img">
-                      <img src="images/gold-medal.png" alt="#">
-                    </div>
-                    <p>AccessiBe</p>
-                    <div class="button">
-                      <a href="#" class="rgb-green">Go to website</a>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="medal__block">
-                    <div class="medal__img">
-                      <img src="images/silver-medal.png" alt="#">
-                    </div>
-                    <p>UserWay</p>
-                    <div class="button">
-                      <a href="#" class="rgb-green">Go to website</a>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="medal__block">
-                    <div class="medal__img">
-                      <img src="images/bronze-medal.png" alt="#">
-                    </div>
-                    <p>Equalweb</p>
-                    <div class="button">
-                      <a href="#" class="rgb-green">Go to website</a>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="button-more">
-                    <a href="#" class="btn-more">Learn more</a>
-                  </div>
-                </li>
-              </ul>
             </div>
         
             <div class="right">
@@ -1199,7 +1202,8 @@
           header,
           vision,
           version1,
-          version2 {
+          version2,
+          #open-button {
             display: none;
           }
         </style>

@@ -325,7 +325,17 @@
       .detail-slider {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+
+        .slick-list {
+          width: 100%;
+        }
+
+        .slick-track {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
 
         .item {
           padding: 10px 15px 20px;
@@ -334,8 +344,9 @@
           box-sizing: border-box;
           box-shadow: 15px 15px 0 rgba(126, 144, 153, 0.08);
           border-radius: 5px;
-          width: 270px;
+          width: 270px !important;
           height: 210px;
+          margin-bottom: 20px;
 
           .item__top {
             border-bottom: 1px solid #e9ecee;
@@ -356,6 +367,9 @@
           .item__bottom {
             .item__img {
               text-align: center;
+              display: flex;
+              justify-content: center;
+              margin-bottom: 10px;
             }
 
             .progress-item {
@@ -382,7 +396,7 @@
             .progress-circle {
               display: flex;
               justify-content: center;
-              margin-bottom: 15px;
+              margin-bottom: 20px;
               position: relative;
               height: 70px;
             }
@@ -976,5 +990,172 @@
 
   .error-hidden.active {
     display: block;
+  }
+}
+
+@media (max-width: 1030px) {
+  .section-details {
+    .wrapper {
+      flex-wrap: wrap;
+
+      .left,
+      .right {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .left {
+        .mobile-details,
+        .arrow__img {
+          display: none;
+        }
+
+        .details__lin {
+          margin-bottom: 20px;
+        }
+
+        .detail-left__img {
+          text-align: center;
+        }
+
+        .button-back {
+          margin-bottom: 15px;
+
+          .btn-detail {
+            height: 50px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            background-image: none;
+            position: relative;
+
+            &::before {
+              position: absolute;
+              content: " ";
+              width: 20px;
+              height: 20px;
+              top: 15px;
+              margin-left: -135px;
+              background-image: url("../../images/left-detail-icon.png");
+            }
+          }
+        }
+      }
+
+      .right {
+        padding: 24px 15px 0;
+        border-top: 1px solid #dae2e7;
+
+        .detail__title {
+          h2 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 25px;
+
+            a {
+              display: none;
+            }
+          }
+
+          .modal-button {
+            span {
+              font-size: 0;
+
+              img {
+                margin-right: 0;
+                width: 25px;
+                height: 25px;
+                object-fit: contain;
+              }
+            }
+          }
+        }
+
+        .detail-slider {
+          padding-top: 0;
+          padding-bottom: 0;
+
+          .item {
+            background: #fff;
+          }
+
+          .slick-prev,
+          .slick-next {
+            display: none !important;
+          }
+
+          .slick-dots {
+            position: absolute;
+            display: flex !important;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            button {
+              display: none;
+            }
+
+            li {
+              width: 10px;
+              height: 10px;
+              background: #3a3a3a;
+              opacity: 0.2;
+              border-radius: 50%;
+              margin-left: 5px;
+              margin-right: 5px;
+            }
+
+            li.slick-active {
+              background: #1dbe7a;
+              opacity: 1;
+            }
+          }
+        }
+
+        .tabs-details {
+          h3 {
+            font-size: 14px;
+            line-height: 25px;
+            letter-spacing: 0.5px;
+          }
+
+          ul {
+            li {
+              .top__details {
+                display: block;
+                padding: 15px 0;
+
+                &:hover {
+                  background: none;
+                }
+
+                .tabs-details__left {
+                  margin-bottom: 10px;
+
+                  &::before {
+                    display: none;
+                  }
+                }
+
+                .tabs-details__right {
+                  padding-left: 0;
+                  padding-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

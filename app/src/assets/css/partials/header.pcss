@@ -286,6 +286,20 @@
       }
     }
   }
+
+  li.current_page_item {
+    a {
+      &::before {
+        position: absolute;
+        content: " ";
+        bottom: 0;
+        height: 2px;
+        background-color: #2dc082;
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
 }
 
 ul.second-nav {
