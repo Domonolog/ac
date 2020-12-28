@@ -113,7 +113,7 @@ jQuery( $ => {
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if(scroll >= 800) {
+    if(scroll >= 500) {
       $(".version1 #sticky-header").addClass("hidden");
     } else {
       $(".version1 #sticky-header").removeClass("hidden");
@@ -122,7 +122,7 @@ jQuery( $ => {
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if(scroll >= 800) {
+    if(scroll >= 500) {
       $(".version2").addClass("vision");
     } else {
       $(".version2").removeClass("vision");
