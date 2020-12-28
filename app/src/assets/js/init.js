@@ -114,15 +114,24 @@ jQuery( $ => {
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if(scroll >= 500) {
-      $(".version1 #sticky-header").addClass("hidden");
+      $(".version1").addClass("hidden");
     } else {
-      $(".version1 #sticky-header").removeClass("hidden");
+      $(".version1").removeClass("hidden");
     }
   });
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if(scroll >= 500) {
+    if(scroll >= 400) {
+      $(".version1 #sticky-header").addClass("hidden-shadow");
+    } else {
+      $(".version1 #sticky-header").removeClass("hidden-shadow");
+    }
+  });
+
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if(scroll >= 400) {
       $(".version2").addClass("vision");
     } else {
       $(".version2").removeClass("vision");
