@@ -367,7 +367,7 @@ jQuery( $ => {
       ['dn', 'dn.png', 'Denmark'],
       ['fr', 'fr.png', 'Finland']
     ],
-    template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(../wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
+    template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(/wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
   });
 
   $(window).click(function(e){
@@ -389,7 +389,7 @@ jQuery( $ => {
       ['dn', 'dn.png', 'DE'],
       ['fr', 'fr.png', 'FN']
     ],
-    template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(../wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
+    template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(/wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
   });
 
   $(window).click(function(e){
