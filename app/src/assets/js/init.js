@@ -132,6 +132,8 @@ jQuery( $ => {
     $(".select__popup").addClass('active');
   });
 
+  document.querySelector('.radial-progress').setAttribute('data-progress', 75);
+
   var target = $('.fixed-bg');
   if (target.length) {
     var targetPos = target.offset().top;
