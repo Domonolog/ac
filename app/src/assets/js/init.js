@@ -194,6 +194,14 @@ jQuery( $ => {
     document.querySelector('.error-hidden').classList.toggle('active');
   });
 
+  document.querySelector('.mobile-button').addEventListener('click', () => {
+    document.querySelector('.mobile-details').classList.toggle('active');
+  });
+
+  document.querySelector('.mobile-button').addEventListener('click', () => {
+    document.querySelector('.mobile-button').classList.toggle('active');
+  });
+
   var target = $('.fixed-bg');
   if (target.length) {
     var targetPos = target.offset().top;

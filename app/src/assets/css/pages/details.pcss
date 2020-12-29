@@ -1029,7 +1029,8 @@
     }
   }
 
-  .mobile-title {
+  .mobile-title,
+  .mobile-button {
     display: none;
   }
 
@@ -1044,6 +1045,103 @@
 }
 
 @media (max-width: 1030px) {
+  .mobile-details.active {
+    display: block !important;
+  }
+
+  .section-details .wrapper .left .left__info p a:hover {
+    span {
+      display: none !important;
+    }
+  }
+
+  .mobile-button {
+    display: block !important;
+    z-index: 60;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    cursor: pointer;
+
+    .vers1,
+    .vers2 {
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #fff;
+      background: #1dbe7a;
+      height: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: " ";
+        width: 30px;
+        height: 30px;
+        background-image: url("../../images/down-active-icon.png");
+        background-size: contain;
+        top: 5px;
+        right: 15px;
+      }
+    }
+
+    .vers2 {
+      display: none;
+    }
+  }
+
+  .mobile-details.active {
+    padding-top: 20px;
+    position: fixed;
+    bottom: 40px;
+    height: 75%;
+    width: 100%;
+    z-index: 59;
+    background: #f2f6f8;
+    overflow: auto;
+
+    &::before {
+      position: fixed;
+      content: " ";
+      width: 100%;
+      height: 25%;
+      background: rgba(0, 0, 0, 0.3);
+      top: -40px;
+      left: 0;
+    }
+  }
+
+  .mobile-button.active {
+    .vers1 {
+      display: none;
+    }
+
+    .vers2 {
+      display: flex;
+      background: #f8fafb;
+      color: #3a3a3a;
+
+      &::before {
+        background-image: url("../../images/down-non-active-icon.png");
+      }
+    }
+
+    h4 {
+      display: none;
+    }
+  }
+
   .section-details {
     overflow: hidden;
 
