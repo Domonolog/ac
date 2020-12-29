@@ -74,7 +74,15 @@ jQuery( $ => {
     swipeToSlide: true,
     responsive: [
       {
-        breakpoint: 1130,
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: true
+        }
+      },
+      {
+        breakpoint: 992,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 3,
@@ -180,6 +188,10 @@ jQuery( $ => {
   $(".select__popup").click(function(e) {
     e.preventDefault();
     $(".select__popup").addClass('active');
+  });
+
+  document.querySelector('.show-all').addEventListener('click', () => {
+    document.querySelector('.error-hidden').classList.toggle('active');
   });
 
   var target = $('.fixed-bg');

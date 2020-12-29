@@ -121,6 +121,7 @@
             line-height: 20px;
             color: rgba(58, 58, 58, 0.7);
             text-decoration: underline;
+            position: relative;
 
             img {
               margin-left: 5px;
@@ -128,8 +129,42 @@
               margin-bottom: -3px;
             }
 
+            span {
+              display: none;
+            }
+
             &:hover {
               text-decoration: none;
+              color: #1dbe7a;
+
+              span {
+                display: block;
+                position: absolute;
+                font-family: SF UI Display;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 20px;
+                letter-spacing: 0.01em;
+                color: #fff;
+                padding: 15px 20px;
+                max-width: 318px;
+                background: #3a3a3a;
+                border-radius: 5px;
+                z-index: 20;
+                right: -338px;
+                top: -40px;
+
+                &::before {
+                  position: absolute;
+                  content: " ";
+                  width: 25px;
+                  height: 40px;
+                  background-image: url("../../images/gray-icon.png");
+                  left: -15px;
+                  top: 27px;
+                }
+              }
             }
           }
         }
@@ -335,6 +370,11 @@
           display: flex;
           justify-content: space-between;
           width: 100%;
+        }
+
+        .slick-prev,
+        .slick-next {
+          display: none !important;
         }
 
         .item {
@@ -568,6 +608,7 @@
                 align-items: center;
                 width: 191px;
                 max-width: 191px;
+                min-width: 191px;
                 position: relative;
 
                 &::before {
@@ -988,6 +1029,10 @@
     }
   }
 
+  .mobile-title {
+    display: none;
+  }
+
   .error-hidden {
     display: none;
     margin-bottom: 0 !important;
@@ -1000,6 +1045,8 @@
 
 @media (max-width: 1030px) {
   .section-details {
+    overflow: hidden;
+
     .wrapper {
       flex-wrap: wrap;
 
@@ -1057,15 +1104,17 @@
         border-top: 1px solid #dae2e7;
 
         .detail__title {
-          h2 {
+          h2,
+          .mobile-title {
             font-style: normal;
             font-weight: 800;
             font-size: 18px;
             line-height: 25px;
+            display: none;
+          }
 
-            a {
-              display: none;
-            }
+          .mobile-title {
+            display: block !important;
           }
 
           .modal-button {
@@ -1135,10 +1184,13 @@
           }
 
           ul {
+            margin-left: -15px;
+            margin-right: -15px;
+
             li {
               .top__details {
                 display: block;
-                padding: 15px 0;
+                padding: 15px;
 
                 &:hover {
                   background: none;
@@ -1155,8 +1207,170 @@
                 .tabs-details__right {
                   padding-left: 0;
                   padding-right: 0;
+
+                  p {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 1px;
+                  }
                 }
               }
+
+              .bottom__content {
+                padding: 20px 15px;
+
+                ol {
+                  li {
+                    margin-bottom: 20px;
+
+                    p {
+                      padding-bottom: 20px;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 13px;
+                      line-height: 20px;
+                      letter-spacing: 0.5px;
+                    }
+
+                    h3 {
+                      font-style: normal;
+                      font-weight: 600;
+                      font-size: 12px;
+                      line-height: 25px;
+                      letter-spacing: 0.5px;
+                    }
+
+                    ul.error,
+                    ul.checks,
+                    ul.error-hidden {
+                      margin-left: 0;
+                      margin-right: 0;
+                    }
+
+                    ul.checks {
+                      padding-bottom: 20px;
+
+                      li {
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 13px;
+                        line-height: 20px;
+                        letter-spacing: 0.5px;
+                      }
+                    }
+
+                    .text-img {
+                      flex-wrap: wrap;
+                      margin-bottom: 0;
+
+                      p {
+                        width: 100%;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 13px;
+                        line-height: 20px;
+                        letter-spacing: 0.5px;
+                        order: 2;
+                      }
+
+                      img {
+                        display: block;
+                        order: 1;
+                      }
+                    }
+
+                    .show-all {
+                      padding-bottom: 24px;
+                    }
+
+                    p {
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 13px;
+                      line-height: 20px;
+                      letter-spacing: 0.5px;
+                    }
+
+                    .detail__img {
+                      padding-bottom: 20px;
+                    }
+
+                    .block-go-website {
+                      flex-wrap: wrap;
+                      border-radius: 6px;
+                      border: 1px solid #e9ecee;
+                      padding: 20px;
+
+                      div {
+                        width: 100%;
+                        position: relative;
+
+                        h3 {
+                          font-style: normal;
+                          font-weight: bold;
+                          font-size: 14px;
+                          line-height: 25px;
+                          letter-spacing: 0.5px;
+                          text-transform: none;
+                          position: absolute;
+                          top: -35px;
+                          left: 42px;
+                        }
+
+                        p {
+                          width: 100%;
+                          max-width: 100%;
+                          font-style: normal;
+                          font-weight: normal;
+                          font-size: 12px;
+                          line-height: 20px;
+                          letter-spacing: 0.5px;
+                          padding-bottom: 20px;
+                        }
+                      }
+
+                      .text {
+                        padding-right: 0;
+                        position: relative;
+                      }
+
+                      .go-website__img {
+                        width: 25px;
+                        height: 25px;
+                        position: relative;
+                        margin-bottom: 10px;
+                      }
+
+                      .button {
+                        .btn {
+                          height: 40px;
+                          width: 100%;
+                          max-width: 100%;
+                          font-style: normal;
+                          font-weight: bold;
+                          font-size: 11px;
+                          line-height: 20px;
+                          text-align: center;
+                          text-transform: uppercase;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .button__read {
+            a {
+              height: 50px;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 30px;
+              letter-spacing: 1px;
             }
           }
         }
