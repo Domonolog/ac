@@ -190,18 +190,6 @@ jQuery( $ => {
     $(".select__popup").addClass('active');
   });
 
-  document.querySelector('.show-all').addEventListener('click', () => {
-    document.querySelector('.error-hidden').classList.toggle('active');
-  });
-
-  document.querySelector('.mobile-button').addEventListener('click', () => {
-    document.querySelector('.mobile-details').classList.toggle('active');
-  });
-
-  document.querySelector('.mobile-button').addEventListener('click', () => {
-    document.querySelector('.mobile-button').classList.toggle('active');
-  });
-
   var target = $('.fixed-bg');
   if (target.length) {
     var targetPos = target.offset().top;
@@ -423,5 +411,17 @@ jQuery( $ => {
     $('#currentValue').html('Current value is: \''+ $('input#flagSelect')[0].value +'\'');
   });
 })(jQuery);
+
+document.querySelector('.show-all').addEventListener('click', () => {
+  document.querySelector('.error-hidden').classList.toggle('active');
+});
+
+document.querySelector('.mobile-button').addEventListener('click', () => {
+  document.querySelector('.mobile-details').classList.toggle('active');
+});
+
+document.querySelector('.mobile-button').addEventListener('click', () => {
+  document.querySelector('.mobile-button').classList.toggle('active');
+});
 
 document.querySelector('.radial-progress').setAttribute('data-progress', 75);
