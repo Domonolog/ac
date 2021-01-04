@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="fonts/fonts.css">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
   <!-- favicon -->
@@ -109,7 +108,7 @@
 
       <main class="main">
 
-        <section class="section-home" style="background-image: url(images/banner-home.png)">
+        <section id="audit-website" class="section-home" style="background-image: url(images/banner-home.png)">
           <div class="inner">
             <div class="home_img">
               <img src="images/home-img.png" alt="#">
@@ -1147,7 +1146,6 @@
           Summaries[3] = 'WCAG 2.1 compliant';
           Summaries[4] = 'ACA compliant';
           Summaries[5] = 'BITV compliant';
-          Summaries[6] = 'And then go back to ADA compliant';
         
           function startTicker() {
             massiveItemCount = Number(Summaries.length);
@@ -1220,7 +1218,7 @@
               <li><a href="#">Blog</a></li>
               <li>
                 <label class="modal-button" for="modal">
-                  <span>Contacts</span>
+                  <span>Contact us</span>
                 </label>
               </li>
             </ul>
@@ -1237,14 +1235,14 @@
               <li class="menu-item-has-children">
                 <h3>Knowledge base</h3>
                 <ul class="sub-menu">
-                  <li><a href="#">Audit your website</a></li>
+                  <li><a href="#audit-website">Audit your website</a></li>
                   <li><a href="#">About</a></li>
                   <li><a href="#">Legislations</a></li>
                   <li><a href="#">How it works?</a></li>
                   <li><a href="#">Blog</a></li>
                   <li>
                     <label class="modal-button" for="modal">
-                      <span>Contacts</span>
+                      <span>Contact us</span>
                     </label>
                   </li>
                 </ul>
@@ -1252,12 +1250,12 @@
               <li class="menu-item-has-children">
                 <h3>Legislations</h3>
                 <ul class="sub-menu">
-                  <li><a href="#">WCAG</a></li>
-                  <li><a href="#">ADA</a></li>
-                  <li><a href="#">Section 508</a></li>
-                  <li><a href="#">EAA/EN301549</a></li>
-                  <li><a href="#">ACA</a></li>
-                  <li><a href="#">AODA</a></li>
+                  <li><a href="#section-tabs">WCAG</a></li>
+                  <li><a href="#section-tabs">ADA</a></li>
+                  <li><a href="#section-tabs">Section 508</a></li>
+                  <li><a href="#section-tabs">EAA/EN301549</a></li>
+                  <li><a href="#section-tabs">ACA</a></li>
+                  <li><a href="#section-tabs">AODA</a></li>
                 </ul>
               </li>
               <li class="menu-item-has-children">
