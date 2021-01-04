@@ -32,13 +32,13 @@ if (TARGET === 'start' || TARGET === 'continue') {
   module.exports = merge(common, {
     devtool: false,
     plugins: [
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false,
-        },
-        output: { comments: false },
-        sourceMap: false,
-      }),
+      //new webpack.optimize.UglifyJsPlugin({
+      //  compress: {
+      //    warnings: false,
+      //  },
+      // output: { comments: false },
+      //  sourceMap: false,
+      //}),
     ],
   });
 } else {

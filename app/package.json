@@ -11,7 +11,7 @@
     "html": "gulp html --production",
     "wp-copy": "gulp wp-copy",
     "wp-build": "gulp wp-build --production",
-    "wp-js": "gulp wp-js --production",
+    "wp-js": "gulp wp-js",
     "wp-css": "gulp wp-css --production"
   },
   "author": "vasiliy@eatsummit.com",
