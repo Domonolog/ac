@@ -8,6 +8,7 @@ require( './blog' );
 require( './smooth-scroll' );
 require( './target-blank' );
 
+import Typed from 'typed.js';
 import WebFont from 'webfontloader';
 
 WebFont.load( {
@@ -18,12 +19,15 @@ WebFont.load( {
   }
 } );
 
+var typed = new Typed('.element', {
+  strings: ["ADA compliant", "Section 508 compliant", "AODA compliant", "WCAG 2.1 compliant", "ACA compliant" , "BITV compliant"],
+  typeSpeed: 40,
+  backSpeed: 30,
+  loop: true,
+  cursorChar: ""
+});
+
 jQuery( $ => {
-  $(function(){
-    $(".element").typed({
-      strings: ["Первое предложение", "Второе предложение", "Третье предложение"], typeSpeed: 0
-    });
-  });
 
   $('.slider-home').slick({
     infinite: true,

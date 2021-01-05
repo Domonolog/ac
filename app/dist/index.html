@@ -113,7 +113,7 @@
             <div class="home_img">
               <img src="images/home-img.png" alt="#">
             </div>
-            <h1 class="title">Find out if your website is <span id="Ticker"></span></h1>
+            <h1 class="title">Find out if your website is<span class="element"></span></h1>
             <p>Scan your website for free, identify accessbility issues, and get exact instructions on how to fix them. Type
               your URL to start now!</p>
             <div class="home__search">
@@ -1132,55 +1132,6 @@
             </ul>
           </div>
         </section>
-        
-        <script type="text/javascript">
-          var CharTimeout = 50;
-          var StoryTimeout = 2000;
-        
-          var Summaries = new Array();
-          var SiteLinks = new Array();
-        
-          Summaries[0] = 'ADA compliant';
-          Summaries[1] = 'Section 508 compliant';
-          Summaries[2] = 'AODA compliant';
-          Summaries[3] = 'WCAG 2.1 compliant';
-          Summaries[4] = 'ACA compliant';
-          Summaries[5] = 'BITV compliant';
-        
-          function startTicker() {
-            massiveItemCount = Number(Summaries.length);
-            CurrentStory = -1;
-            CurrentLength = 0;
-            AnchorObject = document.getElementById("Ticker");
-            runTheTicker();
-          }
-        
-          function runTheTicker() {
-            var myTimeout;
-            if (CurrentLength == 0) {
-              CurrentStory++;
-              CurrentStory = CurrentStory % massiveItemCount;
-              StorySummary = Summaries[CurrentStory].replace(/"/g, '-');
-              AnchorObject.href = SiteLinks[CurrentStory];
-            }
-            AnchorObject.innerHTML = StorySummary.substring(0, CurrentLength) + znak();
-            if (CurrentLength != StorySummary.length) {
-              CurrentLength++;
-              myTimeout = CharTimeout;
-            } else {
-              CurrentLength = 0;
-              myTimeout = StoryTimeout;
-            }
-            setTimeout("runTheTicker()", myTimeout);
-          }
-        
-          function znak() {
-            if (CurrentLength == StorySummary.length) return "";
-            else return "|";
-          }
-        
-          startTicker();
-        </script>
         
 
       </main>
