@@ -1216,6 +1216,22 @@
           }
         </style>
         
+        <script type="text/javascript">
+          document.querySelector('.show-all').addEventListener('click', () => {
+            document.querySelector('.error-hidden').classList.toggle('active');
+          });
+        
+          document.querySelector('.mobile-button').addEventListener('click', () => {
+            document.querySelector('.mobile-details').classList.toggle('active');
+          });
+        
+          document.querySelector('.mobile-button').addEventListener('click', () => {
+            document.querySelector('.mobile-button').classList.toggle('active');
+          });
+        
+          document.querySelector('.radial-progress').setAttribute('data-progress', 75);
+        </script>
+        
 
       </main>
   </div>

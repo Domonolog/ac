@@ -1,3 +1,6 @@
+import WebFont from 'webfontloader';
+import Typed from 'typed.js';
+
 /* eslint-disable no-var */
 // require( 'magnific-popup' );
 require( './jquery' );
@@ -8,9 +11,6 @@ require( './blog' );
 require( './smooth-scroll' );
 require( './target-blank' );
 
-import Typed from 'typed.js';
-import WebFont from 'webfontloader';
-
 WebFont.load( {
   google: {
     families: [
@@ -19,13 +19,6 @@ WebFont.load( {
   }
 } );
 
-var typed = new Typed('.element', {
-  strings: ["ADA compliant", "Section 508 compliant", "AODA compliant", "WCAG 2.1 compliant", "ACA compliant" , "BITV compliant"],
-  typeSpeed: 40,
-  backSpeed: 30,
-  loop: true,
-  cursorChar: ""
-});
 
 jQuery( $ => {
 
@@ -387,6 +380,7 @@ jQuery( $ => {
   $(window).click(function(e){
     $('#currentValue').html('Current value is: \''+ $('input#countrySelect')[0].value +'\'');
   });
+
 })(jQuery);
 
 (function($){
@@ -410,18 +404,12 @@ jQuery( $ => {
     $('#currentValue').html('Current value is: \''+ $('input#flagSelect')[0].value +'\'');
   });
 
-  document.querySelector('.show-all').addEventListener('click', () => {
-    document.querySelector('.error-hidden').classList.toggle('active');
+  var typed = new Typed('.element', {
+    strings: ["ADA compliant", "Section 508 compliant", "AODA compliant", "WCAG 2.1 compliant", "ACA compliant" , "BITV compliant"],
+    typeSpeed: 40,
+    backSpeed: 30,
+    loop: true,
+    cursorChar: ""
   });
-
-  document.querySelector('.mobile-button').addEventListener('click', () => {
-    document.querySelector('.mobile-details').classList.toggle('active');
-  });
-
-  document.querySelector('.mobile-button').addEventListener('click', () => {
-    document.querySelector('.mobile-button').classList.toggle('active');
-  });
-
-  document.querySelector('.radial-progress').setAttribute('data-progress', 75);
 
 })(jQuery);
