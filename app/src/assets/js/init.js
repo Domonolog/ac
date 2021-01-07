@@ -10,6 +10,7 @@ require( './header' );
 require( './blog' );
 require( './smooth-scroll' );
 require( './target-blank' );
+require( './jquery.rateyo' );
 
 WebFont.load( {
   google: {
@@ -19,8 +20,21 @@ WebFont.load( {
   }
 } );
 
-
 jQuery( $ => {
+
+  $(function () {
+    $("#rateYo").rateYo({
+      rating: 1.5,
+      halfStar: true,
+      spacing   : "12px",
+      starWidth: "17px",
+      multiColor: {
+
+        "startColor": "#F1B314",
+        "endColor"  : "#F1B314"
+      }
+    });
+  });
 
   $('.slider-home').slick({
     infinite: true,

@@ -1,7 +1,8 @@
 .popup,
 .popup-download,
 .popup-mobile,
-.popup-audit {
+.popup-audit,
+.popup-stars {
   padding-top: 0;
   padding-bottom: 0;
 
@@ -19,13 +20,15 @@
 
   #modal,
   #modal-download,
-  #modal-audit {
+  #modal-audit,
+  #modal-stars {
     display: none;
   }
 
   #modal:checked ~ .modal-background,
   #modal-download:checked ~ .modal-background,
-  #modal-audit:checked ~ .modal-background {
+  #modal-audit:checked ~ .modal-background,
+  #modal-stars:checked ~ .modal-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -40,7 +43,8 @@
 
   #modal:checked ~ .modal-content,
   #modal-download:checked ~ .modal-content,
-  #modal-audit:checked ~ .modal-content {
+  #modal-audit:checked ~ .modal-content,
+  #modal-stars:checked ~ .modal-content {
     position: fixed;
     transform: scale(1);
     transition: transform 500ms;
@@ -70,7 +74,8 @@
 
   #modal:checked ~ .modal-content .modal-close,
   #modal-download:checked ~ .modal-content .modal-close,
-  #modal-audit:checked ~ .modal-content .modal-close {
+  #modal-audit:checked ~ .modal-content .modal-close,
+  #modal-stars:checked ~ .modal-content .modal-close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -137,6 +142,26 @@
             position: relative;
             padding-top: 31px;
             margin: 0 10px 25px;
+
+            h4 {
+              position: absolute;
+              top: 0;
+              right: 0;
+              font-family: SF UI Display;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 26px;
+              text-align: right;
+              letter-spacing: 1px;
+              color: #1dbe7a;
+              margin-bottom: 0;
+
+              span {
+                position: initial;
+                color: #3a3a3a;
+              }
+            }
 
             span {
               position: absolute;
@@ -654,6 +679,49 @@
   }
 }
 
+.popup-stars {
+  .modal-content {
+    .wrapper {
+      .right {
+        h2 {
+          margin-bottom: 25px;
+        }
+
+        p {
+          margin-bottom: 30px;
+        }
+      }
+
+      .left {
+        width: 330px;
+        height: 528px;
+        display: table;
+      }
+
+      .text__textarea {
+        textarea {
+          height: 114px;
+        }
+      }
+
+      .stars {
+        border: 1px solid rgba(98, 105, 117, 0.5);
+        box-sizing: border-box;
+        border-radius: 5px;
+        width: 245px;
+        height: 50px;
+        position: relative;
+
+        #rateYo {
+          position: absolute;
+          left: 48px;
+          top: 15px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1300px) {
   .modal-button {
     span {
@@ -666,7 +734,8 @@
   .popup,
   .popup-mobile,
   .popup-download,
-  .popup-audit {
+  .popup-audit,
+  .popup-stars {
     .modal-button {
       .btn {
         height: 40px;
@@ -681,7 +750,8 @@
 
     #modal:checked ~ .modal-content,
     #modal-download:checked ~ .modal-content,
-    #modal-audit:checked ~ .modal-content {
+    #modal-audit:checked ~ .modal-content,
+    #modal-stars:checked ~ .modal-content {
       top: 25px;
 
       .content {
@@ -721,6 +791,23 @@
       }
     }
   }
+
+  .popup-stars {
+    .modal-content {
+      .wrapper {
+        .stars {
+          width: 100%;
+          padding-top: 15px;
+          display: flex;
+          justify-content: center;
+
+          #rateYo {
+            position: initial;
+          }
+        }
+      }
+    }
+  }
 }
 
 .popup-mobile {
@@ -731,10 +818,12 @@
   .popup,
   .popup-download,
   .popup-mobile,
-  .popup-audit {
+  .popup-audit,
+  .popup-stars {
     #modal:checked ~ .modal-content,
     #modal-download:checked ~ .modal-content,
-    #modal-audit:checked ~ .modal-content {
+    #modal-audit:checked ~ .modal-content,
+    #modal-stars:checked ~ .modal-content {
       top: 0;
 
       .content {
