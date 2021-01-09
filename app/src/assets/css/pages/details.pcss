@@ -405,15 +405,19 @@
           }
 
           .item__bottom {
-            .item__img,
-            .item__img-hidden {
+            .item__img {
               text-align: center;
               display: flex;
               justify-content: center;
               margin-bottom: 10px;
+
+              img {
+                width: 40px;
+                height: 40px;
+              }
             }
 
-            .item__img-hidden {
+            .item__img.hidden {
               display: none;
             }
 

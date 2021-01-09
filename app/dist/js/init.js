@@ -305,6 +305,12 @@ jQuery(function ($) {
     $(this).addClass('active');
   });
 
+  $(".button-show-statement .btn").click(function (e) {
+    e.preventDefault();
+    $(".hidden__content").addClass('active');
+    $(this).removeClass('active');
+  });
+
   $(".select__popup").click(function (e) {
     e.preventDefault();
     $(".select__popup").addClass('active');
@@ -9360,3 +9366,4 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /***/ })
 /******/ ]);
+//# sourceMappingURL=init.js.map
