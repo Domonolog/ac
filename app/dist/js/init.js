@@ -316,6 +316,16 @@ jQuery(function ($) {
     $(".select__popup").addClass('active');
   });
 
+  $('.button__read .vision').click(function () {
+    $('.button__read').parent().removeClass("active");
+    $(this).parent().toggleClass('active');
+  });
+
+  $('.button__read .close').click(function () {
+    $('.button__read').parent().removeClass("active");
+    $(this).parent().toggleClass('active');
+  });
+
   var target = $('.fixed-bg');
   if (target.length) {
     var targetPos = target.offset().top;
@@ -463,7 +473,7 @@ jQuery(function ($) {
     selector: '#countrySelect',
     placeholder: 'United States',
     options: [['us', 'us.png', 'United States'], ['ca', 'ca.png', 'Canada'], ['eu', 'eu.png', 'Europe'], ['ge', 'ge.png', 'Germany'], ['au', 'au.png', 'Australia'], ['dn', 'dn.png', 'Denmark'], ['fr', 'fr.png', 'Finland']],
-    template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(/wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
+    template: "<div class='jqcs_option' name='flag' data-select-value='$0' style='background-image:url(/wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
   });
 
   $(window).click(function (e) {

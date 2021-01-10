@@ -534,7 +534,10 @@
         }
 
         .button__read {
-          a {
+          margin-bottom: 50px;
+
+          .vision,
+          .close {
             background: #f8fafb;
             border: 1px solid #e9ecee;
             height: 72px;
@@ -542,7 +545,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 50px;
             font-family: SF UI Display;
             font-style: normal;
             font-weight: normal;
@@ -552,6 +554,7 @@
             color: #3a3a3a;
             transition: 0.1s ease-in-out;
             position: relative;
+            cursor: pointer;
 
             &::before {
               position: absolute;
@@ -569,6 +572,33 @@
               text-decoration: none;
               background-color: #fff;
             }
+          }
+
+          .close {
+            display: none;
+
+            &::before {
+              transform: rotate(270deg);
+            }
+          }
+
+          ul {
+            display: none;
+            margin-bottom: 0;
+          }
+        }
+
+        .button__read.active {
+          .vision {
+            display: none;
+          }
+
+          .close {
+            display: flex;
+          }
+
+          ul {
+            display: block;
           }
         }
 
@@ -714,6 +744,12 @@
                     margin-bottom: 0;
                     display: inline-block;
                     margin-left: -2px;
+                  }
+
+                  em {
+                    font-weight: 800;
+                    text-decoration: underline;
+                    font-style: initial;
                   }
 
                   h4 {
@@ -1466,7 +1502,8 @@
           }
 
           .button__read {
-            a {
+            .vision,
+            .close {
               height: 50px;
               font-style: normal;
               font-weight: normal;

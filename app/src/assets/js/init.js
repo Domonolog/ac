@@ -208,10 +208,19 @@ jQuery( $ => {
     $(this).removeClass('active');
   });
 
-
   $(".select__popup").click(function(e) {
     e.preventDefault();
     $(".select__popup").addClass('active');
+  });
+
+  $('.button__read .vision').click(function () {
+    $('.button__read').parent().removeClass("active");
+    $(this).parent().toggleClass('active');
+  });
+
+  $('.button__read .close').click(function () {
+    $('.button__read').parent().removeClass("active");
+    $(this).parent().toggleClass('active');
   });
 
   var target = $('.fixed-bg');

@@ -53,9 +53,9 @@
       border: 1px solid #e0e3e5;
       box-sizing: border-box;
       border-radius: 5px;
-      padding: 8px;
+      max-width: 600px;
+      padding: 8px 11px;
       display: flex;
-      max-width: 586px;
     }
 
     .search {
@@ -192,7 +192,27 @@
 
   .slick-prev,
   .slick-next {
-    display: none !important;
+    position: absolute;
+    bottom: 50%;
+    font-size: 0;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: none;
+    width: 20px;
+    height: 20px;
+    box-shadow: none !important;
+    cursor: pointer;
+    background-position: center center;
+  }
+
+  .slick-next {
+    right: 5px;
+    background-image: url("../../images/arrow-read-right.png");
+  }
+
+  .slick-prev {
+    left: 5px;
+    background-image: url("../../images/arrow-read-right.png");
+    transform: rotate(180deg);
   }
 
   .slick-list {
