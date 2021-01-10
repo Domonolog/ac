@@ -412,7 +412,7 @@ jQuery( $ => {
     template: "<div class='jqcs_option' name='flag' data-select-value='$0' style='background-image:url(/wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
   });
 
-  $(window).click(function(e){
+  $().click(function(e){
     $('#currentValue').html('Current value is: \''+ $('input#countrySelect')[0].value +'\'');
   });
 
@@ -435,7 +435,7 @@ jQuery( $ => {
     template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(/wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
   });
 
-  $(window).click(function(e){
+  $().click(function(e){
     $('#currentValue').html('Current value is: \''+ $('input#flagSelect')[0].value +'\'');
   });
 
