@@ -223,6 +223,11 @@ jQuery( $ => {
     $(this).parent().toggleClass('active');
   });
 
+  $('.error__section .buttons').click(function () {
+    $().parent().addClass("active");
+    $(this).parent().toggleClass('active');
+  });
+
   var target = $('.fixed-bg');
   if (target.length) {
     var targetPos = target.offset().top;

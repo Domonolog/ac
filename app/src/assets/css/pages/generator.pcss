@@ -254,11 +254,12 @@
             min-width: 150px;
             position: relative;
             z-index: 1;
+            cursor: pointer;
 
             &:hover {
               margin-top: 0;
               margin-bottom: 0;
-              opacity: 0.8;
+              opacity: 1;
             }
           }
 
@@ -282,6 +283,7 @@
             color: #000;
             margin-left: -10px;
             text-decoration: none;
+            cursor: pointer;
 
             &:hover {
               opacity: 0.8;
@@ -289,7 +291,8 @@
           }
         }
 
-        .error__content {
+        .error__content,
+        .error__content-clear {
           background: #f8fafb;
           border: 1px solid rgba(98, 105, 117, 0.5);
           box-sizing: border-box;
@@ -356,6 +359,79 @@
             &:hover {
               margin-top: -2px;
               margin-bottom: 2px;
+            }
+          }
+        }
+
+        .error__section {
+          .error__content-clear {
+            display: none;
+          }
+        }
+
+        .error__section.active {
+          .error__content {
+            display: none;
+          }
+
+          .error__content-clear {
+            display: block;
+          }
+
+          .buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+
+            .btn {
+              padding: 5px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 150px;
+              height: 40px;
+              background: #f8fafb;
+              border: 1px solid rgba(98, 105, 117, 0.2);
+              box-sizing: border-box;
+              border-radius: 5px;
+              font-family: SF UI Display;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 25px;
+              letter-spacing: 1px;
+              color: #000;
+              margin-left: -10px;
+              text-decoration: none;
+              cursor: pointer;
+
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+
+            .btn-white {
+              background: #5bbe88;
+              border-radius: 5px;
+              font-family: SF UI Display;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 25px;
+              letter-spacing: 1px;
+              color: #fff;
+              width: 150px;
+              height: 40px;
+              min-width: 150px;
+              position: relative;
+              z-index: 1;
+              cursor: pointer;
+
+              &:hover {
+                margin-top: 0;
+                margin-bottom: 0;
+                opacity: 1;
+              }
             }
           }
         }
@@ -650,7 +726,8 @@
             margin-bottom: 15px;
           }
 
-          .error__content {
+          .error__content,
+          .error__content-clear {
             height: 300px;
             overflow-x: hidden;
             overflow-y: scroll;
