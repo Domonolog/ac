@@ -346,7 +346,8 @@ jQuery(function ($) {
         $(".fixed-left").removeClass('content-fixed-bottom');
       }
     });
-  };
+  }
+  ;
 
   $('.select, .select-popup').each(function () {
     var _this = $(this),
@@ -402,6 +403,7 @@ jQuery(function ($) {
 
   $(function () {
     $('.scroll-top').click(scrollToTop);
+
     function scrollToTop() {
       $('html, body').animate({ scrollTop: 0 }, 'slow');
       return false;
@@ -486,6 +488,8 @@ jQuery(function ($) {
   $().click(function (e) {
     $('#currentValue').html('Current value is: \'' + $('input#countrySelect')[0].value + '\'');
   });
+
+  document.documentElement.style.setProperty('--animate-duration', '2s');
 })(jQuery);
 
 (function ($) {
