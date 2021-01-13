@@ -172,10 +172,12 @@ jQuery( $ => {
     }
   });
 
-  $(".tabs-details ul li").click(function(e) {
-    e.preventDefault();
-    $(".tabs-details ul li").removeClass('active');
-    $(this).addClass('active');
+  $('.tabs-details ul li .top__details').click(function () {
+    $(this).parent().toggleClass('active');
+  });
+
+  $('.show-all').click(function () {
+    $(this).parent().toggleClass('active');
   });
 
   $(".tabs li").click(function(e) {

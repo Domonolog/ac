@@ -1037,11 +1037,24 @@
                       transform: rotate(180deg);
                     }
                   }
+
+                  .error-hidden {
+                    display: none;
+                    margin-bottom: 0 !important;
+                  }
                 }
 
                 li:last-child {
                   &::before {
                     display: none;
+                  }
+                }
+
+                li.active {
+                  ul.error {
+                    .error-hidden {
+                      display: block;
+                    }
                   }
                 }
               }
@@ -1072,15 +1085,6 @@
   .mobile-title,
   .mobile-button {
     display: none;
-  }
-
-  .error-hidden {
-    display: none;
-    margin-bottom: 0 !important;
-  }
-
-  .error-hidden.active {
-    display: block;
   }
 }
 
