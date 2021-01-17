@@ -2,7 +2,8 @@
 .popup-download,
 .popup-mobile,
 .popup-audit,
-.popup-stars {
+.popup-stars,
+.popup-home {
   padding-top: 0;
   padding-bottom: 0;
 
@@ -21,14 +22,16 @@
   #modal,
   #modal-download,
   #modal-audit,
-  #modal-stars {
+  #modal-stars,
+  #modal-home {
     display: none;
   }
 
   #modal:checked ~ .modal-background,
   #modal-download:checked ~ .modal-background,
   #modal-audit:checked ~ .modal-background,
-  #modal-stars:checked ~ .modal-background {
+  #modal-stars:checked ~ .modal-background,
+  #modal-home:checked ~ .modal-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -44,7 +47,8 @@
   #modal:checked ~ .modal-content,
   #modal-download:checked ~ .modal-content,
   #modal-audit:checked ~ .modal-content,
-  #modal-stars:checked ~ .modal-content {
+  #modal-stars:checked ~ .modal-content,
+  #modal-home:checked ~ .modal-content {
     position: fixed;
     transform: scale(1);
     transition: transform 500ms;
@@ -75,7 +79,8 @@
   #modal:checked ~ .modal-content .modal-close,
   #modal-download:checked ~ .modal-content .modal-close,
   #modal-audit:checked ~ .modal-content .modal-close,
-  #modal-stars:checked ~ .modal-content .modal-close {
+  #modal-stars:checked ~ .modal-content .modal-close,
+  #modal-home:checked ~ .modal-content .modal-close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -722,6 +727,36 @@
   }
 }
 
+.popup-home {
+  #modal-home:checked ~ .modal-content {
+    top: 90px;
+  }
+
+  #modal-home:checked ~ .modal-content {
+    .content {
+      padding: 0;
+
+      .section-home {
+        padding-top: 70px;
+
+        .title {
+          padding-left: 80px;
+        }
+
+        .title-p {
+          padding-left: 144px;
+          padding-right: 144px;
+        }
+
+        .jqcs_options {
+          top: initial;
+          bottom: 64px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1300px) {
   .modal-button {
     span {
@@ -735,7 +770,8 @@
   .popup-mobile,
   .popup-download,
   .popup-audit,
-  .popup-stars {
+  .popup-stars,
+  .popup-home {
     .modal-button {
       .btn {
         height: 40px;
@@ -751,7 +787,8 @@
     #modal:checked ~ .modal-content,
     #modal-download:checked ~ .modal-content,
     #modal-audit:checked ~ .modal-content,
-    #modal-stars:checked ~ .modal-content {
+    #modal-stars:checked ~ .modal-content,
+    #modal-home:checked ~ .modal-content {
       top: 25px;
 
       .content {
@@ -819,7 +856,8 @@
   .popup-download,
   .popup-mobile,
   .popup-audit,
-  .popup-stars {
+  .popup-stars,
+  .popup-home {
     #modal:checked ~ .modal-content,
     #modal-download:checked ~ .modal-content,
     #modal-audit:checked ~ .modal-content,
