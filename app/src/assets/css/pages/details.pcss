@@ -113,7 +113,7 @@
             left: 0;
           }
 
-          a {
+          span {
             font-family: SF UI Display;
             font-style: normal;
             font-weight: 500;
@@ -154,6 +154,7 @@
                 z-index: 20;
                 right: -338px;
                 top: -40px;
+                text-decoration: none;
 
                 &::before {
                   position: absolute;
@@ -711,6 +712,7 @@
                   letter-spacing: 0.5px;
                   color: #3a3a3a;
                   position: relative;
+                  word-break: break-all;
                   margin-bottom: 40px;
 
                   &::before {
@@ -1059,6 +1061,57 @@
                   }
                 }
               }
+
+              ol.error-fix {
+                h4 {
+                  font-family: SF UI Display;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: 25px;
+                  letter-spacing: 0.5px;
+                  color: #3a3a3a;
+                  display: inline-block;
+                  margin-bottom: 10px;
+                  padding-bottom: 0;
+                }
+
+                li {
+                  padding-bottom: 10px;
+
+                  ul {
+                    margin-bottom: 0;
+
+                    li {
+                      font-family: SF UI Display;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 12px;
+                      line-height: 25px;
+                      letter-spacing: 0.5px;
+                      color: #3a3a3a;
+                      padding: 5px 15px;
+                      margin-bottom: 0;
+
+                      &:first-child {
+                        border-radius: 5px 5px 0 0;
+                      }
+
+                      &:last-child {
+                        border-radius: 0 0 5px 5px;
+                      }
+
+                      &:nth-child(even) {
+                        background: #f8fafb;
+                      }
+
+                      &:nth-child(odd) {
+                        background: #ebf0f2;
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
 
@@ -1094,7 +1147,7 @@
     display: block !important;
   }
 
-  .section-details .wrapper .left .left__info p a:hover {
+  .section-details .wrapper .left .left__info p span:hover {
     span {
       display: none !important;
     }

@@ -135,8 +135,7 @@
         
               <div class="mobile-details">
                 <div class="left__info">
-                  <p>Based on our analysis, these automated tools will help you become compliant under<a href="#"><img
-                          src="images/germany-icon.png" alt="#">Germany BITV law<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis tellus cursus justo, accumsan convallis fermentum etiam non.</span></a></p>
+                  <p>Based on our analysis, these automated tools will help you become compliant under<span><img src="images/germany-icon.png" alt="#">Germany BITV law<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis tellus cursus justo, accumsan convallis fermentum etiam non.</span></span></p>
                 </div>
                 <ul class="medals">
                   <li>
@@ -315,7 +314,7 @@
                             </li>
                             <li>&#60;h2 class=”title center”&#62;We make growing simple. Watch the video below to learn more.&#60;/h2&#62;</li>
                             <ul class="error-hidden">
-                              <li>&#60;time class=”post-date” datetime=”2020-01-23T07:05:21+00:00”&#62;Jan 23, 2020&#60/time&#62;</li>
+                              <li>&#60;time class=”post-date” datetime=”2020-01-23T07:05:21+00:002020-01-23T07:05:21+00:002020-01-23T07:05:21+00:002020-01-23T07:05:21+00:002020-01-23T07:05:21+00:002020-01-23T07:05:21+00:002020-01-23T07:05:21+00:002020-01-23T07:05:21+00:00”&#62;Jan 23, 2020&#60/time&#62;</li>
                               <li>&#60;h2 class=”title center”&#62;We make growing simple. Watch the video below to learn more.&#60;/h2&#62;</li>
                               <li>&#60;time class=”post-date” datetime=”2020-01-23T07:05:21+00:00”&#62;Jan 23, 2020&#60/time&#62;</li>
                               <li>&#60;h2 class=”title center”&#62;We make growing simple. Watch the video below to learn more.&#60;/h2&#62;</li>
@@ -576,8 +575,24 @@
                         <li>
                           <h3>HOW TO <span class="green">SOLVE IT</span>:</h3>
                           <h4><span class="green">Option 1</span> - Do it yourself:</h4>
-                          <p>Similar to buttons, links primarily get their accessible name from their text content. Avoid filler
-                            words like "Here" or "Read more;" instead, put the most meaningful text into the link itself.</p>
+                          <ol class="error-fix">
+                            <li>
+                              <h4>Place the input element inside a label element:</h4>
+                              <ul>
+                                <li>&#60;label&#62;</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Receive promotional offers?</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;input type="checkbox"&#62;</li>
+                                <li>&#60;/label&#62;</li>
+                              </ul>
+                            </li>
+                            <li>
+                              <h4>Or use the label's for attribute and refer to the element's ID:</h4>
+                              <ul>
+                                <li>&#60;input id="promo" type="checkbox"&#62;</li>
+                                <li>&#60;label for="promo"&#62;Receive promotional offers?&#60;/label&#62;</li>
+                              </ul>
+                            </li>
+                          </ol>
                           <h4><span class="green">Option 2</span> - Use automated solutions:</h4>
                           <p>Instead of fixing each link by yourself, you can use automated solutions to make changes quickly
                             and efficiently. An automated solution will:</p>
