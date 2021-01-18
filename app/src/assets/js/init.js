@@ -230,6 +230,10 @@ jQuery($ => {
     $(this).parent().toggleClass('active');
   });
 
+  var updateTime=function(){loaderclear.style.display="none"}
+  setTimeout(updateTime,3200);
+  clearTimeout(updateTime);
+
   var target = $('.fixed-bg');
   if (target.length) {
     var targetPos = target.offset().top;

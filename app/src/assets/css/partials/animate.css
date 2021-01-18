@@ -102,6 +102,31 @@
   animation-delay: calc(var(--animate-delay) * 5);
 }
 
+.animate__animated.animate__delay-6s {
+  animation-delay: calc(1s * 6);
+  animation-delay: calc(var(--animate-delay) * 6);
+}
+
+.animate__animated.animate__delay-7s {
+  animation-delay: calc(1s * 7);
+  animation-delay: calc(var(--animate-delay) * 7);
+}
+
+.animate__animated.animate__delay-8s {
+  animation-delay: calc(1s * 8);
+  animation-delay: calc(var(--animate-delay) * 8);
+}
+
+.animate__animated.animate__delay-9s {
+  animation-delay: calc(1s * 9);
+  animation-delay: calc(var(--animate-delay) * 9);
+}
+
+.animate__animated.animate__delay-10s {
+  animation-delay: calc(1s * 10);
+  animation-delay: calc(var(--animate-delay) * 10);
+}
+
 .animate__animated.animate__faster {
   animation-duration: calc(1s / 2);
   animation-duration: calc(var(--animate-duration) / 2);
