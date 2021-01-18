@@ -32,8 +32,6 @@
   animation-iteration-count: calc(var(--animate-repeat) * 3);
 }
 
-/* custom time */
-
 .animate__animated.animate__delay-09s {
   animation-delay: 1s;
   animation-delay: var(--animate-delay);
