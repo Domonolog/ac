@@ -555,10 +555,12 @@
     background-size: 100%;
     background-repeat: no-repeat;
     filter: blur(5px) !important;
+    z-index: 99998;
   }
 
   #modal-audit:checked ~ .modal-content {
     top: 203px;
+    z-index: 99999;
   }
 
   #modal-audit:checked ~ .modal-content .content {
