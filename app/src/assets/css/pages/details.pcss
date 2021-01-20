@@ -741,7 +741,6 @@
                   letter-spacing: 0.5px;
                   color: #3a3a3a;
                   position: relative;
-                  word-break: break-all;
                   margin-bottom: 40px;
 
                   &::before {
@@ -751,8 +750,7 @@
                     height: 1px;
                     width: 100%;
                     bottom: 0;
-                    margin-left: -20px;
-                    margin-right: -20px;
+                    left: 0;
                   }
 
                   span.red {
@@ -875,6 +873,7 @@
 
                   ul.error {
                     margin-bottom: 0;
+                    word-break: break-all;
 
                     li {
                       padding: 5px 15px;
@@ -904,6 +903,8 @@
                   }
 
                   ul.error-hidden {
+                    word-break: break-all;
+
                     li {
                       &:nth-child(even) {
                         background-color: #f8fafb;
