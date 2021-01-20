@@ -172,6 +172,15 @@ jQuery($ => {
     }
   });
 
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 300) {
+      $(".section-details-fixed").addClass("active");
+    } else {
+      $(".section-details-fixed").removeClass("active");
+    }
+  });
+
   $('.tabs-details ul li .top__details').click(function () {
     $(this).parent().toggleClass('active');
   });
@@ -247,8 +256,7 @@ jQuery($ => {
         $(".fixed-left").removeClass('content-fixed-bottom');
       }
     });
-  }
-  ;
+  };
 
   $('.select, .select-popup').each(function () {
     const _this = $(this),
