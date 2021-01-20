@@ -182,13 +182,15 @@
         <div class="wrap">
           <div class="left">
             <div class="comliant">
-              <div class="details__img hidden">
-                <img src="{{root}}images/close-mini-details.png" alt="#">
+              <div class="comliant__content" v-if='score > 90'>
+                <div class="details__img hidden">
+                  <img src="{{root}}images/close-mini-details.png" alt="#">
+                </div>
+                <div class="details__img">
+                  <img src="{{root}}images/accept-mini-details.png" alt="#">
+                </div>
+                <h3>NOT COMPLIANT</h3>
               </div>
-              <div class="details__img">
-                <img src="{{root}}images/accept-mini-details.png" alt="#">
-              </div>
-              <h3>NOT COMPLIANT</h3>
             </div>
 
             <div class="bar-circle">
