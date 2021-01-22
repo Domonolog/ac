@@ -759,6 +759,40 @@
   }
 }
 
+.thank_popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  top: 60px;
+  z-index: 400;
+
+  .wrap {
+    display: flex;
+    background: #3a3a3a;
+    border-radius: 5px;
+    padding: 20px 40px 20px 30px;
+    align-items: center;
+    max-width: 425px;
+
+    p {
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 30px;
+      letter-spacing: 0.5px;
+      color: #fff;
+      margin-bottom: 0;
+      padding-left: 15px;
+    }
+  }
+}
+
+.thank_popup.active {
+  display: block;
+}
+
 @media (max-width: 1300px) {
   .modal-button {
     span {
