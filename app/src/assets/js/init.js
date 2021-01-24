@@ -190,7 +190,7 @@ jQuery($ => {
   });
 
   $('.show-all').click(function () {
-    $(this).toggleClass('less');
+    $(this).toggleClass('active');
   });
 
   $('.tabs li p').click(function () {
