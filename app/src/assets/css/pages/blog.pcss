@@ -507,7 +507,59 @@
   }
 }
 
+.progress-site-bar {
+  display: none;
+}
+
 @media (max-width: 992px) {
+  .progress-site-bar {
+    display: block;
+
+    progress {
+      position: fixed;
+      left: 0;
+      top: 45px;
+      width: 100%;
+      height: 2px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      background: #fff;
+      color: #2dc082;
+      z-index: 10;
+    }
+
+    progress::-webkit-progress-bar {
+      background: #fff;
+    }
+
+    progress::-webkit-progress-value {
+      background: #2dc082;
+    }
+
+    progress::-moz-progress-bar {
+      background: #2dc082;
+    }
+
+    .progress-container {
+      width: 100%;
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      display: block;
+    }
+
+    .progress-bar {
+      background: #2dc082;
+      width: 0%;
+      display: block;
+      height: inherit;
+    }
+  }
+
   .section-blog {
     .content__all {
       .inner {

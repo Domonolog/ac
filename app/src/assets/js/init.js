@@ -189,10 +189,9 @@ jQuery($ => {
     $(this).parent().toggleClass('active');
   });
 
-  $(".tabs li").click(function (e) {
-    e.preventDefault();
-    $(".tabs li").removeClass('active');
-    $(this).addClass('active');
+  $('.tabs li p').click(function () {
+    $().parent().addClass('active');
+    $(this).parent().toggleClass('active');
   });
 
   $(".section-frequent__mobile ul li").click(function (e) {
@@ -207,10 +206,19 @@ jQuery($ => {
     $(this).addClass('active');
   });
 
-  $(".section-tabs__mobile ul li").click(function (e) {
-    e.preventDefault();
-    $(".section-tabs__mobile ul li").removeClass('active');
-    $(this).addClass('active');
+  $('.section-tabs__mobile ul li .content__top').click(function () {
+    $().parent().addClass('active');
+    $(this).parent().toggleClass('active');
+  });
+
+  $(function() {
+    $(window).on("scroll resize", function() {
+      var o = $(window).scrollTop() / ($(document).height() - $(window).height());
+      $(".progress-bar").css({
+        "width": (100 * o | 0) + "%"
+      });
+      $('progress')[0].value = o;
+    })
   });
 
   //$(".button-show-statement .btn").click(function (e) {
