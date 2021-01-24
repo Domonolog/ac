@@ -293,7 +293,7 @@ jQuery(function ($) {
   });
 
   $('.show-all').click(function () {
-    $(this).toggleClass('active');
+    $(this).toggleClass('less');
   });
 
   $('.tabs li p').click(function () {
