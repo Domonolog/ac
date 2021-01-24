@@ -292,6 +292,10 @@ jQuery(function ($) {
     $(this).parent().toggleClass('active');
   });
 
+  $('.show-all').click(function () {
+    $(this).toggleClass('active');
+  });
+
   $('.tabs li p').click(function () {
     $().parent().addClass('active');
     $(this).parent().toggleClass('active');
