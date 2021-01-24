@@ -1050,7 +1050,7 @@
                         background-position: 0 0;
                         width: 25px;
                         height: 25px;
-                        margin-left: 70px;
+                        margin-left: 60px;
                       }
 
                       &:hover {
@@ -1063,11 +1063,27 @@
                         }
                       }
                     }
+
+                    .show-less {
+                      display: none;
+
+                      &::before {
+                        margin-left: 70px;
+                      }
+                    }
                   }
 
                   .show-all.active {
-                    span::before {
-                      transform: rotate(180deg);
+                    span {
+                      display: none;
+
+                      &::before {
+                        transform: rotate(180deg);
+                      }
+                    }
+
+                    .show-less {
+                      display: block;
                     }
                   }
 
