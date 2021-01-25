@@ -318,16 +318,6 @@ jQuery(function ($) {
     $(this).parent().toggleClass('active');
   });
 
-  $(function () {
-    $(window).on("scroll resize", function () {
-      var o = $(window).scrollTop() / ($(document).height() - $(window).height());
-      $(".progress-site-bar .progress-bar").css({
-        "width": (100 * o | 0) + "%"
-      });
-      $('progress')[0].value = o;
-    });
-  });
-
   //$(".button-show-statement .btn").click(function (e) {
   //  e.preventDefault();
   //  $(".hidden__content").addClass('active');
@@ -537,6 +527,14 @@ jQuery(function ($) {
     backSpeed: 30,
     loop: true,
     cursorChar: ""
+  });
+
+  $(window).on("scroll resize", function () {
+    var o = $(window).scrollTop() / ($(document).height() - $(window).height());
+    $(".progress-site-bar .progress-bar").css({
+      "width": (100 * o | 0) + "%"
+    });
+    $('progress')[0].value = o;
   });
 })(jQuery);
 
