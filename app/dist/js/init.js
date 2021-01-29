@@ -284,6 +284,15 @@ jQuery(function ($) {
     }
   });
 
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 300) {
+      $(".tabs-details").addClass("fixed");
+    } else {
+      $(".tabs-details").removeClass("fixed");
+    }
+  });
+
   $('.tabs-details ul li .top__details').click(function () {
     $(this).parent().toggleClass('active');
   });
@@ -505,6 +514,26 @@ jQuery(function ($) {
     $('#currentValue').html('Current value is: \'' + $('input#countrySelect')[0].value + '\'');
   });
 
+  $(window).on("scroll resize", function () {
+    var o = $(window).scrollTop() / ($(document).height() - $(window).height());
+    $(".progress-site-bar .progress-bar").css({
+      "width": (100 * o | 0) + "%"
+    });
+    $('progress')[0].value = o;
+  });
+
+  $.customSelect({
+    identifier: 'select-home-popup',
+    selector: '#countrySelectPopup',
+    placeholder: 'United States',
+    options: [['us', 'us.png', 'United States'], ['ca', 'ca.png', 'Canada'], ['eu', 'eu.png', 'Europe'], ['ge', 'ge.png', 'Germany'], ['au', 'au.png', 'Australia'], ['dn', 'dn.png', 'Denmark'], ['fr', 'fr.png', 'Finland']],
+    template: "<div class='jqcs_option' name='flag' data-select-value='$0' style='background-image:url(/wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
+  });
+
+  $().click(function (e) {
+    $('#currentValue').html('Current value is: \'' + $('input#countrySelectPopup')[0].value + '\'');
+  });
+
   document.documentElement.style.setProperty('--animate-duration', '2s');
 })(jQuery);
 
@@ -529,12 +558,28 @@ jQuery(function ($) {
     cursorChar: ""
   });
 
-  $(window).on("scroll resize", function () {
-    var o = $(window).scrollTop() / ($(document).height() - $(window).height());
-    $(".progress-site-bar .progress-bar").css({
-      "width": (100 * o | 0) + "%"
+  var typed = new _typed2.default('.element-popup', {
+    strings: ["ADA compliant", "Section 508 compliant", "AODA compliant", "WCAG 2.1 compliant", "ACA compliant", "BITV compliant"],
+    typeSpeed: 40,
+    backSpeed: 30,
+    loop: true,
+    cursorChar: ""
+  });
+
+  $(function () {
+    var topPos = $('.top__details').offset().top;
+    $(window).scroll(function () {
+      var top = $(document).scrollTop(),
+          pip = $('footer').offset().top,
+          //расстояние до подвала от верха окна браузера
+      height = $('.top__details').outerHeight(); //получаем значение высоты пл.блока
+      if (top > pip - height) {
+        $('.top__details').fadeOut(100);
+      } //блок скроется когда достигнет заданного расстояния
+      else {
+          $('.top__details').removeClass('fixed');
+        }
     });
-    $('progress')[0].value = o;
   });
 })(jQuery);
 
