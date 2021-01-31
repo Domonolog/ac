@@ -236,22 +236,8 @@
         margin-bottom: 50px;
 
         li {
-          position: relative;
           background-image: none;
           padding-left: 0;
-
-          &::before {
-            position: absolute;
-            content: " ";
-            right: 20px;
-            top: 21px;
-            background-image: url("../../images/list-arrow.png");
-            background-repeat: no-repeat;
-            width: 30px;
-            height: 30px;
-            z-index: 1;
-            transition: 0.3s ease-in-out;
-          }
 
           p {
             margin-bottom: 0;
@@ -272,6 +258,19 @@
               background: #fff;
               border: 1px solid #e9ecee;
             }
+
+            &::before {
+              position: absolute;
+              content: " ";
+              right: 20px;
+              top: 21px;
+              background-image: url("../../images/list-arrow.png");
+              background-repeat: no-repeat;
+              width: 30px;
+              height: 30px;
+              z-index: 1;
+              transition: 0.3s ease-in-out;
+            }
           }
 
           .tab-hidden {
@@ -286,19 +285,23 @@
             display: block;
           }
 
-          &::before {
-            transform: rotate(180deg);
-          }
-
           p {
             font-weight: 700;
             border: 1px solid #e9ecee;
+
+            &::before {
+              transform: rotate(180deg);
+            }
           }
 
           .tab-hidden {
             p {
               font-weight: normal;
               padding: 25px 30px 79px;
+
+              &::before {
+                display: none;
+              }
             }
           }
         }

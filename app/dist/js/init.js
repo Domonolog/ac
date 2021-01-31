@@ -137,6 +137,16 @@ _webfontloader2.default.load({
 jQuery(function ($) {
 
   $(function () {
+    $(window).on("scroll resize", function () {
+      var o = $(window).scrollTop() / ($(document).height() - $(window).height());
+      $(".progress-site-bar .progress-bar").css({
+        "width": (100 * o | 0) + "%"
+      });
+      $('progress')[0].value = o;
+    });
+  });
+
+  $(function () {
     $("#rateYo").rateYo({
       rating: 1.5,
       halfStar: true,
@@ -513,14 +523,6 @@ jQuery(function ($) {
     $('#currentValue').html('Current value is: \'' + $('input#countrySelect')[0].value + '\'');
   });
 
-  $(window).on("scroll resize", function () {
-    var o = $(window).scrollTop() / ($(document).height() - $(window).height());
-    $(".progress-site-bar .progress-bar").css({
-      "width": (100 * o | 0) + "%"
-    });
-    $('progress')[0].value = o;
-  });
-
   $.customSelect({
     identifier: 'select-home-popup',
     selector: '#countrySelectPopup',
@@ -563,22 +565,6 @@ jQuery(function ($) {
     backSpeed: 30,
     loop: true,
     cursorChar: ""
-  });
-
-  $(function () {
-    var topPos = $('.top__details').offset().top;
-    $(window).scroll(function () {
-      var top = $(document).scrollTop(),
-          pip = $('footer').offset().top,
-          //расстояние до подвала от верха окна браузера
-      height = $('.top__details').outerHeight(); //получаем значение высоты пл.блока
-      if (top > pip - height) {
-        $('.top__details').fadeOut(100);
-      } //блок скроется когда достигнет заданного расстояния
-      else {
-          $('.top__details').removeClass('fixed');
-        }
-    });
   });
 })(jQuery);
 
