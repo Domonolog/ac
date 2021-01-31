@@ -310,10 +310,9 @@ jQuery(function ($) {
     $(this).parent().toggleClass('active');
   });
 
-  $(".section-frequent__mobile ul li").click(function (e) {
-    e.preventDefault();
-    $(".section-frequent__mobile ul li").removeClass('active');
-    $(this).addClass('active');
+  $('.section-frequent__mobile ul li .frequent__top').click(function () {
+    $().parent().addClass('active');
+    $(this).parent().toggleClass('active');
   });
 
   $(".fixed-left ul li").click(function (e) {
