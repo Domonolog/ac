@@ -317,16 +317,19 @@
     }
 
     .right {
-      padding: 50px 50px 0;
+      padding: 50px 0 0;
       width: 70%;
       background-color: #f8fafb;
       max-width: 950px;
+      position: relative;
+      padding-bottom: 1000px;
 
       .detail__title {
         display: flex;
         justify-content: space-between;
         margin-bottom: 25px;
         align-items: center;
+        padding: 0 50px;
 
         .modal-button {
           cursor: pointer;
@@ -392,6 +395,7 @@
         justify-content: space-between;
         margin-bottom: 30px;
         min-height: 210px;
+        padding: 0 50px;
 
         .slick-list {
           width: 100%;
@@ -553,6 +557,8 @@
       }
 
       .tabs-details {
+        padding: 0 50px;
+
         h3 {
           font-family: SF UI Display;
           font-style: normal;
@@ -1180,15 +1186,28 @@
         }
       }
 
-      /* .tabs-details.fixed {
-        li.animate__animated.active {
+      .tabs-details.fixed {
+        position: fixed;
+        top: 80px;
+        overflow: auto;
+        height: 87vh;
+        max-width: 950px;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+          width: 0;
+          display: none;
+        }
+
+        .animate__animated.active {
           .top__details {
-            position: fixed;
-            background-color: red;
-            z-index: 1200;
+            position: relative;
+            margin-left: -50px;
+            margin-right: -50px;
+            z-index: 40;
           }
         }
-      } */
+      }
     }
   }
 
@@ -1205,7 +1224,6 @@
     background-color: #fff;
     border: 1px solid #e9ecee;
     box-sizing: border-box;
-    margin-left: -50px;
     padding: 19px 50px 14px;
     box-shadow: 15px 15px 0 rgba(126, 144, 153, 0.1);
     display: none;
@@ -1214,6 +1232,8 @@
       display: flex;
       justify-content: space-between;
       max-width: 850px;
+      padding-bottom: 19px;
+      border-bottom: 1px solid #e9ecee;
 
       .left {
         display: flex;
@@ -1327,7 +1347,7 @@
     }
 
     .fixed-h3 {
-      padding-top: 19px;
+      padding-top: 15px;
       font-family: SF UI Display;
       font-style: normal;
       font-weight: bold;
@@ -1540,10 +1560,12 @@
       }
 
       .right {
-        padding: 24px 15px 0;
+        padding: 24px 0 0;
         border-top: 1px solid #dae2e7;
 
         .detail__title {
+          padding: 0 15px;
+
           h2,
           .mobile-title {
             font-style: normal;
@@ -1617,6 +1639,8 @@
         }
 
         .tabs-details {
+          padding: 0 15px;
+
           h3 {
             font-size: 14px;
             line-height: 25px;
@@ -1627,10 +1651,19 @@
             li {
               .top__details {
                 display: block;
-                padding: 15px;
+                padding: 15px 0;
+                margin-left: 15px;
+                margin-right: 15px;
 
                 &:hover {
                   background: none;
+                  border: none;
+                  padding: 16px 0.8px 14.5px;
+                  border-bottom: 1px solid #e9ecee;
+                }
+
+                &::before {
+                  right: 5px;
                 }
 
                 .tabs-details__left {
@@ -1800,6 +1833,11 @@
             }
           }
 
+          .pd-15 {
+            margin-left: -15px;
+            margin-right: -15px;
+          }
+
           .button__read {
             .vision,
             .close {
@@ -1809,6 +1847,25 @@
               font-size: 14px;
               line-height: 30px;
               letter-spacing: 1px;
+            }
+          }
+        }
+
+        .tabs-details.fixed {
+          position: initial;
+          overflow: hidden;
+          height: 100%;
+
+          .animate__animated.active {
+            .top__details {
+              padding-left: 15px;
+              padding-right: 15px;
+              margin-left: 0;
+              margin-right: 0;
+
+              &::before {
+                right: 20px;
+              }
             }
           }
         }
