@@ -551,7 +551,7 @@ jQuery(function ($) {
     $('#currentValue').html('Current value is: \'' + $('input#flagSelect')[0].value + '\'');
   });
 
-  var typed = new _typed2.default('.element', {
+  var typed = new _typed2.default('.element-popup', {
     strings: ["ADA compliant", "Section 508 compliant", "AODA compliant", "WCAG 2.1 compliant", "ACA compliant", "BITV compliant"],
     typeSpeed: 40,
     backSpeed: 30,
@@ -559,7 +559,7 @@ jQuery(function ($) {
     cursorChar: ""
   });
 
-  var typed = new _typed2.default('.element-popup', {
+  var typed = new _typed2.default('.element', {
     strings: ["ADA compliant", "Section 508 compliant", "AODA compliant", "WCAG 2.1 compliant", "ACA compliant", "BITV compliant"],
     typeSpeed: 40,
     backSpeed: 30,

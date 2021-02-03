@@ -1188,23 +1188,39 @@
 
       .tabs-details.fixed {
         position: fixed;
-        top: 80px;
+        top: 120px;
         overflow: auto;
         height: 87vh;
         max-width: 950px;
         -ms-overflow-style: none;
+        z-index: 15;
+        box-shadow: none !important;
 
-        &::-webkit-scrollbar {
-          width: 0;
+        h3.animate__animated {
           display: none;
         }
 
-        .animate__animated.active {
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          width: 0;
+        }
+
+        &::-webkit-scrollbar-track {
+          width: 0;
+        }
+
+        .accordion.active {
           .top__details {
-            position: relative;
+            position: fixed;
             margin-left: -50px;
             margin-right: -50px;
             z-index: 40;
+            top: 120px;
+            box-shadow: 15px 15px 0 rgba(126, 144, 153, 0.1);
+            width: calc(69% + 50px);
           }
         }
       }
@@ -1651,14 +1667,16 @@
             li {
               .top__details {
                 display: block;
-                padding: 15px 0;
-                margin-left: 15px;
-                margin-right: 15px;
+                padding: 15px;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                position: initial !important;
+                width: 100% !important;
 
                 &:hover {
                   background: none;
                   border: none;
-                  padding: 16px 0.8px 14.5px;
+                  padding: 16px 15.8px 15.9px;
                   border-bottom: 1px solid #e9ecee;
                 }
 

@@ -137,6 +137,16 @@ _webfontloader2.default.load({
 jQuery(function ($) {
 
   $(function () {
+    $(window).on("scroll resize", function () {
+      var o = $(window).scrollTop() / ($(document).height() - $(window).height());
+      $(".progress-site-bar .progress-bar").css({
+        "width": (100 * o | 0) + "%"
+      });
+      $('progress')[0].value = o;
+    });
+  });
+
+  $(function () {
     $("#rateYo").rateYo({
       rating: 1.5,
       halfStar: true,
@@ -284,6 +294,15 @@ jQuery(function ($) {
     }
   });
 
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 300) {
+      $(".tabs-details").addClass("fixed");
+    } else {
+      $(".tabs-details").removeClass("fixed");
+    }
+  });
+
   $('.tabs-details ul li .top__details').click(function () {
     $(this).parent().toggleClass('active');
   });
@@ -301,10 +320,9 @@ jQuery(function ($) {
     $(this).parent().toggleClass('active');
   });
 
-  $(".section-frequent__mobile ul li").click(function (e) {
-    e.preventDefault();
-    $(".section-frequent__mobile ul li").removeClass('active');
-    $(this).addClass('active');
+  $('.section-frequent__mobile ul li .frequent__top').click(function () {
+    $().parent().addClass('active');
+    $(this).parent().toggleClass('active');
   });
 
   $(".fixed-left ul li").click(function (e) {
@@ -505,6 +523,18 @@ jQuery(function ($) {
     $('#currentValue').html('Current value is: \'' + $('input#countrySelect')[0].value + '\'');
   });
 
+  $.customSelect({
+    identifier: 'select-home-popup',
+    selector: '#countrySelectPopup',
+    placeholder: 'United States',
+    options: [['us', 'us.png', 'United States'], ['ca', 'ca.png', 'Canada'], ['eu', 'eu.png', 'Europe'], ['ge', 'ge.png', 'Germany'], ['au', 'au.png', 'Australia'], ['dn', 'dn.png', 'Denmark'], ['fr', 'fr.png', 'Finland']],
+    template: "<div class='jqcs_option' name='flag' data-select-value='$0' style='background-image:url(/wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
+  });
+
+  $().click(function (e) {
+    $('#currentValue').html('Current value is: \'' + $('input#countrySelectPopup')[0].value + '\'');
+  });
+
   document.documentElement.style.setProperty('--animate-duration', '2s');
 })(jQuery);
 
@@ -521,7 +551,7 @@ jQuery(function ($) {
     $('#currentValue').html('Current value is: \'' + $('input#flagSelect')[0].value + '\'');
   });
 
-  var typed = new _typed2.default('.element', {
+  var typed = new _typed2.default('.element-popup', {
     strings: ["ADA compliant", "Section 508 compliant", "AODA compliant", "WCAG 2.1 compliant", "ACA compliant", "BITV compliant"],
     typeSpeed: 40,
     backSpeed: 30,
@@ -529,12 +559,12 @@ jQuery(function ($) {
     cursorChar: ""
   });
 
-  $(window).on("scroll resize", function () {
-    var o = $(window).scrollTop() / ($(document).height() - $(window).height());
-    $(".progress-site-bar .progress-bar").css({
-      "width": (100 * o | 0) + "%"
-    });
-    $('progress')[0].value = o;
+  var typed = new _typed2.default('.element', {
+    strings: ["ADA compliant", "Section 508 compliant", "AODA compliant", "WCAG 2.1 compliant", "ACA compliant", "BITV compliant"],
+    typeSpeed: 40,
+    backSpeed: 30,
+    loop: true,
+    cursorChar: ""
   });
 })(jQuery);
 
