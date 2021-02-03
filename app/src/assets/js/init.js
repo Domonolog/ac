@@ -21,17 +21,6 @@ WebFont.load({
 });
 
 jQuery($ => {
-
-  $(function() {
-    $(window).on("scroll resize", function() {
-      var o = $(window).scrollTop() / ($(document).height() - $(window).height());
-      $(".progress-site-bar .progress-bar").css({
-        "width": (100 * o | 0) + "%"
-      });
-      $('progress')[0].value = o;
-    })
-  });
-
   $(function () {
     $("#rateYo").rateYo({
       rating: 1.5,
