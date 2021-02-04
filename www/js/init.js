@@ -504,7 +504,7 @@ jQuery(function ($) {
     identifier: 'select-home',
     selector: '#countrySelect',
     placeholder: 'United States',
-    options: [['us', 'us.png', 'United States'], ['ca', 'ca.png', 'Canada'], ['eu', 'eu.png', 'Europe'], ['ge', 'ge.png', 'Germany'], ['au', 'au.png', 'Australia'], ['dn', 'dn.png', 'Denmark'], ['fr', 'fr.png', 'Finland']],
+    options: [['us', 'us.png', 'United States'], ['ca', 'ca.png', 'Canada'], ['eu', 'eu.png', 'Europe'], ['ge', 'ge.png', 'Germany'], ['au', 'au.png', 'Australia'], ['fr', 'fr.png', 'France'], ['uk', 'uk.png', 'United Kingdom'], ['ww', 'ww.png', 'Worldwide']],
     template: "<div class='jqcs_option' name='flag' data-select-value='$0' style='background-image:url(/wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
   });
 
@@ -516,7 +516,7 @@ jQuery(function ($) {
     identifier: 'select-home-popup',
     selector: '#countrySelectPopup',
     placeholder: 'United States',
-    options: [['us', 'us.png', 'United States'], ['ca', 'ca.png', 'Canada'], ['eu', 'eu.png', 'Europe'], ['ge', 'ge.png', 'Germany'], ['au', 'au.png', 'Australia'], ['dn', 'dn.png', 'Denmark'], ['fr', 'fr.png', 'Finland']],
+    options: [['us', 'us.png', 'United States'], ['ca', 'ca.png', 'Canada'], ['eu', 'eu.png', 'Europe'], ['ge', 'ge.png', 'Germany'], ['au', 'au.png', 'Australia'], ['fr', 'fr.png', 'France'], ['uk', 'uk.png', 'United Kingdom'], ['ww', 'ww.png', 'Worldwide']],
     template: "<div class='jqcs_option' name='flag' data-select-value='$0' style='background-image:url(/wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
   });
 
@@ -532,7 +532,7 @@ jQuery(function ($) {
     identifier: 'select-header',
     selector: '#flagSelect',
     placeholder: 'US',
-    options: [['us', 'us.png', 'US'], ['ca', 'ca.png', 'CA'], ['eu', 'eu.png', 'EU'], ['ge', 'ge.png', 'GE'], ['au', 'au.png', 'AU'], ['dn', 'dn.png', 'DE'], ['fr', 'fr.png', 'FN']],
+    options: [['us', 'us.png', 'US'], ['ca', 'ca.png', 'CA'], ['eu', 'eu.png', 'EU'], ['ge', 'ge.png', 'GE'], ['au', 'au.png', 'AU'], ['fr', 'fr.png', 'FR'], ['uk', 'uk.png', 'UK'], ['ww', 'ww.png', 'WW']],
     template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(/wp-content/themes/accessibility/assets/images/$1);'>$2</div>"
   });
 
