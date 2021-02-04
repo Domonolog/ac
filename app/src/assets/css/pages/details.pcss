@@ -27,6 +27,12 @@
   }
 }
 
+.left-sidebar__fixed {
+  position: fixed;
+  max-width: 330px;
+  z-index: 50;
+}
+
 .section-details {
   padding-top: 0;
   padding-bottom: 0;
@@ -1421,6 +1427,11 @@
     .section-details-fixed.active {
       display: none;
     }
+  }
+
+  .left-sidebar__fixed {
+    position: initial;
+    max-width: 100%;
   }
 
   .mobile-details.active {
