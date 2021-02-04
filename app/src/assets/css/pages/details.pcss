@@ -741,6 +741,7 @@
                   letter-spacing: 1px;
                   color: #3a3a3a;
                   margin-bottom: 0;
+                  word-break: break-all;
                 }
               }
             }
@@ -1240,7 +1241,7 @@
             z-index: 40;
             top: 120px;
             box-shadow: 15px 15px 0 rgba(126, 144, 153, 0.1);
-            width: calc(69% + 50px);
+            width: calc(50% + 310px);
           }
         }
       }
@@ -1404,6 +1405,18 @@
   .section-details {
     .section-details-fixed {
       width: calc(69% + 50px);
+    }
+
+    .wrapper {
+      .right {
+        .tabs-details.fixed {
+          .accordion.active {
+            .top__details {
+              width: calc(69% + 50px);
+            }
+          }
+        }
+      }
     }
   }
 }
