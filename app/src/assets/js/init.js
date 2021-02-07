@@ -213,6 +213,15 @@ jQuery($ => {
     }
   });
 
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 20) {
+      $(".menu-button").addClass("fixed");
+    } else {
+      $(".menu-button").removeClass("fixed");
+    }
+  });
+
   $('.tabs-details ul li .top__details').click(function () {
     $(this).parent().toggleClass('active');
   });

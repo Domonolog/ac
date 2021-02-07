@@ -603,18 +603,27 @@ ul.second-nav {
 }
 
 @media (max-width: 992px) {
-  .admin-bar #sticky-header,
+  .admin-bar #sticky-header {
+    margin-top: 0 !important;
+  }
+
   .admin-bar .menu-button {
+    margin-top: 46px !important;
+  }
+
+  .admin-bar .menu-button.fixed {
     margin-top: 0 !important;
   }
 
   .admin-bar #sticky-header.unfixed {
     position: absolute;
     top: 45px;
+    width: 100%;
   }
 
   .admin-bar #sticky-header.fixed {
     position: fixed;
     top: 0;
+    width: 100%;
   }
 }
