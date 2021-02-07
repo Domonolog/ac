@@ -495,9 +495,10 @@
   background-repeat: no-repeat;
   background-position: center center;
   display: block;
-  position: absolute;
   right: 65px;
-  bottom: 65px;
+  top: initial;
+  position: absolute;
+  bottom: 50px;
 
   &:hover,
   &:active,
@@ -505,6 +506,16 @@
     text-decoration: none;
     outline: none;
   }
+}
+
+.up-scroll.scroll-fixed {
+  position: fixed;
+  bottom: 50px;
+}
+
+.up-scroll.scroll-fixed.up-scroll-fixed-bottom {
+  position: absolute;
+  bottom: 50px;
 }
 
 .progress-site-bar {
