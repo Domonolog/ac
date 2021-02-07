@@ -222,6 +222,15 @@ jQuery($ => {
     }
   });
 
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 20) {
+      $(".header.version2.vision").addClass("fixed");
+    } else {
+      $(".header.version2.vision").removeClass("fixed");
+    }
+  });
+
   $('.tabs-details ul li .top__details').click(function () {
     $(this).parent().toggleClass('active');
   });
