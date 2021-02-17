@@ -217,6 +217,41 @@
               }
             }
           }
+
+          span.active {
+            text-decoration: none;
+            color: #1dbe7a;
+
+            span {
+              display: block !important;
+              position: absolute;
+              font-family: SF UI Display;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 20px;
+              letter-spacing: 0.01em;
+              color: #fff;
+              padding: 15px 20px;
+              max-width: 318px;
+              background: #3a3a3a;
+              border-radius: 5px;
+              z-index: 20;
+              right: -338px;
+              top: -40px;
+              text-decoration: none;
+
+              &::before {
+                position: absolute;
+                content: " ";
+                width: 25px;
+                height: 40px;
+                background-image: url("../../images/gray-icon.png");
+                left: -15px;
+                top: 27px;
+              }
+            }
+          }
         }
       }
 
@@ -1466,9 +1501,22 @@
     display: block !important;
   }
 
-  .section-details .wrapper .left .left__info p span:hover {
-    span {
-      display: none !important;
+  .section-details .wrapper .left .left__info p span.active span,
+  .section-details .wrapper .left .left__info p span:hover span {
+    right: initial;
+    width: 100%;
+    position: relative;
+    top: 30px;
+    left: -20px;
+    max-width: 100%;
+    z-index: 3;
+
+    &::before {
+      left: 50%;
+      transform: translate(-50%);
+      transform: rotate(90deg);
+      top: -25px;
+      margin-left: 0;
     }
   }
 

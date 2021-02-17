@@ -367,6 +367,11 @@ jQuery(function ($) {
     $(this).parent().toggleClass('active');
   });
 
+  $('.section-details .wrapper .left .left__info p span').click(function () {
+    $().parent().addClass('active');
+    $(this).toggleClass('active');
+  });
+
   //$(".button-show-statement .btn").click(function (e) {
   //  e.preventDefault();
   //  $(".hidden__content").addClass('active');
