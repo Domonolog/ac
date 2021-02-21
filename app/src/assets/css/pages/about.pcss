@@ -485,7 +485,10 @@
         }
 
         ul {
-          padding-left: 0;
+          padding: 0;
+          margin: 0;
+          padding-left: 15px;
+          list-style-type: disc;
 
           li {
             font-style: normal;
@@ -493,6 +496,33 @@
             font-size: 13px;
             line-height: 20px;
             letter-spacing: 0.5px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            padding-left: 5px;
+            margin-bottom: 15px;
+
+            &::marker {
+              color: #202020;
+            }
+          }
+        }
+
+        ul.accept {
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+
+          li {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 20px;
+            letter-spacing: 0.5px;
+            background-image: url("../../images/check-icon.png");
+            background-repeat: no-repeat;
+            background-size: 20px;
+            padding-left: 25px;
+            margin-bottom: 15px;
           }
         }
 
