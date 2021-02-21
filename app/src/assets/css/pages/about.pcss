@@ -209,9 +209,32 @@
       ul {
         padding: 0;
         margin: 0;
+        padding-left: 15px;
+        list-style-type: disc;
+
+        li {
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 30px;
+          letter-spacing: 0.5px;
+          color: #3a3a3a;
+          background-repeat: no-repeat;
+          background-size: 20px;
+          padding-left: 5px;
+          margin-bottom: 15px;
+
+          &::marker {
+            color: #202020;
+          }
+        }
+      }
+
+      ul.accept {
+        padding: 0;
+        margin: 0;
         list-style-type: none;
-        padding-left: 20px;
-        margin-bottom: 20px;
 
         li {
           font-family: SF UI Display;
@@ -223,8 +246,9 @@
           color: #3a3a3a;
           background-image: url("../../images/check-icon.png");
           background-repeat: no-repeat;
-          padding-left: 40px;
-          margin-bottom: 10px;
+          background-size: 20px;
+          padding-left: 25px;
+          margin-bottom: 15px;
         }
       }
 
