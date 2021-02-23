@@ -39,6 +39,8 @@
   max-width: 330px;
   z-index: 51;
   height: 100vh;
+  position: fixed;
+  overflow-x: scroll;
 
   &::-webkit-scrollbar {
     width: 0;
@@ -207,19 +209,19 @@
                 background: #3a3a3a;
                 border-radius: 5px;
                 z-index: 20;
-                top: -20px;
+                top: 40px;
                 text-decoration: none;
-                left: 114%;
-                width: 250px;
+                margin-left: -27px;
 
                 &::before {
                   position: absolute;
                   content: " ";
                   width: 25px;
                   height: 40px;
+                  transform: rotate(90deg) translateX(-50%);
                   background-image: url("../../images/gray-icon.png");
-                  left: -15px;
-                  top: 6px;
+                  left: 50%;
+                  top: -12px;
                 }
               }
             }
@@ -230,7 +232,7 @@
             color: #1dbe7a;
 
             span {
-              display: block !important;
+              display: block;
               position: absolute;
               font-family: SF UI Display;
               font-style: normal;
@@ -244,18 +246,19 @@
               background: #3a3a3a;
               border-radius: 5px;
               z-index: 20;
-              right: -338px;
-              top: -40px;
+              top: 40px;
               text-decoration: none;
+              margin-left: -27px;
 
               &::before {
                 position: absolute;
                 content: " ";
                 width: 25px;
                 height: 40px;
+                transform: rotate(90deg) translateX(-50%);
                 background-image: url("../../images/gray-icon.png");
-                left: -15px;
-                top: 27px;
+                left: 50%;
+                top: -12px;
               }
             }
           }
@@ -1608,6 +1611,7 @@
     left: -5px;
     max-width: 100%;
     z-index: 15;
+    margin-left: 5px;
 
     &::before {
       left: 50%;
