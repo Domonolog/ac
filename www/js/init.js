@@ -398,10 +398,6 @@ jQuery(function ($) {
     $(this).parent().toggleClass('active');
   });
 
-  $(".top__details").click(function () {
-    $(".section-details-fixed").toggleClass("box-none");
-  });
-
   // var updateTime=function(){loaderclear.style.display="none"}
   // setTimeout(updateTime,3200);
   // clearTimeout(updateTime);
