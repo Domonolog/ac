@@ -344,11 +344,13 @@
     align-items: center;
     margin-bottom: 42px;
     flex-wrap: wrap;
+    position: relative;
 
     .avatar__info {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      padding-right: 200px;
 
       .avatar__mobile {
         display: flex;
@@ -388,8 +390,9 @@
     .time {
       display: flex;
       padding-left: 30px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      position: absolute;
+      right: 0;
+      top: 8px;
 
       .calendar,
       .eye {
@@ -713,11 +716,12 @@
       margin-bottom: 30px;
 
       .avatar__info {
-        display: block;
+        display: flex;
+        padding-right: 140px;
 
         .avatar__mobile {
-          margin-top: -4px;
-          margin-bottom: 12px;
+          padding-right: 10px;
+          margin-bottom: 0;
         }
 
         .avatar__img {
