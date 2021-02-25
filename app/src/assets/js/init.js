@@ -269,7 +269,6 @@ jQuery($ => {
     $(this).toggleClass('active');
   });
 
-
   //$(".button-show-statement .btn").click(function (e) {
   //  e.preventDefault();
   //  $(".hidden__content").addClass('active');
