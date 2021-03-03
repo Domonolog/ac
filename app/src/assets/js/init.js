@@ -526,7 +526,7 @@ jQuery($ => {
   });
 
   var typed = new Typed('.element-popup', {
-    strings: ["ADA compliant", "Section 508 compliant", "AODA compliant", "WCAG 2.1 compliant", "ACA compliant", "BITV compliant"],
+    strings: theme_params.audit_popup,
     typeSpeed: 40,
     backSpeed: 30,
     loop: true,
@@ -534,7 +534,7 @@ jQuery($ => {
   });
 
   var typed = new Typed('.element', {
-    strings: ["ADA compliant", "Section 508 compliant", "AODA compliant", "WCAG 2.1 compliant", "ACA compliant", "BITV compliant"],
+    strings: theme_params.audit_popup,
     typeSpeed: 40,
     backSpeed: 30,
     loop: true,
