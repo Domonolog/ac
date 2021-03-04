@@ -1633,19 +1633,25 @@
           display: flex;
           justify-content: center;
 
+          .blog__medium,
           .blog__big {
-            display: none;
-          }
-
-          .blog__medium {
             margin-bottom: 15px;
             max-height: initial;
             margin-left: 0;
             margin-right: 0;
             min-height: auto;
+            max-width: 370px;
 
             .wrapper {
               padding: 15px 20px 20px;
+
+              .info__top {
+                display: block;
+
+                .time {
+                  padding-left: 20px;
+                }
+              }
 
               .info__bottom {
                 h2 {
@@ -2034,7 +2040,8 @@
     .inner {
       ul {
         li {
-          .blog__medium {
+          .blog__medium,
+          .blog__big {
             max-width: 100%;
             width: 100%;
           }
