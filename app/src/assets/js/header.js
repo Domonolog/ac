@@ -14,6 +14,7 @@ jQuery( document ).ready( ( $ ) => {
 
   $( '#open-button' ).on( 'click', toggleMenu );
   $( '#close-button' ).on( 'click', toggleMenu );
+  $( 'ul.mobile-nav li a').on('click', toggleMenu );
   $( '.content-wrap' ).on( 'click', ( {target} ) => {
     if ( isOpen && target !== openbtn ) {
       toggleMenu();
