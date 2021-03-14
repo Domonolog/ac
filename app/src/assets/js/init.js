@@ -275,6 +275,78 @@ jQuery($ => {
   //  $(this).removeClass('active');
   //});
 
+  $("footer .tab-active1").click(function (e) {
+    $(".section-tabs ul li").removeClass('active');
+  });
+
+  $("footer .tab-active2").click(function (e) {
+    $(".section-tabs ul li").removeClass('active');
+  });
+
+  $("footer .tab-active3").click(function (e) {
+    $(".section-tabs ul li").removeClass('active');
+  });
+
+  $("footer .tab-active4").click(function (e) {
+    $(".section-tabs ul li").removeClass('active');
+  });
+
+  $("footer .tab-active5").click(function (e) {
+    $(".section-tabs ul li").removeClass('active');
+  });
+
+  $("footer .tab-active6").click(function (e) {
+    $(".section-tabs ul li").removeClass('active');
+  });
+
+  $("footer .tab-active1").click(function (e) {
+    $(".section-tabs .content").removeClass('active');
+  });
+
+  $("footer .tab-active2").click(function (e) {
+    $(".section-tabs .content").removeClass('active');
+  });
+
+  $("footer .tab-active3").click(function (e) {
+    $(".section-tabs .content").removeClass('active');
+  });
+
+  $("footer .tab-active4").click(function (e) {
+    $(".section-tabs .content").removeClass('active');
+  });
+
+  $("footer .tab-active5").click(function (e) {
+    $(".section-tabs .content").removeClass('active');
+  });
+
+  $("footer .tab-active6").click(function (e) {
+    $(".section-tabs .content").removeClass('active');
+  });
+
+  $("footer .tab-active1").click(function (e) {
+    $(".section-tabs .tab-active1").addClass('active');
+  });
+
+  $("footer .tab-active2").click(function (e) {
+    $(".section-tabs .tab-active2").addClass('active');
+  });
+
+  $("footer .tab-active3").click(function (e) {
+    $(".section-tabs .tab-active3").addClass('active');
+  });
+
+  $("footer .tab-active4").click(function (e) {
+    $(".section-tabs .tab-active4").addClass('active');
+  });
+
+  $("footer .tab-active5").click(function (e) {
+    $(".section-tabs .tab-active5").addClass('active');
+  });
+
+  $("footer .tab-active6").click(function (e) {
+    $(".section-tabs .tab-active6").addClass('active');
+  });
+
   $(".select__popup").click(function (e) {
     e.preventDefault();
     $(".select__popup").addClass('active');
