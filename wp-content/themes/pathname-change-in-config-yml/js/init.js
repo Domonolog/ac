@@ -476,6 +476,10 @@ jQuery(function ($) {
 
           selectList.slideUp(duration);
           selectHead.removeClass('on');
+
+          //sort order blog
+          var link = $(this).data('value');
+          window.location.href = link;
         });
       } else {
         $(this).removeClass('on');
@@ -8211,6 +8215,7 @@ jQuery(document).ready(function ($) {
 
   $('#open-button').on('click', toggleMenu);
   $('#close-button').on('click', toggleMenu);
+  $('ul.mobile-nav li a').on('click', toggleMenu);
   $('.content-wrap').on('click', function (_ref) {
     var target = _ref.target;
 
