@@ -375,6 +375,10 @@ jQuery($ => {
 
           selectList.slideUp(duration);
           selectHead.removeClass('on');
+
+          //sort order blog
+          var link = $(this).data('value');
+          window.location.href = link;
         });
 
       } else {
