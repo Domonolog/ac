@@ -264,9 +264,9 @@ jQuery($ => {
     $(this).parent().toggleClass('active');
   });
 
-  $('.section-details .wrapper .left .left__info p span').click(function () {
+  $('.section-details .wrapper .left .left__info p').click(function () {
     $().parent().addClass('active');
-    $(this).toggleClass('active');
+    $(".section-details .wrapper .left .left__info p span").toggleClass('active');
   });
 
   //$(".button-show-statement .btn").click(function (e) {
