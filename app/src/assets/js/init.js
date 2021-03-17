@@ -12,14 +12,6 @@ require('./smooth-scroll');
 require('./target-blank');
 require('./jquery.rateyo');
 
-WebFont.load({
-  google: {
-    families: [
-      'Roboto:300,400,500,600,700',
-    ]
-  }
-});
-
 jQuery($ => {
   $(function () {
     $("#rateYo").rateYo({
@@ -235,6 +227,10 @@ jQuery($ => {
     $(this).parent().toggleClass('active');
   });
 
+  $('.tabs-details ul li .top__details').click(function () {
+    $(this).parent().toggleClass('active');
+  });
+
   $('.show-all').click(function () {
     $(this).parent().toggleClass('active');
   });
@@ -265,6 +261,7 @@ jQuery($ => {
   });
 
   $(".section-details .wrapper .left .left__info p span span").click(function (e) {
+    e.preventDefault();
     $(".section-details .wrapper .left .left__info p span").removeClass('active');
   });
 

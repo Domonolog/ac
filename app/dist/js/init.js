@@ -128,12 +128,6 @@ __webpack_require__(11);
 __webpack_require__(12);
 __webpack_require__(13);
 
-_webfontloader2.default.load({
-  google: {
-    families: ['Roboto:300,400,500,600,700']
-  }
-});
-
 jQuery(function ($) {
   $(function () {
     $("#rateYo").rateYo({
@@ -338,6 +332,10 @@ jQuery(function ($) {
     $(this).parent().toggleClass('active');
   });
 
+  $('.tabs-details ul li .top__details').click(function () {
+    $(this).parent().toggleClass('active');
+  });
+
   $('.show-all').click(function () {
     $(this).parent().toggleClass('active');
   });
@@ -368,6 +366,7 @@ jQuery(function ($) {
   });
 
   $(".section-details .wrapper .left .left__info p span span").click(function (e) {
+    e.preventDefault();
     $(".section-details .wrapper .left .left__info p span").removeClass('active');
   });
 
