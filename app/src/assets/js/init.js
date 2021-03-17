@@ -264,7 +264,11 @@ jQuery($ => {
     $(this).parent().toggleClass('active');
   });
 
-  $('.section-details .wrapper .left .left__info p').click(function () {
+  $(".section-details .wrapper .left .left__info p span span").click(function (e) {
+    $(".section-details .wrapper .left .left__info p span").removeClass('active');
+  });
+
+  $('.section-details .wrapper .left .left__info p span').click(function () {
     $().parent().addClass('active');
     $(".section-details .wrapper .left .left__info p span").toggleClass('active');
   });
