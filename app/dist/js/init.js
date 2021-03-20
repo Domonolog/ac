@@ -332,8 +332,8 @@ jQuery(function ($) {
     $(this).parent().toggleClass('active');
   });
 
-  $('.tabs-details ul li .top__details').click(function () {
-    $(this).parent().toggleClass('active');
+  $('.tabs-details ul .passed-audits .top__details').click(function () {
+    $(this).parent().toggleClass('not-fixed');
   });
 
   $('.show-all').click(function () {

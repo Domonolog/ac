@@ -1299,6 +1299,19 @@
             width: calc(50% + 310px);
           }
         }
+
+        .passed-audits.not-fixed {
+          .top__details {
+            position: initial;
+            margin-left: 0;
+            margin-right: 0;
+            width: 100% !important;
+
+            &::before {
+              right: 70px;
+            }
+          }
+        }
       }
     }
   }
