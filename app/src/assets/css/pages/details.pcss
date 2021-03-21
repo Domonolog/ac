@@ -1309,6 +1309,10 @@
 
             &::before {
               right: 70px;
+
+              @media (max-width: 1030px) {
+                right: 5px;
+              }
             }
           }
         }
@@ -1891,7 +1895,7 @@
                 }
 
                 &::before {
-                  right: 5px;
+                  right: 5px !important;
                 }
 
                 .tabs-details__left {
