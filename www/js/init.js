@@ -334,14 +334,18 @@ jQuery(function ($) {
 
   $(".issue-list__passed .passed-audits").click(function (e) {
     e.preventDefault();
-    $(".issue-list__passed .passed-audits").removeClass('not-fixed');
     $(this).addClass('not-fixed');
   });
 
   $(".issue-list__passed .passed-audits").click(function (e) {
     e.preventDefault();
-    $(".issue-list__passed .passed-audits").removeClass('active');
-    $(this).addClass('active');
+    if (onclick()) {
+      $(".issue-list__passed .passed-audits").removeClass('active');
+      $(this).addClass('active');
+    } else {
+      $(".issue-list__passed .passed-audits.active").removeClass('active');
+      $(this).removeClass('active');
+    }
   });
 
   $('.show-all').click(function () {
