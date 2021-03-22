@@ -198,6 +198,15 @@ jQuery($ => {
 
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
+    if (scroll >= 530) {
+      $(".section-details-fixed").addClass("active-mobile");
+    } else {
+      $(".section-details-fixed").removeClass("active-mobile");
+    }
+  });
+
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
     if (scroll >= 300) {
       $(".tabs-details").addClass("fixed");
     } else {
@@ -227,7 +236,7 @@ jQuery($ => {
     $(this).parent().toggleClass('active');
   });
 
-  $(".issue-list__passed .passed-audits").click(function(e) {
+  $(".pd-15 .passed-audits").click(function(e) {
     e.preventDefault();
     $(this).addClass('not-fixed');
   });
@@ -235,10 +244,10 @@ jQuery($ => {
   $(".issue-list__passed .passed-audits").click(function(e) {
     e.preventDefault();
     if (onclick()) {
-      $(".issue-list__passed .passed-audits").removeClass('active');
+      $(".pd-15 .passed-audits").removeClass('active');
       $(this).addClass('active');
     } else {
-      $(".issue-list__passed .passed-audits.active").removeClass('active');
+      $(".pd-15 .passed-audits.active").removeClass('active');
       $(this).removeClass('active');
     }
   });
