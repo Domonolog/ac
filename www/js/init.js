@@ -303,7 +303,7 @@ jQuery(function ($) {
 
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-    if (scroll >= 530) {
+    if (scroll >= 550) {
       $(".section-details-fixed").addClass("active-mobile");
     } else {
       $(".section-details-fixed").removeClass("active-mobile");
@@ -346,15 +346,8 @@ jQuery(function ($) {
     $(this).addClass('not-fixed');
   });
 
-  $(".issue-list__passed .passed-audits").click(function (e) {
-    e.preventDefault();
-    if (onclick()) {
-      $(".pd-15 .passed-audits").removeClass('active');
-      $(this).addClass('active');
-    } else {
-      $(".pd-15 .passed-audits.active").removeClass('active');
-      $(this).removeClass('active');
-    }
+  $('.pd-15 .passed-audits .top__details').click(function () {
+    $(this).parent().toggleClass('active');
   });
 
   $('.show-all').click(function () {
