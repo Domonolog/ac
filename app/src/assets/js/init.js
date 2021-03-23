@@ -198,7 +198,7 @@ jQuery($ => {
 
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-    if (scroll >= 630) {
+    if (scroll >= 680) {
       $(".section-details-fixed").addClass("active-mobile");
     } else {
       $(".section-details-fixed").removeClass("active-mobile");
