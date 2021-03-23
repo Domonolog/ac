@@ -303,7 +303,7 @@ jQuery(function ($) {
 
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-    if (scroll >= 550) {
+    if (scroll >= 630) {
       $(".section-details-fixed").addClass("active-mobile");
     } else {
       $(".section-details-fixed").removeClass("active-mobile");
