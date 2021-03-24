@@ -1,5 +1,9 @@
 @import "../global-mixins.pcss";
 
+.green-color {
+  color: #1dbe7a;
+}
+
 .rgb-btn {
   max-width: 215px;
   height: 60px;
@@ -118,6 +122,14 @@
     color: #3a3a3a;
     display: block;
     margin-bottom: 25px;
+
+    span:first-child {
+      display: block;
+
+      span {
+        display: inline;
+      }
+    }
 
     .element,
     .element-popup {
