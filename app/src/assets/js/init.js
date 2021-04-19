@@ -5,11 +5,8 @@ import Typed from 'typed.js';
 // require( 'magnific-popup' );
 require('./jquery');
 require('slick-carousel');
-require('./retina');
 require('./header');
-require('./blog');
 require('./smooth-scroll');
-require('./target-blank');
 require('./jquery.rateyo');
 
 jQuery($ => {
