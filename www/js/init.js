@@ -334,10 +334,6 @@ jQuery(function ($) {
     }
   });
 
-  $('.tabs-details ul li .top__details').click(function () {
-    $(this).parent().toggleClass('active');
-  });
-
   $('.pd-15 .passed-audits .top__details').click(function () {
     $(this).parent().toggleClass('not-fixed');
   });
