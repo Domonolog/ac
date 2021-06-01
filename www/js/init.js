@@ -559,8 +559,10 @@ jQuery(function ($) {
           selectHead.removeClass('on');
 
           //sort order blog
-          var link = $(this).data('value');
-          window.location.href = link;
+          if ($('body').hasClass('blog')) {
+            var link = $(this).data('value');
+            window.location.href = link;
+          }
         });
       } else {
         $(this).removeClass('on');

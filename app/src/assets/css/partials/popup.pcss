@@ -3,7 +3,9 @@
 .popup-mobile,
 .popup-audit,
 .popup-stars,
-.popup-home {
+.popup-home,
+.popup-score,
+.popup-score-error {
   padding-top: 0;
   padding-bottom: 0;
   height: 0;
@@ -26,7 +28,9 @@
   #modal-download-txt,
   #modal-audit,
   #modal-stars,
-  #modal-home {
+  #modal-home,
+  #modal-score,
+  #modal-score-error {
     display: none;
   }
 
@@ -36,7 +40,9 @@
   #modal-download-txt:checked ~ .modal-background,
   #modal-audit:checked ~ .modal-background,
   #modal-stars:checked ~ .modal-background,
-  #modal-home:checked ~ .modal-background {
+  #modal-home:checked ~ .modal-background,
+  #modal-score:checked ~ .modal-background,
+  #modal-score-error:checked ~ .modal-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -55,7 +61,9 @@
   #modal-download-txt:checked ~ .modal-content,
   #modal-audit:checked ~ .modal-content,
   #modal-stars:checked ~ .modal-content,
-  #modal-home:checked ~ .modal-content {
+  #modal-home:checked ~ .modal-content,
+  #modal-score:checked ~ .modal-content,
+  #modal-score-error:checked ~ .modal-content {
     position: fixed;
     transform: scale(1);
     transition: transform 500ms;
@@ -89,7 +97,9 @@
   #modal-download-txt:checked ~ .modal-content .modal-close,
   #modal-audit:checked ~ .modal-content .modal-close,
   #modal-stars:checked ~ .modal-content .modal-close,
-  #modal-home:checked ~ .modal-content .modal-close {
+  #modal-home:checked ~ .modal-content .modal-close,
+  #modal-score:checked ~ .modal-content .modal-close,
+  #modal-score-error:checked ~ .modal-content .modal-close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -809,6 +819,94 @@
   display: block;
 }
 
+.popup-score,
+.popup-score-error {
+  #modal-score:checked ~ .modal-content,
+  #modal-score-error:checked ~ .modal-content {
+    top: 61px;
+  }
+
+  .modal-content {
+    .wrapper {
+      justify-content: center;
+
+      .right {
+        h2 {
+          margin-bottom: 15px;
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 30px;
+          line-height: 45px;
+          letter-spacing: 0.5px;
+          color: #3a3a3a;
+          text-align: center;
+        }
+
+        h3 {
+          text-align: center;
+          margin-bottom: 50px;
+
+          a {
+            font-family: SF UI Display;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 1px;
+            text-decoration-line: underline;
+            color: #1dbe7a;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .button {
+        padding-top: 15px;
+        padding-bottom: 16px;
+      }
+    }
+  }
+}
+
+.popup-score-error {
+  .modal-content {
+    .wrapper {
+      justify-content: center;
+
+      .right {
+        h2 {
+          font-family: SF UI Display;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 30px;
+          line-height: 45px;
+          letter-spacing: 0.5px;
+          color: #e34b4b;
+          margin-bottom: 25px;
+        }
+
+        p {
+          font-family: SF UI Display;
+          font-style: normal;
+          font-size: 14px;
+          line-height: 22px;
+          text-align: center;
+          letter-spacing: 1px;
+          color: #3a3a3a;
+          font-weight: 400;
+          margin-left: -54px;
+          margin-right: -54px;
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1300px) {
   .modal-button {
     span {
@@ -823,7 +921,9 @@
   .popup-download,
   .popup-audit,
   .popup-stars,
-  .popup-home {
+  .popup-home,
+  .popup-score,
+  .popup-score-error {
     .modal-button {
       .btn {
         height: 40px;
@@ -849,7 +949,9 @@
     #modal-download-txt:checked ~ .modal-content,
     #modal-audit:checked ~ .modal-content,
     #modal-stars:checked ~ .modal-content,
-    #modal-home:checked ~ .modal-content {
+    #modal-home:checked ~ .modal-content,
+    #modal-score:checked ~ .modal-content,
+    #modal-score-error:checked ~ .modal-content {
       top: 25px;
 
       .content {
@@ -951,6 +1053,21 @@
       }
     }
   }
+
+  .popup-score-error {
+    .modal-content {
+      .wrapper {
+        justify-content: center;
+
+        .right {
+          p {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 .mobile-contact-img,
@@ -978,13 +1095,17 @@
   .popup-mobile,
   .popup-audit,
   .popup-stars,
-  .popup-home {
+  .popup-home,
+  .popup-score,
+  .popup-score-error {
     #modal:checked ~ .modal-content,
     #modal-download:checked ~ .modal-content,
     #modal-download-html:checked ~ .modal-content,
     #modal-download-txt:checked ~ .modal-content,
     #modal-audit:checked ~ .modal-content,
-    #modal-stars:checked ~ .modal-content {
+    #modal-stars:checked ~ .modal-content,
+    #modal-score:checked ~ .modal-content,
+    #modal-score-error:checked ~ .modal-content {
       top: 0;
 
       .content {
