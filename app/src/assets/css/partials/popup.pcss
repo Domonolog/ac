@@ -294,6 +294,10 @@
             }
           }
 
+          input {
+            display: none;
+          }
+
           .checkmark {
             position: absolute;
             top: 0;
@@ -326,6 +330,17 @@
             -webkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             transform: rotate(45deg);
+          }
+        }
+
+        .download-holder {
+          .button {
+            margin-left: -35px;
+
+            @media (max-width: 992px) {
+              width: 100%;
+              margin-left: 0;
+            }
           }
         }
       }
@@ -983,6 +998,7 @@
           .container {
             display: flex !important;
             padding-left: 0 !important;
+            flex-wrap: wrap;
 
             p {
               padding-top: 1px !important;
