@@ -5,7 +5,8 @@
 .popup-stars,
 .popup-home,
 .popup-score,
-.popup-score-error {
+.popup-score-error,
+.popup-score-new {
   padding-top: 0;
   padding-bottom: 0;
   height: 0;
@@ -30,7 +31,8 @@
   #modal-stars,
   #modal-home,
   #modal-score,
-  #modal-score-error {
+  #modal-score-error,
+  #modal-score-new {
     display: none;
   }
 
@@ -42,7 +44,8 @@
   #modal-stars:checked ~ .modal-background,
   #modal-home:checked ~ .modal-background,
   #modal-score:checked ~ .modal-background,
-  #modal-score-error:checked ~ .modal-background {
+  #modal-score-error:checked ~ .modal-background,
+  #modal-score-new:checked ~ .modal-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -63,7 +66,8 @@
   #modal-stars:checked ~ .modal-content,
   #modal-home:checked ~ .modal-content,
   #modal-score:checked ~ .modal-content,
-  #modal-score-error:checked ~ .modal-content {
+  #modal-score-error:checked ~ .modal-content,
+  #modal-score-new:checked ~ .modal-content {
     position: fixed;
     transform: scale(1);
     transition: transform 500ms;
@@ -99,7 +103,8 @@
   #modal-stars:checked ~ .modal-content .modal-close,
   #modal-home:checked ~ .modal-content .modal-close,
   #modal-score:checked ~ .modal-content .modal-close,
-  #modal-score-error:checked ~ .modal-content .modal-close {
+  #modal-score-error:checked ~ .modal-content .modal-close,
+  #modal-score-new:checked ~ .modal-content .modal-close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -531,6 +536,11 @@
           min-height: 50px;
           width: 100%;
           max-width: 100%;
+
+          &.none {
+            pointer-events: none;
+            background-color: rgba(98, 105, 117, 0.5);
+          }
         }
       }
     }
@@ -831,9 +841,11 @@
 }
 
 .popup-score,
-.popup-score-error {
+.popup-score-error,
+.popup-score-new {
   #modal-score:checked ~ .modal-content,
-  #modal-score-error:checked ~ .modal-content {
+  #modal-score-error:checked ~ .modal-content,
+  #modal-score-new:checked ~ .modal-content {
     top: 20px;
   }
 
@@ -953,7 +965,8 @@
   .popup-stars,
   .popup-home,
   .popup-score,
-  .popup-score-error {
+  .popup-score-error,
+  .popup-score-new {
     .modal-button {
       .btn {
         height: 40px;
@@ -981,11 +994,16 @@
     #modal-stars:checked ~ .modal-content,
     #modal-home:checked ~ .modal-content,
     #modal-score:checked ~ .modal-content,
-    #modal-score-error:checked ~ .modal-content {
-      top: 25px;
+    #modal-score-error:checked ~ .modal-content,
+    #modal-score-new:checked ~ .modal-content {
+      top: 0;
+      overflow: auto;
+      height: 100vh;
+      background-color: #fff;
 
       .content {
         width: 70%;
+        box-shadow: none;
       }
     }
 
@@ -1128,7 +1146,8 @@
   .popup-stars,
   .popup-home,
   .popup-score,
-  .popup-score-error {
+  .popup-score-error,
+  .popup-score-new {
     #modal:checked ~ .modal-content,
     #modal-download:checked ~ .modal-content,
     #modal-download-html:checked ~ .modal-content,
@@ -1136,7 +1155,8 @@
     #modal-audit:checked ~ .modal-content,
     #modal-stars:checked ~ .modal-content,
     #modal-score:checked ~ .modal-content,
-    #modal-score-error:checked ~ .modal-content {
+    #modal-score-error:checked ~ .modal-content,
+    #modal-score-new:checked ~ .modal-content {
       top: 0;
 
       .content {

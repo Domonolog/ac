@@ -586,6 +586,12 @@ jQuery(function ($) {
     });
   });
 
+  $(function () {
+    $(".section-blog-new .blog-tabs").on("click", ":not(.active)", function () {
+      $(this).addClass('active').siblings().removeClass("active").closest(".section-blog-new").find(".content").removeClass("active").eq($(this).index()).addClass("active");
+    });
+  });
+
   $('#modal-audit').change(function () {
     if ($(this).is(":checked")) {
       $('.container').addClass("blur");

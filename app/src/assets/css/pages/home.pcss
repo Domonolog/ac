@@ -894,6 +894,192 @@
   }
 }
 
+.section-info-new {
+  padding-top: 10px;
+  padding-bottom: 170px;
+
+  @media (max-width: 992px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .title-info-new {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 30px;
+
+      br {
+        display: none;
+      }
+    }
+
+    .img {
+      margin-right: 23px;
+
+      @media (max-width: 992px) {
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
+
+    .title {
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 30px;
+      line-height: 45px;
+      letter-spacing: 0.5px;
+      color: #3a3a3a;
+      margin-bottom: 0;
+
+      @media (max-width: 992px) {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .item {
+      width: 31.6%;
+      text-decoration: none;
+
+      @media (max-width: 992px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .item-content {
+        background: #fff;
+        border: 1px solid #e9ecee;
+        box-sizing: border-box;
+        box-shadow: 15px 15px 0 #eef2f4;
+        border-radius: 5px;
+        padding: 40px 40px 48px;
+        width: 100%;
+        margin-bottom: 30px;
+        text-decoration: none;
+        transition: 0.2s ease-in-out;
+
+        @media (max-width: 992px) {
+          max-width: 370px;
+          padding: 15px 20px 20px;
+        }
+
+        @media (max-width: 767px) {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        &:hover {
+          margin-top: -10px;
+          margin-bottom: 40px;
+        }
+
+        .img {
+          text-align: center;
+        }
+      }
+
+      h3 {
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 35px;
+        color: #3a3a3a;
+        margin-bottom: 5px;
+        margin-right: -6px;
+
+        @media (max-width: 992px) {
+          font-style: normal;
+          font-weight: 800;
+          font-size: 14px;
+          line-height: 25px;
+          letter-spacing: 0.5px;
+          max-width: 100%;
+        }
+      }
+
+      p {
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 35px;
+        color: #3a3a3a;
+        letter-spacing: 0.5px;
+        margin-bottom: 24px;
+
+        @media (max-width: 992px) {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 20px;
+          letter-spacing: 1px;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .item-link {
+      width: 31.6%;
+      background: #f8fafb;
+      border: 1px solid #e9ecee;
+      box-sizing: border-box;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: SF UI Display;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: #3a3a3a;
+      text-decoration: none;
+      margin-bottom: 30px;
+      transition: 0.2s ease-in-out;
+
+      @media (max-width: 992px) {
+        height: 70px;
+        width: 100%;
+      }
+
+      span {
+        display: inline-block;
+        margin-left: 10px;
+        height: 16px;
+        width: 16px;
+        background-image: url("../../images/arrow-icon.png");
+        background-repeat: no-repeat;
+      }
+
+      &:hover {
+        margin-top: -2px;
+        margin-bottom: 32px;
+        color: #5bbe88;
+        text-decoration: none;
+        background-color: #fff;
+
+        span {
+          background-image: url("../../images/green-arrow-icon.png");
+        }
+      }
+    }
+  }
+}
+
 .section-info {
   overflow: hidden;
   padding-bottom: 100px;
